@@ -92,6 +92,7 @@ road = "US 550"
 miles = 10.5
 drive_time = "25 min"
 photo_query = "Red Mountain Pass Colorado"
+photos = ["wikimedia-2216529.jpg", "wikimedia-2216582.jpg", "wikimedia-11159541.jpg", "wikimedia-92721973.jpg"]
 via = [
   [37.9850, -107.6580], [37.9650, -107.6630],
   [37.9450, -107.6700],
@@ -115,6 +116,7 @@ note = "Its wooden headframe stands right beside the road. One of the richest si
 lat = 37.9269
 lon = -107.6886
 photo_query = "Yankee Girl Mine"
+photos = ["images/red-mountain-pass-colorado/wikimedia-100036775.png"]
 [stops.info]
 "SEE" = "The red peaks of Red Mountain and old mines on every slope."
 "DO" = "Walk the summit area. Wildflowers peak in July."

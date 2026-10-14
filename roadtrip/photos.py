@@ -53,7 +53,12 @@ def pick_photos(stop, limit=PER_STOP):
         for name in stop.photos:
             path = folder / name if "/" not in name else REPO_ROOT / name
             if path.exists():
-                chosen.append((path, by_file.get(path.name, {"file": path.name})))
+                entry = by_file.get(path.name)
+                if entry is None:  # borrowed from another place's folder: use its credits
+                    other = path.parent / "credits.json"
+                    others = json.loads(other.read_text()) if other.exists() else []
+                    entry = next((e for e in others if e["file"] == path.name), {"file": path.name})
+                chosen.append((path, entry))
             else:
                 print(f"  {stop.name}: pinned photo {name} not found", file=sys.stderr)
         return chosen[:limit] if limit else chosen
