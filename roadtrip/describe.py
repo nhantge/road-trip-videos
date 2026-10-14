@@ -32,7 +32,7 @@ def description(route, segs, offset, brand):
     bits = [f"{fmt_int(route.total_miles)} miles", f"{len(route.stops)} stops",
             f"about {fmt_minutes(route.total_drive_minutes)} of driving"]
     if route.days:
-        bits.append(f"{route.days} days recommended")
+        bits.append(f"{route.days} day{'' if route.days.strip() == "1" else 's'} recommended")
     lines += [" · ".join(bits), ""]
     lines += ["CHAPTERS"] + [f"{fmt_clock(t)} {name}" for t, name in chapters(route, segs, offset)] + [""]
     lines.append("THE ROUTE")

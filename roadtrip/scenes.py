@@ -431,7 +431,7 @@ class Renderer:
         ]
         passes = [p for p in route.passes if (p.elevation_ft or 0) >= 10000]
         if passes:
-            rows.append((str(len(passes)), "passes over 10,000 ft"))
+            rows.append((str(len(passes)), plural(len(passes), "pass", "passes") + " over 10,000 ft"))
         for k, (big, small) in enumerate(rows):
             ra = S.ease_out((t - 0.3 - 0.15 * k) / 0.4)
             row = Image.new("RGBA", (img.width, 110), (0, 0, 0, 0))
@@ -512,9 +512,9 @@ class Renderer:
         bits = [f"{S.fmt_int(route.total_miles)} miles", f"{self.n} stops"]
         passes = [p for p in route.passes if (p.elevation_ft or 0) >= 10000]
         if passes:
-            bits.append(f"{len(passes)} passes over 10,000 ft")
+            bits.append(f"{len(passes)} {plural(len(passes), 'pass', 'passes')} over 10,000 ft")
         if route.days:
-            bits.append(f"{route.days} days")
+            bits.append(days_text(route.days))
         d.text((S.W / 2, 640), "  ·  ".join(bits), font=S.font("regular", 32), fill=S.TEXT_DIM, anchor="mm")
         a = S.ease_out(t / 0.5)
         img.alpha_composite(S.with_alpha(layer, a), (0, int((1 - a) * 20)))
@@ -537,12 +537,15 @@ class Renderer:
             (high - low, "", "FT ELEVATION CHANGE",
              f"{S.fmt_int(low)} ft near {low_name} to {S.fmt_int(high)} ft near {high_name}"),
             (len(names), "", "STOPS ON THE ROUTE", stops_note),
-            (hours, "h", "HOURS OF DRIVING", "Behind the wheel, without stops"),
-            (None, route.days.replace(" to ", "–") if route.days else "–", "DAYS RECOMMENDED",
+            (hours, "h", "HOURS OF DRIVING", "Behind the wheel, without stops") if hours >= 2 else
+            (route.total_drive_minutes, "", "MINUTES OF DRIVING", "Behind the wheel, without stops"),
+            (None, route.days.replace(" to ", "–") if route.days else "–",
+             "DAY RECOMMENDED" if route.days.strip() == "1" else "DAYS RECOMMENDED",
              f"Best season: {route.best_season}" if route.best_season else "Time for the stops, not just the drive"),
         ]
         if passes:
-            cards.append((len(passes), "", "PASSES OVER 10,000 FT", ", ".join(p.name for p in passes)))
+            cards.append((len(passes), "", plural(len(passes), "PASS", "PASSES") + " OVER 10,000 FT",
+                          ", ".join(p.name for p in passes)))
         else:
             cards.append((route.climb_ft, "", "FT OF CLIMBING", "Total uphill along the way"))
         return cards
@@ -611,7 +614,7 @@ class Renderer:
         y = 215
         facts = [("TOTAL", f"{S.fmt_int(route.total_miles)} miles · {S.fmt_minutes(route.total_drive_minutes)}")]
         if route.days:
-            facts.append(("TAKE", f"{route.days} days"))
+            facts.append(("TAKE", days_text(route.days)))
         if route.best_season:
             facts.append(("BEST SEASON", route.best_season))
         for k, (label, value) in enumerate(facts):
@@ -648,10 +651,13 @@ class Renderer:
         layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
         d = ImageDraw.Draw(layer)
         d.text((140, 265), "THANKS FOR RIDING ALONG", font=S.font("bold", 22), fill=S.ORANGE, anchor="lm")
-        d.text((136, 375), route.title, font=S.font("display", 90), fill=S.TEXT, anchor="ls")
+        title = S.font("display", 90)
+        if title.getlength(route.title) > 940:  # leave room for the Up next card
+            title = S.font("display", int(90 * 940 / title.getlength(route.title)))
+        d.text((136, 375), route.title, font=title, fill=S.TEXT, anchor="ls")
         bits = [f"{S.fmt_int(route.total_miles)} miles", f"{self.n} stops"]
         if route.days:
-            bits.append(f"{route.days} days")
+            bits.append(days_text(route.days))
         d.text((140, 440), "  ·  ".join(bits), font=S.font("regular", 30), fill=S.TEXT_DIM, anchor="lm")
         layer.alpha_composite(S.rounded_box(258, 76, 38, S.ORANGE + (255,)), (140, 538))
         d.text((269, 576), "SUBSCRIBE", font=S.font("bold", 25), fill=S.BG_TITLE, anchor="mm")
@@ -675,6 +681,14 @@ class Renderer:
             dc.text((30, 414), sub, font=S.font("regular", 22), fill=S.TEXT_DIM, anchor="lm")
             img.alpha_composite(S.with_alpha(card, ca), (1135, 238 + int((1 - ca) * 20)))
         return img.convert("RGB")
+
+
+def plural(n, one, many):
+    return one if n == 1 else many
+
+
+def days_text(days):
+    return f"{days} day" if days.strip() == "1" else f"{days} days"
 
 
 def drive_progress(p):

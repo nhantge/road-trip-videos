@@ -52,6 +52,7 @@ lon = -107.6714
 elevation_ft = 7792
 tag = "THE SWITZERLAND OF AMERICA"
 photo_query = "Ouray Colorado"
+photos = ["pixabay-1679707.jpg", "pixabay-669432.jpg", "pixabay-670527.jpg", "pixabay-669467.png"]
 caption = "Welcome to Ouray, tucked into a box canyon with 13,000-foot peaks on every side!"
 fact = "Ouray's Ice Park turns the gorge at the edge of town into a frozen climbing wall every winter."
 narration = "Welcome to Ouray, tucked into a box canyon with thirteen-thousand-foot peaks on every side! Before you hit the road, soak in the hot springs pool and walk out to Box Cañon Falls. Trust me, it's worth it!"
