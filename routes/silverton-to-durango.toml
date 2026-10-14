@@ -1,0 +1,159 @@
+# Silverton to Durango on US 550, over Molas and Coal Bank Passes.
+# Picks up where the Million Dollar Highway episode ends. See README.md for every field.
+
+title = "Silverton to Durango"
+series = "Colorado Road Trips"
+region = "San Juan Mountains"
+days = "1"
+best_season = "June to early October"
+hook = [
+  "Two passes over 10,000 feet in 13 miles : Coal Bank Pass",
+  "A mountain lake view that stops traffic : Molas Pass",
+  "A railroad town with a steam train you can ride back : Durango",
+]
+tips = [
+  "Fill up in Silverton. There's little in the way of services until Purgatory.",
+  "Pull over at the Molas Pass overlook on the east side of the road. Don't skip it!",
+  "Watch for deer and elk south of Purgatory, especially at dawn and dusk.",
+  "Make it a loop: drive one way and ride the steam train the other (book ahead).",
+]
+
+[narration]
+hook = "Two mountain passes over ten thousand feet! One of the best lake views in all of Colorado! And a railroad town at the end of the line! Let's do this!"
+intro = "This is Silverton to Durango: 48 miles of high passes and big views, and it picks up right where the Million Dollar Highway left off. Stay till the end for the full trip planner!"
+overview = "Here's the plan! We leave Silverton, climb Molas Pass, hop over Coal Bank Pass, then cruise all the way down the valley into Durango!"
+finale = "And that's the drive! 48 miles from Silverton to Durango, topping out at 10,910 feet on Molas Pass."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Hit subscribe, and next time we're heading to Rocky Mountain National Park and Trail Ridge Road!"
+
+[inset]
+name = "SW Colorado"
+bounds = [-108.9, 37.0, -106.6, 38.6]
+city = { name = "Ouray", lat = 38.0228, lon = -107.6714 }
+
+[thumbnail]
+text = ["2 PASSES · 48 MILES", "SILVERTON → DURANGO"]
+stop = "Molas Pass"
+photo = 0
+
+[up_next]
+title = "Trail Ridge Road"
+subtitle = "Rocky Mountain National Park"
+miles = 48
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Silverton"
+lat = 37.8119
+lon = -107.6645
+elevation_ft = 9318
+tag = "NATIONAL HISTORIC LANDMARK"
+photo_query = "Silverton Colorado"
+photos = ["wikimedia-27487059.jpg", "pixabay-7375198.jpg", "wikimedia-10935432.jpg", "wikimedia-18773019.jpg"]
+caption = "We're back in Silverton! Grab a coffee, because the views start fast."
+fact = "Silverton was founded in 1874 as a silver mining camp, which is how it got its name."
+narration = "We're back in Silverton, and today we're heading south to Durango! Grab a coffee, because the views start the second you leave town."
+[stops.info]
+"SEE & DO" = "Greene Street's historic storefronts, and the steam train arriving midday."
+"EAT" = "Handlebars Food & Saloon."
+"TIP" = "Fill up here. Services are thin until Purgatory."
+
+[[stops]]
+name = "Molas Pass"
+lat = 37.7406
+lon = -107.6969
+elevation_ft = 10910
+kind = "pass"
+tag = "THE BIG VIEW"
+road = "US 550"
+miles = 6
+drive_time = "15 min"
+photo_query = "Molas Pass"
+via = [[37.8000, -107.6680], [37.7850, -107.6720], [37.7680, -107.6780], [37.7520, -107.6880]]
+drive_caption = "US 550 switchbacks straight up out of Silverton!"
+drive_fact = "In about six miles you climb nearly 1,600 feet."
+drive_narration = "Right out of town, US 550 switchbacks straight up the mountainside. And keep an eye out on your left for Molas Lake, the perfect picnic spot!"
+caption = "Molas Pass, 10,910 feet. This might be the best view on the whole San Juan Skyway!"
+fact = "The jagged peaks across the valley are the Grenadier Range, part of the Weminuche, Colorado's largest wilderness area."
+narration = "Welcome to Molas Pass, ten thousand nine hundred and ten feet! Seriously, pull over here. Those jagged peaks are the Grenadier Range, in the Weminuche, the biggest wilderness area in Colorado!"
+[[stops.sights]]
+name = "Molas Lake"
+note = "A small mountain lake with a campground and huge views. Great for a picnic or a paddle."
+say = "Keep an eye out for Molas Lake, the perfect picnic spot!"
+lat = 37.7470
+lon = -107.6860
+photo_query = "Molas Lake"
+[stops.info]
+"SEE" = "The overlook across to the Grenadier Range and the Animas River gorge."
+"DO" = "Hike a stretch of the Colorado Trail, which crosses right here."
+"TIP" = "Afternoon storms roll in fast in summer. Come in the morning."
+
+[[stops]]
+name = "Coal Bank Pass"
+lat = 37.6997
+lon = -107.7781
+elevation_ft = 10640
+kind = "pass"
+tag = "PASS NUMBER TWO"
+road = "US 550"
+miles = 7
+drive_time = "15 min"
+photo_query = "Coal Bank Pass"
+via = [[37.7250, -107.7150], [37.7120, -107.7450], [37.7050, -107.7650]]
+drive_caption = "Down from Molas, then straight back up to the second pass!"
+drive_fact = "Two passes over 10,000 feet, just 7 miles apart!"
+drive_narration = "Down from Molas, past Andrews Lake, and right back up again! Two passes over ten thousand feet, just seven miles apart!"
+caption = "Coal Bank Pass, 10,640 feet, with Engineer Mountain right next door!"
+fact = "Engineer Mountain tops out at 12,968 feet. A popular trail to its summit starts at this pass."
+narration = "Coal Bank Pass, ten thousand six hundred and forty feet! And that big pointy peak right there? That's Engineer Mountain, almost thirteen thousand feet tall!"
+[[stops.sights]]
+name = "Andrews Lake"
+note = "A quiet lake just south of Molas Pass, with an easy loop trail and great reflections."
+lat = 37.7290
+lon = -107.7110
+photo_query = "Andrews Lake Colorado"
+[stops.info]
+"SEE" = "Engineer Mountain, towering right over the pass."
+"HIKE" = "The Pass Creek Trail heads toward Engineer Mountain from here."
+"TIP" = "The descent south is long and steep. Use lower gears."
+
+[[stops]]
+name = "Durango"
+lat = 37.2753
+lon = -107.8801
+elevation_ft = 6512
+tag = "END OF THE LINE"
+road = "US 550"
+miles = 35
+drive_time = "50 min"
+photo_query = "Durango Colorado"
+via = [
+  [37.6850, -107.7900], [37.6650, -107.8000], [37.6400, -107.8070],
+  { name = "Purgatory", lat = 37.6303, lon = -107.8139 },
+  [37.5900, -107.8200], [37.5300, -107.8150],
+  { name = "Hermosa", lat = 37.4161, lon = -107.8370 },
+  [37.4000, -107.8430], [37.3600, -107.8460], [37.3300, -107.8480], [37.3050, -107.8600], [37.2900, -107.8720],
+]
+drive_caption = "A long, beautiful glide down into the Animas Valley!"
+drive_fact = "From Coal Bank Pass to Durango you drop more than 4,000 feet."
+drive_narration = "Now it's a long, beautiful glide down into the Animas Valley! Fun stops on the way: Purgatory Resort, with a summer alpine coaster, and Trimble Hot Springs, just north of Durango. Your legs will thank you!"
+caption = "Durango! Historic Main Avenue, the Animas River, and the steam train depot."
+fact = "The railroad founded Durango in 1880, and the steam train still runs to Silverton, 45 miles each way."
+narration = "Welcome to Durango! The railroad founded this town back in 1880, and you can still ride the steam train all the way back to Silverton. What a way to finish!"
+[[stops.sights]]
+name = "Purgatory Resort"
+note = "In summer: an alpine coaster, scenic chairlift rides and mountain biking."
+lat = 37.6303
+lon = -107.8139
+photo_query = "Purgatory Resort Durango"
+[[stops.sights]]
+name = "Trimble Hot Springs"
+note = "Natural hot springs pools just north of Durango. Perfect after a day on the road."
+lat = 37.3890
+lon = -107.8480
+photo_query = "Trimble Hot Springs"
+[stops.info]
+"SEE & DO" = "Ride the Durango & Silverton Narrow Gauge Railroad. Walk Main Avenue."
+"EAT" = "Steamworks Brewing Co."
+"STAY" = "The Strater Hotel, open since 1887."

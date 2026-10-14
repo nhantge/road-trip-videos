@@ -188,6 +188,18 @@ The generator doesn't upload; do this in YouTube Studio:
 The look (dark map, HUD, inset, elevation strip, panel, stats and end cards) follows the
 earlier San Juan Skyway demo.
 
+## Your own photos
+
+Your own shots beat stock photos. Add them to a place's folder, credited to you:
+
+```sh
+python3 scripts/add_photos.py "Molas Pass" ~/Pictures/molas1.jpg ~/Pictures/molas2.jpg --author "Your Name"
+```
+
+They're resized to at most 1920 px wide, saved as `images/<place>/own-*.jpg` and
+credited on screen as "Photo: Your Name". Stops without pinned `photos` pick your own
+photos first, then Wikimedia, then Pixabay.
+
 ## Fetching photos
 
 `scripts/fetch_photos.py` searches Wikimedia Commons and Pixabay by place name and
@@ -202,7 +214,10 @@ python3 scripts/fetch_photos.py "Grand Canyon" "Monument Valley" --count 5
 ```
 
 Options: `--source wikimedia|pixabay|both` (default both), `--count N` per source
-per place (default 5), `--width PX` for Wikimedia thumbnails (default 1920).
+per place (default 5), `--width PX` for Wikimedia thumbnails (default 1920), `--dest DIR`
+to download somewhere else first (handy for vetting photos before they enter `images/`).
+Wikimedia throttles busy shared IPs (cloud servers especially); the script backs off and
+retries, and saves credits after every photo so an interrupted run keeps what it got.
 Re-running skips images already listed in `credits.json`.
 
 Licenses differ: many Wikimedia images are CC BY / CC BY-SA and **require attribution**

@@ -64,7 +64,8 @@ def pick_photos(stop, limit=PER_STOP):
         return chosen[:limit] if limit else chosen
     # Wikimedia results are tagged to the place; Pixabay keyword hits often aren't
     # (search "Monarch Pass" and you get butterflies), so they only fill gaps.
-    ranked = sorted(entries, key=lambda e: e.get("source") == "pixabay")
+    # Your own photos come first.
+    ranked = sorted(entries, key=lambda e: {"own": 0, "wikimedia": 1}.get(e.get("source"), 2))
     for entry in ranked:
         path = folder / entry["file"]
         if not path.exists():
@@ -96,6 +97,8 @@ def short_credit(entry):
     author = entry["author"].split("\n")[0][:40]
     if entry.get("source") == "pixabay":
         return f"Photo: {author} / Pixabay"
+    if entry.get("source") == "own":
+        return f"Photo: {author}"
     return f"Photo: {author} / {entry.get('license', '')}".strip(" /")
 
 

@@ -47,6 +47,8 @@ def short_attribution(entry):
     author = " ".join(entry["author"].split())
     if entry.get("source") == "pixabay":
         return f"{author} / Pixabay, {entry['page_url']}"
+    if entry.get("source") == "own":
+        return f"Photo: {author}"
     title = entry.get("title", "").rsplit(".", 1)[0]
     link = f"https://commons.wikimedia.org/?curid={entry['id']}" if entry.get("id") else entry.get("page_url", "")
     return f'"{title}" by {author}, {entry.get("license", "")}, {link}'

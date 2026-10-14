@@ -249,8 +249,10 @@ class Route:
         """(elevation ft, name of the nearest named point) for the highest point."""
         k = int(np.argmax(self.prof_ft))
         named = list(self.stops) + list(self.places)
-        near = min(named, key=lambda p: abs(p.mile - self.prof_mi[k]))
-        return float(self.prof_ft[k]), near.name
+        top = float(self.prof_ft[k])
+        known = [p for p in named if p.elevation_ft and abs(p.elevation_ft - top) < 1]
+        near = known[0] if known else min(named, key=lambda p: abs(p.mile - self.prof_mi[k]))
+        return top, near.name
 
     def low_point(self):
         k = int(np.argmin(self.prof_ft))
