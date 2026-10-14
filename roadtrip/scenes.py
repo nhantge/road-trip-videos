@@ -197,7 +197,9 @@ class Renderer:
             n = max(1, len(self.photos.get(st.index) or []))
             return [(st.index, k, st.tag, "") for k in range(n)]
         slides = [(st.index, 0, "COMING UP", "")]
-        slides += [(("sight", st.index, k), 0, "WORTH A STOP", sight.name) for k, sight in enumerate(st.sights)]
+        # Sights without a photo keep their map marker and tip but get no slide.
+        slides += [(("sight", st.index, k), 0, "WORTH A STOP", sight.name) for k, sight in enumerate(st.sights)
+                   if self.photos.get(("sight", st.index, k))]
         return slides
 
     def slide_at(self, seg, t):
@@ -344,7 +346,7 @@ class Renderer:
         if k == 0:
             self._fact_card(img, "ON THIS STRETCH", st.drive_fact, t, 0.8)
         else:
-            sight = st.sights[k - 1]
+            sight = st.sights[slides[k][0][2]]
             self._fact_card(img, f"WORTH A STOP  ·  {sight.name.upper()}", sight.note, lt, 0.15)
 
     def _leg_chart(self, img, a_stop, b_stop, p, top, alpha):

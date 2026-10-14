@@ -85,6 +85,7 @@ say = "Keep an eye out for Molas Lake, the perfect picnic spot!"
 lat = 37.7470
 lon = -107.6860
 photo_query = "Molas Lake"
+photos = ["wikimedia-59049238.jpg"]
 [stops.info]
 "SEE" = "The overlook across to the Grenadier Range and the Animas River gorge."
 "DO" = "Hike a stretch of the Colorado Trail, which crosses right here."
@@ -101,7 +102,7 @@ road = "US 550"
 miles = 7
 drive_time = "15 min"
 photo_query = "Coal Bank Pass"
-photos = ["wikimedia-151712104.jpg", "wikimedia-3829420.jpg", "wikimedia-163484710.jpg", "wikimedia-89796760.jpg"]
+photos = ["images/engineer-mountain-colorado/wikimedia-107268081.jpg", "wikimedia-151712104.jpg", "wikimedia-3829420.jpg", "images/engineer-mountain-colorado/wikimedia-107408757.jpg"]
 via = [[37.7250, -107.7150], [37.7120, -107.7450], [37.7050, -107.7650]]
 drive_caption = "Down from Molas, then straight back up to the second pass!"
 drive_fact = "Two passes over 10,000 feet, just 7 miles apart!"
@@ -130,6 +131,7 @@ road = "US 550"
 miles = 35
 drive_time = "50 min"
 photo_query = "Durango Colorado"
+photos = ["wikimedia-176177003.jpg", "wikimedia-159718252.jpg", "wikimedia-41797674.jpg"]
 via = [
   [37.6850, -107.7900], [37.6650, -107.8000], [37.6400, -107.8070],
   { name = "Purgatory", lat = 37.6303, lon = -107.8139 },
