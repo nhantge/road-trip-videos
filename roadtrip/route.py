@@ -89,6 +89,7 @@ class Route:
     narration: dict = field(default_factory=dict)
     inset: dict = field(default_factory=dict)
     up_next: dict = field(default_factory=dict)
+    thumbnail: dict = field(default_factory=dict)
     places: list = field(default_factory=list)
 
     @property
@@ -229,7 +230,7 @@ STOP_KEYS = {"name", "lat", "lon", "kind", "tag", "elevation_ft", "caption", "fa
              "info", "photo_query", "photos", "road", "miles", "drive_time", "via",
              "drive_caption", "drive_fact", "drive_narration"}
 ROUTE_KEYS = {"title", "series", "region", "days", "best_season", "hook", "tips", "narration",
-              "inset", "up_next", "stops"}
+              "inset", "up_next", "thumbnail", "stops"}
 
 
 def load_route(path):
@@ -270,6 +271,7 @@ def load_route(path):
         series=data.get("series", ""), region=data.get("region", ""), days=data.get("days", ""),
         best_season=data.get("best_season", ""), hook=data.get("hook", []), tips=data.get("tips", []),
         narration=data.get("narration", {}), inset=data.get("inset", {}), up_next=data.get("up_next", {}),
+        thumbnail=data.get("thumbnail", {}),
     )
 
 

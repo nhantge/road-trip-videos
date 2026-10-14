@@ -3,8 +3,8 @@
 
     python3 scripts/make_video.py routes/denver-to-ouray.toml
 
-Writes out/<route>/<route>.mp4 (1080p30) plus description.txt (chapters, itinerary,
-photo credits), captions.srt, voiceover_script.md and timeline.json.
+Writes out/<route>/<route>.mp4 (1080p30) plus thumbnail.jpg, description.txt
+(chapters, itinerary, photo credits), captions.srt, voiceover_script.md and timeline.json.
 """
 
 import argparse
@@ -19,7 +19,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from roadtrip import audio, describe, photos, style  # noqa: E402
+from roadtrip import audio, describe, photos, style, thumbnail  # noqa: E402
 from roadtrip.route import load_route  # noqa: E402
 from roadtrip.scenes import Renderer  # noqa: E402
 from roadtrip.terrain import Terrain  # noqa: E402
@@ -45,6 +45,7 @@ def main():
     ap.add_argument("--photo-sheets", action="store_true",
                     help="write a contact sheet of each stop's photos (for choosing `photos = [...]`) and exit")
     ap.add_argument("--crf", type=int, default=19, help="x264 quality (lower is better, default 19)")
+    ap.add_argument("--audio-only", action="store_true", help="write just the soundtrack (soundtrack.wav), to check the mix")
     args = ap.parse_args()
 
     route = load_route(args.route)
@@ -71,6 +72,10 @@ def main():
     if outro and not outro.exists():
         print(f"warning: outro music {outro} not found; skipping it", file=sys.stderr)
         outro = None
+    bed = audio.BRAND_DIR / brand["music_bed"] if brand.get("music_bed") else None
+    if bed and not bed.exists():
+        print(f"warning: music bed {bed} not found; skipping it", file=sys.stderr)
+        bed = None
     sting_dur = audio.media_duration(sting) if sting else 0.0
     full = sting_dur + total
 
@@ -91,6 +96,16 @@ def main():
                       "narration": s.narration, "voiceover": s.vo_path.name if s.vo_path else None}
                      for s in segs]}, indent=2) + "\n")
 
+    thumbnail.render(route, out / "thumbnail.jpg")
+
+    soundtrack = out / "soundtrack.wav"
+    mix_args = (full, sting, sting_dur, outro, float(brand.get("outro_seconds", 10)), segs,
+                bed, float(brand.get("music_bed_volume", 0.16)))
+    if args.audio_only:
+        audio.mix(soundtrack, *mix_args)
+        print(f"wrote {soundtrack.relative_to(REPO_ROOT)}")
+        return
+
     t0 = time.time()
     _renderer = Renderer(route, segs, terrain)
     print(f"map built in {time.time() - t0:.0f} s")
@@ -102,8 +117,7 @@ def main():
         print(f"stills in {out}")
         return
 
-    soundtrack = out / "soundtrack.wav"
-    audio.mix(soundtrack, full, sting, sting_dur, outro, float(brand.get("outro_seconds", 10)), segs)
+    audio.mix(soundtrack, *mix_args)
 
     video = out / f"{route.slug}.mp4"
     n = int(round(total * style.FPS))

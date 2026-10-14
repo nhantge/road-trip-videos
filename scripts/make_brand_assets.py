@@ -2,11 +2,13 @@
 """Build the channel's reusable brand assets in assets/brand/:
 
     intro_sting.mp4   2.6 s animated logo sting with sound, played before every episode
+    music_bed.m4a     a quiet, seamless loop that sits under the narration
     outro_music.m4a   original music that ends every episode (its last outro_seconds play,
                       so the final chord lands on the last frame)
 
 Both are synthesized here (no samples or licensed audio), so the channel owns them.
-Run it once; the files are committed and reused by every render. Swap either file
+Run it once (or name the assets to rebuild: sting, outro, bed); the files are
+committed and reused by every render. Swap either file
 for your own (same name, or point brand.json at it) and every episode picks it up.
 """
 
@@ -160,6 +162,38 @@ def outro_music(seconds=13.0):
     return out
 
 
+# -- music bed ---------------------------------------------------------------------------
+
+def music_bed(bars=16):
+    """A soft, loopable bed under the narration: D-Bm-G-A pads, a quiet arpeggio and a
+    light shaker at 84 BPM. No drums or melody to compete with the voice. The tail of
+    the last bar is wrapped onto the start so the loop is seamless."""
+    rng = np.random.default_rng(5)
+    beat = 60 / 84
+    bar = beat * 4
+    seconds = bars * bar
+    chords = [("D3", "A3", "D4", "F#4"), ("B2", "F#3", "B3", "D4"), ("G2", "D3", "G3", "B3"), ("A2", "E3", "A3", "C#4")]
+    n = int((seconds + 3) * SR)
+    mono = np.zeros(n)
+    width = np.zeros(n)
+    for i in range(bars):
+        chord = chords[i % len(chords)]
+        t0 = i * bar
+        freqs = [note(c) for c in chord]
+        place(width, pad(freqs, bar + 1.2, 0.09), t0)
+        place(mono, pluck(note(chord[0]) / 2, bar, 0.14), t0)
+        arp = [freqs[1] * 2, freqs[2] * 2, freqs[3] * 2, freqs[2] * 2]
+        for k in range(8):
+            if i % 2 == 0 or k % 2 == 0:  # thinner arpeggio every other bar
+                place(width, pluck(arp[k % 4], beat * 1.5, 0.045), t0 + k * beat / 2)
+        for k in range(8):
+            place(width, shaker(rng, 0.016 if k % 2 else 0.009), t0 + k * beat / 2)
+    out = stereo(mono, 0.0, 0) + stereo(width, 0.8)
+    loop = int(seconds * SR)
+    out[: n - loop] += out[loop:]  # wrap the ringing tail onto the start
+    return out[:loop]
+
+
 # -- intro sting ---------------------------------------------------------------------
 
 STING_SECONDS = 2.6
@@ -227,25 +261,38 @@ def sting_frame(t, brand):
 
 
 def main():
+    which = set(sys.argv[1:]) or {"sting", "outro", "bed"}
+    unknown = which - {"sting", "outro", "bed"}
+    if unknown:
+        sys.exit(f"unknown asset(s) {sorted(unknown)}; choose from sting, outro, bed")
     brand = json.loads((BRAND / "brand.json").read_text())
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
-        write_wav(tmp / "outro.wav", outro_music())
-        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(tmp / "outro.wav"), "-c:a", "aac", "-b:a", "192k",
-                        str(BRAND / brand["outro_music"])], check=True)
-        write_wav(tmp / "sting.wav", sting_audio())
-        frames = int(STING_SECONDS * S.FPS)
-        cmd = ["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{S.W}x{S.H}",
-               "-r", str(S.FPS), "-i", "pipe:0", "-i", str(tmp / "sting.wav"), "-c:v", "libx264", "-crf", "16",
-               "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart",
-               str(BRAND / brand["intro_sting"])]
-        proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-        for i in range(frames):
-            proc.stdin.write(sting_frame(i / S.FPS, brand).tobytes())
-        proc.stdin.close()
-        if proc.wait():
-            sys.exit("ffmpeg failed")
-    print(f"wrote {brand['intro_sting']} and {brand['outro_music']} in {BRAND.relative_to(REPO_ROOT)}")
+
+        def encode(audio, name):
+            write_wav(tmp / "a.wav", audio)
+            subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(tmp / "a.wav"), "-c:a", "aac", "-b:a", "192k",
+                            str(BRAND / name)], check=True)
+            print(f"wrote {name}")
+
+        if "outro" in which:
+            encode(outro_music(), brand["outro_music"])
+        if "bed" in which:
+            encode(music_bed(), brand["music_bed"])
+        if "sting" in which:
+            write_wav(tmp / "sting.wav", sting_audio())
+            frames = int(STING_SECONDS * S.FPS)
+            cmd = ["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{S.W}x{S.H}",
+                   "-r", str(S.FPS), "-i", "pipe:0", "-i", str(tmp / "sting.wav"), "-c:v", "libx264", "-crf", "16",
+                   "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart",
+                   str(BRAND / brand["intro_sting"])]
+            proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+            for i in range(frames):
+                proc.stdin.write(sting_frame(i / S.FPS, brand).tobytes())
+            proc.stdin.close()
+            if proc.wait():
+                sys.exit("ffmpeg failed")
+            print(f"wrote {brand['intro_sting']}")
 
 
 if __name__ == "__main__":

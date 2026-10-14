@@ -3,8 +3,9 @@
 Images and a video generator for road trip episodes. Give it a route (start, stops,
 end) and it renders a 1080p MP4: an animated map that follows the drive, a running
 mile counter, an elevation profile, captions and photo cards for each stop, voiceover,
-a branded intro sting and outro music, and an end card. It also writes the YouTube
-description (chapters, itinerary, photo credits) and a captions file.
+a branded intro sting, a music bed and outro music, and an end card. It also writes
+the thumbnail, the YouTube description (chapters, itinerary, photo credits) and a
+captions file.
 
 Demo: [`examples/denver-to-ouray/`](examples/denver-to-ouray/) (US 285 and US 50 over
 the Continental Divide, narrated by the ElevenLabs voice "Sadie").
@@ -21,13 +22,15 @@ Output lands in `out/<route>/`:
 
 | File | What it is |
 |---|---|
-| `<route>.mp4` | the episode, 1920x1080, 30 fps, H.264 + AAC |
+| `<route>.mp4` | the episode, 1920x1080, 30 fps, H.264 + AAC, audio at -14 LUFS (YouTube's level) |
+| `thumbnail.jpg` | 1280x720 YouTube thumbnail: stop photo, headline, mini route map |
 | `description.txt` | YouTube description: chapters, the route with mileage and drive times, tips, photo credits |
 | `captions.srt` | captions timed to the narration, for upload to YouTube |
 | `voiceover_script.md` | every narration line with its segment id and start time |
 | `timeline.json` | segment start times and durations |
 
 Useful flags: `--stills` (one PNG per segment instead of the video, for a quick look),
+`--audio-only` (just the soundtrack, to check the mix), `--crf N` (video quality),
 `--photo-sheets` (contact sheets of each stop's photos, for picking `photos = [...]`),
 `--no-voiceover`, `--no-fetch`, `--offline` (cached terrain only), `--workers N`.
 
@@ -57,6 +60,11 @@ tips = ["Fill up in Buena Vista...", ...]                               # planne
 name = "Colorado"
 bounds = [-109.05, 37.0, -102.04, 41.0]          # west, south, east, north
 city = { name = "Denver", lat = 39.7392, lon = -104.9903 }
+
+[thumbnail]                         # thumbnail.jpg
+text = ["305 MILES", "OVER THE DIVIDE"]   # line 1 white, line 2 orange; 2-5 words
+stop = "Blue Mesa Reservoir"        # whose photo (default: the highest stop)
+photo = 1                           # which of its photos; also zoom = 1.3, focus = 0.8
 
 [up_next]                           # end card
 title = "The Million Dollar Highway"
@@ -132,13 +140,30 @@ to 1.0 to use clips as recorded.
 `assets/brand/` holds what every episode shares:
 
 - `intro_sting.mp4`: a 2.6 s logo sting with sound, played first
+- `music_bed.m4a`: a quiet loop under the whole episode at `music_bed_volume`; it
+  ducks about 10 dB whenever the narrator talks and hands over to the outro
 - `outro_music.m4a`: music for the end; its last `outro_seconds` (10) play under the
   planner and end card, so the final chord lands on the last frame
 - `brand.json`: channel name, tagline, the file names above, and the voice settings
 
 Both media files are original and were synthesized by `scripts/make_brand_assets.py`
-(no samples or licensed audio). Re-run it after changing the channel name or tagline,
-or replace either file with your own and every episode will use it.
+(no samples or licensed audio). Re-run it after changing the channel name or tagline
+(`python3 scripts/make_brand_assets.py sting` rebuilds just the sting; `outro` and `bed`
+work the same way), or replace any file with your own and every episode will use it.
+The final mix is loudness-normalized to -14 LUFS, so swapped-in music needs no leveling.
+
+## Publishing on YouTube
+
+The generator doesn't upload; do this in YouTube Studio:
+
+1. Upload `<route>.mp4`, set the title, and paste `description.txt` (YouTube builds
+   chapters from its timestamps).
+2. Upload `thumbnail.jpg` as the custom thumbnail.
+3. Subtitles: upload `captions.srt` (English, "with timing").
+4. End screen: add a Subscribe element and a video element over the last ~7 s; the
+   end card leaves room for both on the left and right.
+
+`examples/denver-to-ouray/UPLOAD.md` has the full checklist used for the demo.
 
 ## How an episode is laid out
 

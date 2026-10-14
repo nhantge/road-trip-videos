@@ -28,6 +28,11 @@ name = "Colorado"
 bounds = [-109.05, 37.0, -102.04, 41.0]   # west, south, east, north
 city = { name = "Denver", lat = 39.7392, lon = -104.9903 }
 
+[thumbnail]                         # out/<route>/thumbnail.jpg for YouTube
+text = ["305 MILES", "OVER THE DIVIDE"]   # first line white, second orange; keep it short
+stop = "Blue Mesa Reservoir"        # whose photo to use
+photo = 1                           # which of that stop's photos (0 = first)
+
 [up_next]
 title = "The Million Dollar Highway"
 subtitle = "Ouray to Silverton"
