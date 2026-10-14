@@ -69,6 +69,7 @@ road = "US 550"
 miles = 2.5
 drive_time = "8 min"
 photo_query = "Bear Creek Falls Colorado"
+photos = ["wikimedia-51916896.jpg", "wikimedia-51336103.jpg", "wikimedia-51336082.jpg"]
 via = [[38.0125, -107.6690], [38.0050, -107.6620]]
 drive_caption = "Right out of town, US 550 switchbacks up into the Uncompahgre Gorge!"
 drive_fact = "The highway is carved straight into the canyon wall, with some of the biggest drop-offs of the whole drive."

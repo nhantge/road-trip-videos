@@ -118,8 +118,8 @@ def extension_for(url):
     return ".jpg" if ext in ("", ".jpeg") else ext
 
 
-def fetch_place(place, sources, count, width, pixabay_key):
-    folder = REPO_ROOT / "images" / slugify(place)
+def fetch_place(place, sources, count, width, pixabay_key, dest=None):
+    folder = Path(dest or REPO_ROOT / "images") / slugify(place)
     folder.mkdir(parents=True, exist_ok=True)
     credits_path = folder / "credits.json"
     credits = json.loads(credits_path.read_text()) if credits_path.exists() else []
@@ -149,13 +149,14 @@ def fetch_place(place, sources, count, width, pixabay_key):
             item["attribution"] = f"\"{item['title']}\" by {item['author']}, {license_part}, via {item['page_url']}"
         credits.append({"file": filename, "place": place, **item})
         known.add(filename)
+        credits_path.write_text(json.dumps(credits, indent=2, ensure_ascii=False) + "\n")  # keep progress if stopped
         added += 1
         print(f"  {filename}  [{item['license']}] {item['author']}")
         if item["source"] == "wikimedia":
             time.sleep(3)  # stay well under Wikimedia's rate limits (shared IPs get throttled)
 
     credits_path.write_text(json.dumps(credits, indent=2, ensure_ascii=False) + "\n")
-    print(f"{place}: {added} new image(s) in {folder.relative_to(REPO_ROOT)}")
+    print(f"{place}: {added} new image(s) in {folder}")
 
 
 def main():
@@ -164,6 +165,7 @@ def main():
     parser.add_argument("--count", type=int, default=5, help="images per source per place (default 5)")
     parser.add_argument("--source", choices=["both", "wikimedia", "pixabay"], default="both")
     parser.add_argument("--width", type=int, default=1920, help="Wikimedia thumbnail width (default 1920)")
+    parser.add_argument("--dest", help="folder to download into instead of images/ (e.g. to vet photos first)")
     args = parser.parse_args()
 
     sources = {"wikimedia", "pixabay"} if args.source == "both" else {args.source}
@@ -175,7 +177,7 @@ def main():
         sources.discard("pixabay")
 
     for place in args.places:
-        fetch_place(place, sources, args.count, args.width, pixabay_key)
+        fetch_place(place, sources, args.count, args.width, pixabay_key, args.dest)
 
 
 if __name__ == "__main__":
