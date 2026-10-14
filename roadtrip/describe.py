@@ -27,7 +27,31 @@ def chapters(route, segs, offset):
     return out
 
 
+YOUTUBE_LIMIT = 5000  # characters; YouTube also rejects "<" and ">"
+
+
 def description(route, segs, offset, brand):
+    """YouTube description, kept under YouTube's 5,000-character limit."""
+    text = _description(route, segs, offset, brand)
+    if len(text) > YOUTUBE_LIMIT:  # the per-stop see/eat/stay rows are also in the video
+        text = _description(route, segs, offset, brand, details=False)
+    if len(text) > YOUTUBE_LIMIT:
+        raise ValueError(f"description is {len(text)} characters; YouTube allows {YOUTUBE_LIMIT}")
+    return text.replace("<", "(").replace(">", ")")
+
+
+def short_attribution(entry):
+    """Compact credit: title, author, license and a short source link."""
+    if not entry or "author" not in entry:
+        return ""
+    author = " ".join(entry["author"].split())
+    if entry.get("source") == "pixabay":
+        return f"{author} / Pixabay, {entry['page_url']}"
+    title = entry.get("title", "").rsplit(".", 1)[0]
+    link = f"https://commons.wikimedia.org/?curid={entry['id']}" if entry.get("id") else entry.get("page_url", "")
+    return f'"{title}" by {author}, {entry.get("license", "")}, {link}'
+
+def _description(route, segs, offset, brand, details=True):
     lines = [f"{route.title} | {route.series}" if route.series else route.title, ""]
     bits = [f"{fmt_int(route.total_miles)} miles", f"{len(route.stops)} stops",
             f"about {fmt_minutes(route.total_drive_minutes)} of driving"]
@@ -43,7 +67,7 @@ def description(route, segs, offset, brand):
         lines.append(f"{st.index + 1}. {st.name} ({fmt_int(st.elevation_ft)} ft) · {where}")
         for sight in st.sights:
             lines.append(f"   On the way, worth a stop: {sight.name}. {sight.note}")
-        for label, value in st.info.items():
+        for label, value in (st.info.items() if details else ()):
             lines.append(f"   {label.title()}: {value}")
     lines.append("")
     if route.best_season:
@@ -57,8 +81,9 @@ def description(route, segs, offset, brand):
     for st in route.stops:
         for item in [st, *st.sights]:
             for _, entry in pick_photos(item, limit=1 if item is not st else 4):
-                if entry.get("attribution") and entry["attribution"] not in credits:
-                    credits.append(entry["attribution"])
+                line = short_attribution(entry)
+                if line and line not in credits:
+                    credits.append(line)
     if credits:
         lines += ["PHOTO CREDITS"] + [f"- {c}" for c in credits] + [""]
     lines.append("CREDITS")

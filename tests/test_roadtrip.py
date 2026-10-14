@@ -98,6 +98,14 @@ class TimelineTests(unittest.TestCase):
             self.assertGreaterEqual(b - a, 10)
         self.assertGreaterEqual(2.6 + total - marks[-1][0], 10)
 
+    def test_descriptions_fit_youtube(self):
+        for name in ("denver-to-ouray", "million-dollar-highway"):
+            route = R.load_route(ROUTE.parent / f"{name}.toml").build(terrain=None)
+            segs, _, _ = timeline.layout(route, use_voiceover=False)
+            text = describe.description(route, segs, 2.6, {"music_credit": "x"})
+            self.assertLessEqual(len(text), describe.YOUTUBE_LIMIT, name)
+            self.assertNotRegex(text, "[<>]")
+
     def test_drive_progress_is_smooth_and_monotonic(self):
         p = [scenes.drive_progress(t) for t in np.linspace(0, 1, 501)]
         self.assertAlmostEqual(p[0], 0)

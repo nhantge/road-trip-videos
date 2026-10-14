@@ -42,24 +42,24 @@ GOOD TO KNOW
 Mileage and drive times are approximate and don't include stops. Check road conditions before you go.
 
 PHOTO CREDITS
-- Image by 12019 from Pixabay (https://pixabay.com/photos/beaumont-hotel-ouray-colorado-town-1679707/)
-- Image by psaudio from Pixabay (https://pixabay.com/photos/ouray-colorado-landscape-nature-669432/)
-- Image by psaudio from Pixabay (https://pixabay.com/photos/columbines-colorado-ouray-mountains-670527/)
-- Image by psaudio from Pixabay (https://pixabay.com/photos/wildflowers-stream-colorado-ouray-669467/)
-- "Bear Creek Falls in the San Juan Mountains, Telluride, Colorado LCCN2015632366.tif" by Carol M. Highsmith, Public domain, via https://commons.wikimedia.org/wiki/File:Bear_Creek_Falls_in_the_San_Juan_Mountains,_Telluride,_Colorado_LCCN2015632366.tif
-- "Bear Creek Falls in the San Juan Mountains, Telluride, Colorado LCCN2015632364.tif" by Carol M. Highsmith, Public domain, via https://commons.wikimedia.org/wiki/File:Bear_Creek_Falls_in_the_San_Juan_Mountains,_Telluride,_Colorado_LCCN2015632364.tif
-- "Information panel- A snapshot of the Geology at Bear Creek Falls in the San Juan Mountains, Telluride, Colorado LCCN2015632363.tif" by Carol M. Highsmith, Public domain, via https://commons.wikimedia.org/wiki/File:Information_panel-_A_snapshot_of_the_Geology_at_Bear_Creek_Falls_in_the_San_Juan_Mountains,_Telluride,_Colorado_LCCN2015632363.tif
-- "Red Mountain Pass Red Mountain 2 2006 09 13.jpg" by Andreas F. Borchert, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), via https://commons.wikimedia.org/wiki/File:Red_Mountain_Pass_Red_Mountain_2_2006_09_13.jpg
-- "Red Mountain Pass Red Mountain 1 2006 09 13.jpg" by Andreas F. Borchert, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), via https://commons.wikimedia.org/wiki/File:Red_Mountain_Pass_Red_Mountain_1_2006_09_13.jpg
-- "Red Mountain Pass, Ouray-Silverton Stage Road, Colorado, 1901.jpg" by Detroit Publishing Co., Public domain, via https://commons.wikimedia.org/wiki/File:Red_Mountain_Pass,_Ouray-Silverton_Stage_Road,_Colorado,_1901.jpg
-- "Red Mountain Pass - Flickr - snowpeak.jpg" by John Fowler from Placitas, NM, USA, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0), via https://commons.wikimedia.org/wiki/File:Red_Mountain_Pass_-_Flickr_-_snowpeak.jpg
-- "Ironton, Colorado (7575397600).jpg" by John Fowler from Placitas, NM, USA, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0), via https://commons.wikimedia.org/wiki/File:Ironton,_Colorado_(7575397600).jpg
-- "Yankee Girl Mine in Red Mountain Pass near Guston, Colorado.png" by William Henry Jackson, Public domain, via https://commons.wikimedia.org/wiki/File:Yankee_Girl_Mine_in_Red_Mountain_Pass_near_Guston,_Colorado.png
-- "Downtown Silverton, Colorado.jpg" by Alex Reinhart, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0), via https://commons.wikimedia.org/wiki/File:Downtown_Silverton,_Colorado.jpg
-- "Train by the Durango and Silverton Narrow Gauge Railroad.jpg" by Michael Gäbler, CC BY 3.0 (https://creativecommons.org/licenses/by/3.0), via https://commons.wikimedia.org/wiki/File:Train_by_the_Durango_and_Silverton_Narrow_Gauge_Railroad.jpg
-- Image by RosZie from Pixabay (https://pixabay.com/photos/historic-center-architecture-7375198/)
-- "Silverton.jpg" by Daniel Schwen, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), via https://commons.wikimedia.org/wiki/File:Silverton.jpg
-- "Ice Lake basin, San Juan Mountains, Colorado.jpg" by John Fowler, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0), via https://commons.wikimedia.org/wiki/File:Ice_Lake_basin,_San_Juan_Mountains,_Colorado.jpg
+- 12019 / Pixabay, https://pixabay.com/photos/beaumont-hotel-ouray-colorado-town-1679707/
+- psaudio / Pixabay, https://pixabay.com/photos/ouray-colorado-landscape-nature-669432/
+- psaudio / Pixabay, https://pixabay.com/photos/columbines-colorado-ouray-mountains-670527/
+- psaudio / Pixabay, https://pixabay.com/photos/wildflowers-stream-colorado-ouray-669467/
+- "Bear Creek Falls in the San Juan Mountains, Telluride, Colorado LCCN2015632366" by Carol M. Highsmith, Public domain, https://commons.wikimedia.org/?curid=51916896
+- "Bear Creek Falls in the San Juan Mountains, Telluride, Colorado LCCN2015632364" by Carol M. Highsmith, Public domain, https://commons.wikimedia.org/?curid=51336103
+- "Information panel- A snapshot of the Geology at Bear Creek Falls in the San Juan Mountains, Telluride, Colorado LCCN2015632363" by Carol M. Highsmith, Public domain, https://commons.wikimedia.org/?curid=51336082
+- "Red Mountain Pass Red Mountain 2 2006 09 13" by Andreas F. Borchert, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=2216529
+- "Red Mountain Pass Red Mountain 1 2006 09 13" by Andreas F. Borchert, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=2216582
+- "Red Mountain Pass, Ouray-Silverton Stage Road, Colorado, 1901" by Detroit Publishing Co., Public domain, https://commons.wikimedia.org/?curid=11159541
+- "Red Mountain Pass - Flickr - snowpeak" by John Fowler from Placitas, NM, USA, CC BY 2.0, https://commons.wikimedia.org/?curid=92721973
+- "Ironton, Colorado (7575397600)" by John Fowler from Placitas, NM, USA, CC BY 2.0, https://commons.wikimedia.org/?curid=24663091
+- "Yankee Girl Mine in Red Mountain Pass near Guston, Colorado" by William Henry Jackson, Public domain, https://commons.wikimedia.org/?curid=100036775
+- "Downtown Silverton, Colorado" by Alex Reinhart, CC BY-SA 3.0, https://commons.wikimedia.org/?curid=27487059
+- "Train by the Durango and Silverton Narrow Gauge Railroad" by Michael Gäbler, CC BY 3.0, https://commons.wikimedia.org/?curid=18773019
+- RosZie / Pixabay, https://pixabay.com/photos/historic-center-architecture-7375198/
+- "Silverton" by Daniel Schwen, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=10935432
+- "Ice Lake basin, San Juan Mountains, Colorado" by John Fowler, CC BY 2.0, https://commons.wikimedia.org/?curid=60006502
 
 CREDITS
 - Intro sting and outro music: original music by Colorado Road Trips
