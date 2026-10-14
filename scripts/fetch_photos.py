@@ -29,6 +29,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 WIKIMEDIA_API = "https://commons.wikimedia.org/w/api.php"
 PIXABAY_API = "https://pixabay.com/api/"
 MAX_RETRIES = 8
+MAX_WAIT = 90  # seconds; Wikimedia may ask for 600 but often answers much sooner
 
 
 def slugify(text):
@@ -53,6 +54,7 @@ def http_get(url, params=None):
                 raise
             retry_after = err.headers.get("Retry-After", "")
             delay = int(retry_after) if retry_after.isdigit() else 5 * 2**attempt
+            delay = min(delay, MAX_WAIT)  # throttling is bursty; retrying sooner usually works
             print(f"  HTTP {err.code}, retrying in {delay}s", file=sys.stderr)
             time.sleep(delay)
 

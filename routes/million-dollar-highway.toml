@@ -68,7 +68,7 @@ tag = "THE ROAD CROSSES THE FALLS"
 road = "US 550"
 miles = 2.5
 drive_time = "8 min"
-photo_query = "Bear Creek Falls Ouray"
+photo_query = "Bear Creek Falls Colorado"
 via = [[38.0125, -107.6690], [38.0050, -107.6620]]
 drive_caption = "Right out of town, US 550 switchbacks up into the Uncompahgre Gorge!"
 drive_fact = "The highway is carved straight into the canyon wall, with some of the biggest drop-offs of the whole drive."
@@ -91,7 +91,7 @@ tag = "TOP OF THE HIGHWAY"
 road = "US 550"
 miles = 10.5
 drive_time = "25 min"
-photo_query = "Red Mountain Pass"
+photo_query = "Red Mountain Pass Colorado"
 via = [
   [37.9850, -107.6580], [37.9650, -107.6630],
   [37.9450, -107.6700],
@@ -145,7 +145,7 @@ name = "Ice Lake Basin"
 note = "Bright blue alpine lakes. The trail starts up South Mineral Creek Road; plan a full day."
 lat = 37.8060
 lon = -107.7730
-photo_query = "Ice Lake Basin"
+photo_query = "Ice Lake Basin Colorado"
 [stops.info]
 "SEE & DO" = "Ride the steam train, or tour the Old Hundred Gold Mine."
 "EAT" = "Handlebars Food & Saloon, right on Greene Street."
