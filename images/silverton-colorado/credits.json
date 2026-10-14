@@ -26,5 +26,57 @@
     "license_url": "https://pixabay.com/service/license-summary/",
     "attribution_required": false,
     "attribution": "Image by Wolfgang_P_aus_E from Pixabay (https://pixabay.com/photos/silverton-stage-couch-stagecoach-257379/)"
+  },
+  {
+    "file": "wikimedia-18773019.jpg",
+    "place": "Silverton Colorado",
+    "source": "wikimedia",
+    "id": "18773019",
+    "title": "Train by the Durango and Silverton Narrow Gauge Railroad.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Train_by_the_Durango_and_Silverton_Narrow_Gauge_Railroad.jpg",
+    "author": "Michael Gäbler",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "attribution_required": true,
+    "attribution": "\"Train by the Durango and Silverton Narrow Gauge Railroad.jpg\" by Michael Gäbler, CC BY 3.0 (https://creativecommons.org/licenses/by/3.0), via https://commons.wikimedia.org/wiki/File:Train_by_the_Durango_and_Silverton_Narrow_Gauge_Railroad.jpg"
+  },
+  {
+    "file": "wikimedia-27487059.jpg",
+    "place": "Silverton Colorado",
+    "source": "wikimedia",
+    "id": "27487059",
+    "title": "Downtown Silverton, Colorado.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Downtown_Silverton,_Colorado.jpg",
+    "author": "Alex Reinhart",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution_required": true,
+    "attribution": "\"Downtown Silverton, Colorado.jpg\" by Alex Reinhart, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0), via https://commons.wikimedia.org/wiki/File:Downtown_Silverton,_Colorado.jpg"
+  },
+  {
+    "file": "wikimedia-10935432.jpg",
+    "place": "Silverton Colorado",
+    "source": "wikimedia",
+    "id": "10935432",
+    "title": "Silverton.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Silverton.jpg",
+    "author": "Daniel Schwen",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution_required": true,
+    "attribution": "\"Silverton.jpg\" by Daniel Schwen, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), via https://commons.wikimedia.org/wiki/File:Silverton.jpg"
+  },
+  {
+    "file": "wikimedia-33829833.jpg",
+    "place": "Silverton Colorado",
+    "source": "wikimedia",
+    "id": "33829833",
+    "title": "AERIAL VIEW OF SILVERTON, COLORADO - Silverton Historic District, Silverton, San Juan County, CO HABS COLO,56-SILTN,1-1.tif",
+    "page_url": "https://commons.wikimedia.org/wiki/File:AERIAL_VIEW_OF_SILVERTON,_COLORADO_-_Silverton_Historic_District,_Silverton,_San_Juan_County,_CO_HABS_COLO,56-SILTN,1-1.tif",
+    "author": "Related names:\n\nBarrett, William E, photographer\nMcDonald, Melissa, historian",
+    "license": "Public domain",
+    "license_url": "",
+    "attribution_required": false,
+    "attribution": "\"AERIAL VIEW OF SILVERTON, COLORADO - Silverton Historic District, Silverton, San Juan County, CO HABS COLO,56-SILTN,1-1.tif\" by Related names:\n\nBarrett, William E, photographer\nMcDonald, Melissa, historian, Public domain, via https://commons.wikimedia.org/wiki/File:AERIAL_VIEW_OF_SILVERTON,_COLORADO_-_Silverton_Historic_District,_Silverton,_San_Juan_County,_CO_HABS_COLO,56-SILTN,1-1.tif"
   }
 ]

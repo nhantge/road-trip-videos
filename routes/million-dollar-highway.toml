@@ -111,6 +111,7 @@ note = "Walk among the cabins of an 1880s mining camp, a short stroll off the hi
 lat = 37.9364
 lon = -107.6728
 photo_query = "Ironton Colorado"
+photos = ["wikimedia-24663091.jpg"]
 [[stops.sights]]
 name = "Yankee Girl Mine"
 note = "Its wooden headframe stands right beside the road. One of the richest silver mines of the 1880s."
@@ -133,6 +134,7 @@ road = "US 550"
 miles = 11
 drive_time = "20 min"
 photo_query = "Silverton Colorado"
+photos = ["wikimedia-27487059.jpg", "wikimedia-18773019.jpg", "pixabay-7375198.jpg", "wikimedia-10935432.jpg"]
 via = [
   [37.8880, -107.7200], [37.8760, -107.7250], [37.8550, -107.7255], [37.8350, -107.7265],
   [37.8220, -107.7150], [37.8160, -107.6980], [37.8110, -107.6820],
@@ -149,6 +151,7 @@ note = "Bright blue alpine lakes. The trail starts up South Mineral Creek Road; 
 lat = 37.8060
 lon = -107.7730
 photo_query = "Ice Lake Basin Colorado"
+photos = ["wikimedia-60006502.jpg"]
 [stops.info]
 "SEE & DO" = "Ride the steam train, or tour the Old Hundred Gold Mine."
 "EAT" = "Handlebars Food & Saloon, right on Greene Street."
