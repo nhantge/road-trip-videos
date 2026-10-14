@@ -1,0 +1,66 @@
+Denver to Ouray | Colorado Road Trips
+
+305 miles · 6 stops · about 5 hr 50 min of driving · 2 to 3 days recommended
+
+CHAPTERS
+0:00 Intro
+0:38 Denver
+0:56 Kenosha Pass
+1:23 Buena Vista
+1:48 Monarch Pass
+2:16 Blue Mesa Reservoir
+2:40 Ouray
+3:21 Trip planner
+
+THE ROUTE
+1. Denver (5,280 ft) · start
+   See & Do: Union Station and the Capitol's mile-high step.
+   Tip: Gas and snacks here. The first real town is an hour out.
+2. Kenosha Pass (10,001 ft) · mile 63 · 63 mi / 1 hr 15 min from Denver via US 285
+   See: The view across South Park, a 50-mile-wide mountain basin.
+   Do: Walk a stretch of the Colorado Trail, which crosses at the summit.
+   Tip: Aspens peak in the last two weeks of September.
+3. Buena Vista (7,965 ft) · mile 119 · 56 mi / 1 hr from Kenosha Pass via US 285
+   See & Do: Raft Browns Canyon on the Arkansas. Soak at Mount Princeton Hot Springs.
+   Eat: Eddyline Restaurant & Brewery, on the river.
+   Tip: Book rafting a few days ahead in July and August.
+4. Monarch Pass (11,312 ft) · mile 160 · 41 mi / 50 min from Buena Vista via US 50
+   See: The Continental Divide marker and 360-degree views of the Sawatch Range.
+   Do: Ride the Monarch Crest tram to 12,000 ft (summer only).
+   Tip: Weather changes fast up here. Bring a jacket even in July.
+5. Blue Mesa Reservoir (7,519 ft) · mile 219 · 59 mi / 1 hr 5 min from Monarch Pass via US 50
+   See: The Dillon Pinnacles, volcanic spires on the north shore.
+   Do: Stop at the Elk Creek Visitor Center, or rent a boat at the marina.
+   Tip: Wind picks up most afternoons. Paddle in the morning.
+6. Ouray (7,792 ft) · mile 305 · 86 mi / 1 hr 40 min from Blue Mesa Reservoir via US 50 · US 550
+   See & Do: Ouray Hot Springs Pool. Walk into Box Cañon Falls.
+   Eat: Ouray Brewery, with a rooftop deck on Main Street.
+   Stay: The Beaumont Hotel, built in 1886.
+
+Best season: Late June to early October
+
+GOOD TO KNOW
+- Fill up in Buena Vista, Salida, Gunnison and Montrose. Gaps between pumps get long.
+- Monarch Pass can see snow in any month. Check COtrip.org before you go.
+- Leave Denver early on Fridays. US 285 backs up with weekend traffic.
+
+Mileage and drive times are approximate and don't include stops. Check road conditions before you go.
+
+PHOTO CREDITS
+- Image by 12019 from Pixabay (https://pixabay.com/photos/denver-colorado-mountains-city-2228782/)
+- "Denver Skyline (147779451).jpeg" by Alex Gray, CC BY 3.0 (https://creativecommons.org/licenses/by/3.0), via https://commons.wikimedia.org/wiki/File:Denver_Skyline_(147779451).jpeg
+- "Kenosha Pass (10047905963).jpg" by KimonBerlin, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0), via https://commons.wikimedia.org/wiki/File:Kenosha_Pass_(10047905963).jpg
+- "Kenosha Pass 1447.jpg" by Chris Light, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), via https://commons.wikimedia.org/wiki/File:Kenosha_Pass_1447.jpg
+- "Downtown Buena Vista Colorado USA.JPG" by Greg Tally - User: (WT-shared) WineCountryInn at  wts wikivoyage, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0), via https://commons.wikimedia.org/wiki/File:Downtown_Buena_Vista_Colorado_USA.JPG
+- "Buena Vista, Colorado, Town Hall.jpg" by Elisa.rolle, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), via https://commons.wikimedia.org/wiki/File:Buena_Vista,_Colorado,_Town_Hall.jpg
+- "Monarchsign.JPG" by The original uploader was Nationalparks at English Wikipedia., CC BY-SA 2.5 (https://creativecommons.org/licenses/by-sa/2.5), via https://commons.wikimedia.org/wiki/File:Monarchsign.JPG
+- "Continental-Divide Monarch-Pass 2012-10-28.JPG" by Milan Suvajac, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), via https://commons.wikimedia.org/wiki/File:Continental-Divide_Monarch-Pass_2012-10-28.JPG
+- Image by RJA1988 from Pixabay (https://pixabay.com/photos/river-mountains-snow-field-meadow-5746496/)
+- Image by RJA1988 from Pixabay (https://pixabay.com/photos/river-mountains-snow-field-meadow-5746499/)
+- Image by 12019 from Pixabay (https://pixabay.com/photos/beaumont-hotel-ouray-colorado-town-1679707/)
+- Image by psaudio from Pixabay (https://pixabay.com/photos/columbines-colorado-ouray-mountains-670527/)
+
+CREDITS
+- Intro sting and outro music: original music by Colorado Road Trips
+- Voiceover: ElevenLabs voice "Sadie"
+- Elevation: AWS Terrain Tiles (USGS 3DEP, SRTM, GMTED2010, ETOPO1 and others, https://registry.opendata.aws/terrain-tiles/)
