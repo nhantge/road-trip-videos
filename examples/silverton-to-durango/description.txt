@@ -1,0 +1,65 @@
+Silverton to Durango | Colorado Road Trips
+
+48 miles · 4 stops · about 1 hr 20 min of driving · 1 day recommended
+
+CHAPTERS
+0:00 Intro
+0:37 Silverton / Molas Pass
+1:11 Coal Bank Pass
+1:33 Durango
+2:11 Trip planner
+
+THE ROUTE
+1. Silverton (9,318 ft) · start
+   See & Do: Greene Street's historic storefronts, and the steam train arriving midday.
+   Eat: Handlebars Food & Saloon.
+   Tip: Fill up here. Services are thin until Purgatory.
+2. Molas Pass (10,910 ft) · mile 6 · 6 mi / 15 min from Silverton via US 550
+   On the way, worth a stop: Molas Lake. A small mountain lake with a campground and huge views. Great for a picnic or a paddle.
+   See: The overlook across to the Grenadier Range and the Animas River gorge.
+   Do: Hike a stretch of the Colorado Trail, which crosses right here.
+   Tip: Afternoon storms roll in fast in summer. Come in the morning.
+3. Coal Bank Pass (10,640 ft) · mile 13 · 7 mi / 15 min from Molas Pass via US 550
+   On the way, worth a stop: Andrews Lake. A quiet lake just south of Molas Pass, with an easy loop trail and great reflections.
+   See: Engineer Mountain, towering right over the pass.
+   Hike: The Pass Creek Trail heads toward Engineer Mountain from here.
+   Tip: The descent south is long and steep. Use lower gears.
+4. Durango (6,512 ft) · mile 48 · 35 mi / 50 min from Coal Bank Pass via US 550
+   On the way, worth a stop: Purgatory Resort. In summer: an alpine coaster, scenic chairlift rides and mountain biking.
+   On the way, worth a stop: Trimble Hot Springs. Natural hot springs pools just north of Durango. Perfect after a day on the road.
+   See & Do: Ride the Durango & Silverton Narrow Gauge Railroad. Walk Main Avenue.
+   Eat: Steamworks Brewing Co.
+   Stay: The Strater Hotel, open since 1887.
+
+Best season: June to early October
+
+GOOD TO KNOW
+- Fill up in Silverton. There's little in the way of services until Purgatory.
+- Pull over at the Molas Pass overlook on the east side of the road. Don't skip it!
+- Watch for deer and elk south of Purgatory, especially at dawn and dusk.
+- Make it a loop: drive one way and ride the steam train the other (book ahead).
+
+Mileage and drive times are approximate and don't include stops. Check road conditions before you go.
+
+PHOTO CREDITS
+- "Downtown Silverton, Colorado" by Alex Reinhart, CC BY-SA 3.0, https://commons.wikimedia.org/?curid=27487059
+- RosZie / Pixabay, https://pixabay.com/photos/historic-center-architecture-7375198/
+- "Silverton" by Daniel Schwen, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=10935432
+- "Train by the Durango and Silverton Narrow Gauge Railroad" by Michael Gäbler, CC BY 3.0, https://commons.wikimedia.org/?curid=18773019
+- "Molas Pass (48316562841)" by John Fowler from Placitas, NM, USA, CC BY 2.0, https://commons.wikimedia.org/?curid=86542609
+- "Molas Pass CO NW 2006 09 13" by Andreas F. Borchert, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=2215637
+- "Molas Pass sign 1" by Jeffrey Beall, CC BY 4.0, https://commons.wikimedia.org/?curid=89767766
+- "Molas Pass CO" by Dave Austin, Public domain, https://commons.wikimedia.org/?curid=149686119
+- "Molas Lake Campground Silverton Colorado - panoramio" by SFC H, CC BY 3.0, https://commons.wikimedia.org/?curid=59049238
+- "Engineer Mountain" by mark byzewski, CC BY 2.0, https://commons.wikimedia.org/?curid=107268081
+- "Coal Bank Pass (16065809896)" by Chris M Morris, CC BY 2.0, https://commons.wikimedia.org/?curid=151712104
+- "Coalbankpass sign" by Original uploader was Nationalparks at en.wikipedia, CC BY-SA 2.5, https://commons.wikimedia.org/?curid=3829420
+- "Colorado Trail - Engineer Mountain" by James Charnesky, CC BY 2.0, https://commons.wikimedia.org/?curid=107408757
+- "Durango, Colorado" by Quintin Soloviev, CC BY 4.0, https://commons.wikimedia.org/?curid=176177003
+- "Downtown Durango, CO" by Maplemoths, CC BY 4.0, https://commons.wikimedia.org/?curid=159718252
+- "Durango-downtown" by Raburrell, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=41797674
+
+CREDITS
+- Intro sting and outro music: original music by Colorado Road Trips
+- Voiceover: ElevenLabs voice "Marie"
+- Elevation: AWS Terrain Tiles (USGS 3DEP, SRTM, GMTED2010, ETOPO1 and others, https://registry.opendata.aws/terrain-tiles/)
