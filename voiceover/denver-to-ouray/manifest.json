@@ -1,0 +1,21 @@
+{
+  "voice": "Sadie (ElevenLabs bD9maNcCuQQS75DGuteM)",
+  "model": "eleven_v3",
+  "hook": "eb3494908f",
+  "intro": "3031262bf2",
+  "overview": "86534f6c38",
+  "stop-0": "98d07708a9",
+  "drive-1": "5d9bdfb9be",
+  "stop-1": "ad9356e1c9",
+  "drive-2": "42b612d5e4",
+  "stop-2": "ac91679984",
+  "drive-3": "06d2e203d8",
+  "stop-3": "f3a3146ef3",
+  "drive-4": "0155a404d0",
+  "stop-4": "3fd3fbcebd",
+  "drive-5": "e31dffdccc",
+  "stop-5": "e8c1db24a9",
+  "finale": "7961183abf",
+  "planner": "2d1266310c",
+  "end": "675fe01dd1"
+}

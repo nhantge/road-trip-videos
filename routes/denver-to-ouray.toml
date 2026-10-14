@@ -1,0 +1,184 @@
+# Denver → Ouray over the Continental Divide (US 285, US 50, US 550).
+#
+# Every stop needs a name and lat/lon. Everything else is optional. `photos` pins
+# files from images/<photo_query slug>/ (pick them with --photo-sheets). The leg *into*
+# a stop (road name, miles, drive time, shaping points, drive caption and fact)
+# lives on that stop. See README.md for the full field list.
+
+title = "Denver to Ouray"
+series = "Colorado Road Trips"
+region = "Central Colorado"
+days = "2 to 3"
+best_season = "Late June to early October"
+# Short punchy lines for the "coming up" hook at the start. Each one is paired
+# with the stop named after the colon, whose photo plays behind it.
+hook = [
+  "Over the Continental Divide at 11,312 ft : Monarch Pass",
+  "Colorado's largest body of water : Blue Mesa Reservoir",
+  "A hot-springs town walled in by 13,000-foot peaks : Ouray",
+]
+tips = [
+  "Fill up in Buena Vista, Salida, Gunnison and Montrose. Gaps between pumps get long.",
+  "Monarch Pass can see snow in any month. Check COtrip.org before you go.",
+  "Leave Denver early on Fridays. US 285 backs up with weekend traffic.",
+]
+
+[inset]
+name = "Colorado"
+bounds = [-109.05, 37.0, -102.04, 41.0]   # west, south, east, north
+city = { name = "Denver", lat = 39.7392, lon = -104.9903 }
+
+[up_next]
+title = "The Million Dollar Highway"
+subtitle = "Ouray to Silverton"
+miles = 24
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Denver"
+lat = 39.7392
+lon = -104.9903
+elevation_ft = 5280
+tag = "START"
+photo_query = "Denver skyline"
+photos = ["pixabay-2228782.jpg", "wikimedia-73793552.jpg"]
+caption = "We start in Denver, exactly one mile high, and point the car southwest on US 285."
+fact = "The 13th step of the State Capitol sits at 5,280 ft. Look for the engraved marker."
+[stops.info]
+"SEE & DO" = "Union Station and the Capitol's mile-high step."
+"TIP" = "Gas and snacks here. The first real town is an hour out."
+
+[[stops]]
+name = "Kenosha Pass"
+lat = 39.4133
+lon = -105.7578
+elevation_ft = 10001
+kind = "pass"
+road = "US 285"
+miles = 63
+drive_time = "1 hr 15 min"
+photo_query = "Kenosha Pass"
+photos = ["wikimedia-57537383.jpg", "wikimedia-119499910.jpg"]
+via = [
+  [39.653, -105.053], [39.638, -105.170],
+  { name = "Conifer", lat = 39.5219, lon = -105.3047 },
+  [39.469, -105.380],
+  { name = "Bailey", lat = 39.4061, lon = -105.4733 },
+  [39.426, -105.555], [39.4589, -105.6614],
+]
+drive_caption = "US 285 climbs out of the foothills, through Conifer and Bailey, toward the Divide."
+drive_fact = "Bailey sits on the North Fork of the South Platte, the same river that runs through Denver."
+caption = "Kenosha Pass tops out at 10,001 ft, and the whole of South Park opens up below."
+fact = "In late September the aspens here turn gold. It's one of the busiest leaf-peeping spots in the state."
+[stops.info]
+"SEE" = "The view across South Park, a 50-mile-wide mountain basin."
+"DO" = "Walk a stretch of the Colorado Trail, which crosses at the summit."
+"TIP" = "Aspens peak in the last two weeks of September."
+
+[[stops]]
+name = "Buena Vista"
+lat = 38.8422
+lon = -106.1311
+elevation_ft = 7965
+road = "US 285"
+miles = 56
+drive_time = "1 hr"
+photo_query = "Buena Vista Colorado"
+photos = ["wikimedia-22986698.jpg", "wikimedia-63418574.jpg"]
+via = [
+  { name = "Jefferson", lat = 39.3780, lon = -105.8003 },
+  { name = "Fairplay", lat = 39.2247, lon = -106.0020 },
+  [39.10, -105.965], [38.993, -105.893],
+  { name = "Trout Creek Pass", lat = 38.9105, lon = -105.9708, kind = "pass", elevation_ft = 9487 },
+  [38.8135, -106.1100],
+]
+drive_caption = "Across South Park and over Trout Creek Pass, the Collegiate Peaks fill the windshield."
+drive_fact = "Fairplay is one of the towns that inspired the cartoon South Park."
+caption = "Buena Vista sits under a wall of fourteeners on the Arkansas River."
+fact = "Mount Princeton, Yale, Harvard and Columbia are all over 14,000 ft and all visible from town."
+[stops.info]
+"SEE & DO" = "Raft Browns Canyon on the Arkansas. Soak at Mount Princeton Hot Springs."
+"EAT" = "Eddyline Restaurant & Brewery, on the river."
+"TIP" = "Book rafting a few days ahead in July and August."
+
+[[stops]]
+name = "Monarch Pass"
+lat = 38.4967
+lon = -106.3253
+elevation_ft = 11312
+kind = "pass"
+tag = "CONTINENTAL DIVIDE"
+road = "US 50"
+miles = 41
+drive_time = "50 min"
+photo_query = "Monarch Pass"
+photos = ["wikimedia-5767514.jpg", "wikimedia-39156183.jpg"]
+via = [
+  [38.745, -106.077],
+  { name = "Poncha Springs", lat = 38.5130, lon = -106.0767 },
+  [38.5317, -106.2242], [38.5480, -106.2930], [38.512, -106.312],
+]
+drive_caption = "South to Poncha Springs, then US 50 climbs hard toward the Continental Divide."
+drive_fact = "From Poncha Springs, US 50 gains over 3,800 ft in about 18 miles."
+caption = "Monarch Pass: 11,312 ft. Rain that falls here splits between two oceans."
+fact = "Water on the east side drains to the Gulf of Mexico. The west side drains to the Pacific."
+[stops.info]
+"SEE" = "The Continental Divide marker and 360-degree views of the Sawatch Range."
+"DO" = "Ride the Monarch Crest tram to 12,000 ft (summer only)."
+"TIP" = "Weather changes fast up here. Bring a jacket even in July."
+
+[[stops]]
+name = "Blue Mesa Reservoir"
+lat = 38.4688
+lon = -107.1722
+elevation_ft = 7519
+tag = "CURECANTI NRA"
+road = "US 50"
+miles = 59
+drive_time = "1 hr 5 min"
+photo_query = "Blue Mesa Reservoir"
+photos = ["pixabay-5746496.jpg", "pixabay-5746499.jpg"]
+via = [
+
+  { name = "Sargents", lat = 38.4069, lon = -106.4153 },
+  [38.452, -106.6008], [38.5047, -106.7248],
+  { name = "Gunnison", lat = 38.5458, lon = -106.9253 },
+  [38.502, -107.05],
+]
+drive_caption = "Down the west side through Gunnison, then along the shore of Blue Mesa."
+drive_fact = "Gunnison is one of the coldest towns in the lower 48 in winter."
+caption = "Blue Mesa is the largest body of water entirely inside Colorado."
+fact = "It's the biggest kokanee salmon fishery in the US. Its shoreline runs about 96 miles."
+[stops.info]
+"SEE" = "The Dillon Pinnacles, volcanic spires on the north shore."
+"DO" = "Stop at the Elk Creek Visitor Center, or rent a boat at the marina."
+"TIP" = "Wind picks up most afternoons. Paddle in the morning."
+
+[[stops]]
+name = "Ouray"
+lat = 38.0228
+lon = -107.6714
+elevation_ft = 7792
+tag = "THE SWITZERLAND OF AMERICA"
+road = "US 50 · US 550"
+miles = 86
+drive_time = "1 hr 40 min"
+photo_query = "Ouray Colorado"
+photos = ["pixabay-1679707.jpg", "pixabay-670527.jpg"]
+via = [
+  [38.468, -107.30], [38.42, -107.41],
+  { name = "Cimarron", lat = 38.4436, lon = -107.5539 },
+  { name = "Cerro Summit", lat = 38.4378, lon = -107.6481, kind = "pass", elevation_ft = 7958 },
+  { name = "Montrose", lat = 38.4783, lon = -107.8762 },
+  [38.30, -107.78],
+  { name = "Ridgway", lat = 38.1528, lon = -107.7559 },
+]
+drive_caption = "Over Cerro Summit to Montrose, then south on US 550 into the San Juans."
+drive_fact = "The Black Canyon of the Gunnison is a short detour east of Montrose. Its Painted Wall is 2,250 ft tall."
+caption = "Ouray, boxed in by 13,000-foot peaks. Soak in the hot springs. You earned it."
+fact = "Ouray calls itself the Switzerland of America, and the Million Dollar Highway starts at the south end of town."
+[stops.info]
+"SEE & DO" = "Ouray Hot Springs Pool. Walk into Box Cañon Falls."
+"EAT" = "Ouray Brewery, with a rooftop deck on Main Street."
+"STAY" = "The Beaumont Hotel, built in 1886."

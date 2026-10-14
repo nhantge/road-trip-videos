@@ -1,0 +1,29 @@
+[
+  {
+    "file": "wikimedia-73793552.jpg",
+    "place": "Denver skyline",
+    "source": "wikimedia",
+    "id": "73793552",
+    "title": "Denver Skyline (147779451).jpeg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Denver_Skyline_(147779451).jpeg",
+    "author": "Alex Gray",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "attribution_required": true,
+    "attribution": "\"Denver Skyline (147779451).jpeg\" by Alex Gray, CC BY 3.0 (https://creativecommons.org/licenses/by/3.0), via https://commons.wikimedia.org/wiki/File:Denver_Skyline_(147779451).jpeg"
+  },
+  {
+    "file": "pixabay-2228782.jpg",
+    "place": "Denver skyline",
+    "source": "pixabay",
+    "id": "2228782",
+    "title": "denver, colorado, nature, mountains, city, urban, skyline, downtown, cityscape, aerial view, buildings, architecture, travel, United States, Denver, Colorado",
+    "page_url": "https://pixabay.com/photos/denver-colorado-mountains-city-2228782/",
+    "author": "12019",
+    "author_url": "https://pixabay.com/users/12019-12019/",
+    "license": "Pixabay Content License",
+    "license_url": "https://pixabay.com/service/license-summary/",
+    "attribution_required": false,
+    "attribution": "Image by 12019 from Pixabay (https://pixabay.com/photos/denver-colorado-mountains-city-2228782/)"
+  }
+]
