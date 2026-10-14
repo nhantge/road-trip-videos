@@ -117,6 +117,16 @@ def triangle(size, fill):
     return big.resize((s, s), Image.LANCZOS)
 
 
+@lru_cache(maxsize=64)
+def diamond(size, fill, outline=None):
+    s = int(size)
+    big = Image.new("RGBA", (s * SS, s * SS), (0, 0, 0, 0))
+    h = s * SS / 2
+    ImageDraw.Draw(big).polygon([(h, 0), (s * SS, h), (h, s * SS), (0, h)], fill=fill, outline=outline,
+                                width=2 * SS if outline else 0)
+    return big.resize((s, s), Image.LANCZOS)
+
+
 def paste_center(canvas, sprite, x, y, alpha=1.0):
     if alpha < 1:
         sprite = with_alpha(sprite, alpha)

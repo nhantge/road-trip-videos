@@ -48,8 +48,8 @@ def main():
     ap.add_argument("--dry-run", action="store_true", help="print the lines that would be recorded")
     args = ap.parse_args()
 
-    voice = load_brand().get("voice", {})
     route = load_route(args.route)
+    voice = {**load_brand().get("voice", {}), **route.voice}
     # Narration quotes miles and elevations, so build the route (terrain is cached after the first run).
     route.build(Terrain(REPO_ROOT / ".cache" / "terrain"))
     segs = build_segments(route)

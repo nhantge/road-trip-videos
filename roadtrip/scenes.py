@@ -28,6 +28,9 @@ class Renderer:
         self.map = MapView(route, terrain)
         self.n = len(route.stops)
         self.photos = {s.index: pick_photos(s) for s in route.stops}
+        for s in route.stops:
+            for k, sight in enumerate(s.sights):
+                self.photos[("sight", s.index, k)] = pick_photos(sight, limit=1)
         self._covers = {}
         self.hook = hook_items(route)
         self._stats = self._stat_cards()
@@ -46,20 +49,22 @@ class Renderer:
             self._covers[key] = placeholder_art(size, index)
         return self._covers[key]
 
-    def photo_frame(self, stop_index, size, t, which=0):
-        """Ken Burns crop of a stop photo (or illustrated placeholder) at time t."""
-        photos = self.photos.get(stop_index) or []
+    def photo_frame(self, key, size, t, which=0):
+        """Ken Burns crop of a photo (or illustrated placeholder) at time t. key is a stop
+        index or ("sight", stop index, n)."""
+        photos = self.photos.get(key) or []
+        seed = key if isinstance(key, int) else key[1] + key[2] + 3
         if photos:
             path, entry = photos[which % len(photos)]
             src = self.cover(path, size)
         else:
             entry = None
-            src = self.placeholder(stop_index, size)
+            src = self.placeholder(seed, size)
         p = S.clamp(t / 9.0)
         zoom = 1.0 + 0.10 * p
         cw, ch = src.width / 1.12 / zoom * 1.12, src.height / 1.12 / zoom * 1.12
         cw, ch = min(cw, src.width), min(ch, src.height)
-        drift = (stop_index % 2 * 2 - 1) * 0.5
+        drift = ((seed + which) % 2 * 2 - 1) * 0.5
         cx = src.width / 2 + drift * (src.width - cw) * (p - 0.5)
         cy = src.height / 2
         box = (cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2)
@@ -185,33 +190,62 @@ class Renderer:
                 color = S.ORANGE
             d.rounded_rectangle((x - 9, 52, x + 9, 61), 4, fill=color)
 
-    def _photo(self, img, stop_index, t, chip="", h=330, switch_at=None):
+    def slides_for(self, seg):
+        """The photo slideshow for a panel: [(photo key, which photo, chip, caption)]."""
+        st = self.route.stops[seg.stop]
+        if seg.kind == "stop":
+            n = max(1, len(self.photos.get(st.index) or []))
+            return [(st.index, k, st.tag, "") for k in range(n)]
+        slides = [(st.index, 0, "COMING UP", "")]
+        slides += [(("sight", st.index, k), 0, "WORTH A STOP", sight.name) for k, sight in enumerate(st.sights)]
+        return slides
+
+    def slide_at(self, seg, t):
+        slides = self.slides_for(seg)
+        per = seg.dur / len(slides)
+        k = min(int(t / per), len(slides) - 1)
+        return slides, k, t - k * per, per
+
+    def _photo(self, img, seg, t, h=330):
+        """Photo box with a crossfading slideshow; returns the y of its bottom edge."""
         X, Y, Wd, Ht = PHOTO_BOX
         X -= S.PANEL_X
         Ht = h
         a = S.ease_out(t / 0.5)
-        if switch_at is not None and len(self.photos.get(stop_index) or []) > 1 and t > switch_at:
-            first, _ = self.photo_frame(stop_index, (Wd, Ht), t, 0)
-            second, entry = self.photo_frame(stop_index, (Wd, Ht), t - switch_at, 1)
-            photo = Image.blend(first, second, S.smooth((t - switch_at) / 0.6))
-        else:
-            photo, entry = self.photo_frame(stop_index, (Wd, Ht), t, 0)
+        slides, k, lt, per = self.slide_at(seg, t)
+        key, which, chip, caption = slides[k]
+        photo, entry = self.photo_frame(key, (Wd, Ht), lt + k * 1.5, which)
+        if k and lt < 0.6:
+            pkey, pwhich, _, _ = slides[k - 1]
+            before, _ = self.photo_frame(pkey, (Wd, Ht), per + (k - 1) * 1.5, pwhich)
+            photo = Image.blend(before, photo, S.smooth(lt / 0.6))
         mask = S.rounded_box(Wd, Ht, 14, (255, 255, 255, 255)).getchannel("A")
         if a < 1:
             mask = mask.point(lambda v: int(v * a))
         img.paste(photo, (X, Y + int((1 - a) * 16)), mask)
         d = ImageDraw.Draw(img)
+        ca = S.ease_out(lt / 0.4) if k else a
         if chip:
             f = S.font("bold", 14)
             w = int(f.getlength(chip) + 22)
-            img.alpha_composite(S.with_alpha(S.rounded_box(w, 28, 6, (6, 10, 14, 225)), a), (X + 16, Y + 16))
-            d.text((X + 16 + w / 2, Y + 30), chip, font=f, fill=S.TEXT, anchor="mm")
+            fill = S.ORANGE + (240,) if chip == "WORTH A STOP" else (6, 10, 14, 225)
+            img.alpha_composite(S.with_alpha(S.rounded_box(w, 28, 6, fill), ca), (X + 16, Y + 16))
+            d.text((X + 16 + w / 2, Y + 30), chip, font=f, fill=S.BG_TITLE if chip == "WORTH A STOP" else S.TEXT,
+                   anchor="mm")
+        if caption:
+            f = S.font("display", 34)
+            layer = Image.new("RGBA", (Wd, Ht), (0, 0, 0, 0))
+            dl = ImageDraw.Draw(layer)
+            dl.text((20, Ht - 22), caption, font=f, fill=S.TEXT, anchor="ls", stroke_width=3, stroke_fill=(0, 0, 0))
+            img.alpha_composite(S.with_alpha(layer, ca), (X, Y))
         credit = short_credit(entry)
         if credit:
             f = S.font("medium", 12)
             w = int(f.getlength(credit) + 16)
-            img.alpha_composite(S.with_alpha(S.rounded_box(w, 22, 5, (6, 10, 14, 190)), a), (X + Wd - w - 10, Y + Ht - 32))
-            d.text((X + Wd - 10 - w / 2, Y + Ht - 21), credit, font=f, fill=(205, 210, 214), anchor="mm")
+            cy = Y + 16 if caption else Y + Ht - 32
+            cx = X + Wd - w - 10
+            img.alpha_composite(S.with_alpha(S.rounded_box(w, 22, 5, (6, 10, 14, 190)), a), (cx, cy))
+            d.text((cx + w / 2, cy + 11), credit, font=f, fill=(205, 210, 214), anchor="mm")
         return Y + Ht
 
     def _fact_card(self, img, kicker, text, t, start):
@@ -239,8 +273,7 @@ class Renderer:
         X = 1206 - S.PANEL_X
         d.text((X, 57), f"STOP {st.index + 1} OF {self.n}", font=S.font("semibold", 19), fill=S.ORANGE, anchor="lm")
         self._dots(d, st.index + 1)
-        switch = seg.dur * 0.5 if seg.dur > 5 else None
-        bottom = self._photo(img, st.index, t, chip=st.tag, switch_at=switch)
+        bottom = self._photo(img, seg, t)
         a = S.ease_out((t - 0.12) / 0.45)
         title = S.font("display", 60)
         if title.getlength(st.name) > 672:
@@ -281,7 +314,7 @@ class Renderer:
         X = 1206 - S.PANEL_X
         d.text((X, 57), f"NEXT STOP  ·  {st.index + 1} OF {self.n}", font=S.font("semibold", 19), fill=S.ORANGE, anchor="lm")
         self._dots(d, st.index, active=st.index)
-        bottom = self._photo(img, st.index, t, chip="COMING UP", h=300)
+        bottom = self._photo(img, seg, t, h=300)
         a = S.ease_out((t - 0.1) / 0.45)
         layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
         dl = ImageDraw.Draw(layer)
@@ -306,7 +339,13 @@ class Renderer:
                 font=S.font("regular", 16), fill=S.TEXT_FAINT, anchor="lm")
         img.alpha_composite(S.with_alpha(layer, a), (0, int((1 - a) * 14)))
         self._leg_chart(img, prev, st, p, y + 220, S.ease_out((t - 0.4) / 0.45))
-        self._fact_card(img, "ON THIS STRETCH", st.drive_fact, t, 0.8)
+        # The card under the photo follows the slideshow: the leg's fact, then each sight's tip.
+        slides, k, lt, _ = self.slide_at(seg, t)
+        if k == 0:
+            self._fact_card(img, "ON THIS STRETCH", st.drive_fact, t, 0.8)
+        else:
+            sight = st.sights[k - 1]
+            self._fact_card(img, f"WORTH A STOP  ·  {sight.name.upper()}", sight.note, lt, 0.15)
 
     def _leg_chart(self, img, a_stop, b_stop, p, top, alpha):
         """Small elevation chart of just this leg, filling in as the car drives it."""

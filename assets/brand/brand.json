@@ -9,11 +9,11 @@
   "music_credit": "original music by Colorado Road Trips",
   "voice": {
     "provider": "elevenlabs",
-    "name": "Sadie",
-    "voice_id": "bD9maNcCuQQS75DGuteM",
+    "name": "Marie",
+    "voice_id": "ijbjxuucMt4vnA0kA9IO",
     "model_id": "eleven_v3",
-    "credit": "ElevenLabs voice \"Sadie\"",
-    "tempo": 1.08,
+    "credit": "ElevenLabs voice \"Marie\"",
+    "tempo": 1.0,
     "max_pause": 0.45
   }
 }

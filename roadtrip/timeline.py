@@ -78,8 +78,9 @@ def build_segments(route):
     segs.append(Segment("overview", "overview", 5.0, nar.get("overview") or plan))
     for s in route.stops:
         if s.index:
-            text = s.drive_narration or " ".join(x for x in (s.drive_caption, s.drive_fact) if x)
-            dur = min(6.0, max(3.6, 3.0 + s.miles / 40))
+            says = [x.say or f"Worth a stop: {x.name}. {x.note}" for x in s.sights]
+            text = s.drive_narration or " ".join(x for x in (s.drive_caption, *says, s.drive_fact) if x)
+            dur = min(6.0, max(3.6, 3.0 + s.miles / 40)) + 3.0 * len(s.sights)
             segs.append(Segment(f"drive-{s.index}", "drive", dur, text, stop=s.index))
         text = s.narration or " ".join(x for x in (s.caption, s.fact) if x)
         segs.append(Segment(f"stop-{s.index}", "stop", 5.5 if s.index == 0 else 6.5, text, stop=s.index))

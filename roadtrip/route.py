@@ -49,6 +49,18 @@ class Place:
 
 
 @dataclass
+class Sight:
+    """A "worth a stop" detour or roadside sight on the leg into a stop."""
+    name: str
+    note: str = ""
+    say: str = ""          # narration line; the note is shown on screen
+    lat: float | None = None
+    lon: float | None = None
+    photo_query: str = ""
+    photos: list = field(default_factory=list)
+
+
+@dataclass
 class Stop:
     name: str
     lat: float
@@ -70,6 +82,7 @@ class Stop:
     drive_caption: str = ""
     drive_fact: str = ""
     drive_narration: str = ""
+    sights: list = field(default_factory=list)
     # Filled in by Route.
     mile: float = 0.0
     index: int = 0
@@ -90,6 +103,7 @@ class Route:
     inset: dict = field(default_factory=dict)
     up_next: dict = field(default_factory=dict)
     thumbnail: dict = field(default_factory=dict)
+    voice: dict = field(default_factory=dict)  # overrides brand.json "voice" for this route
     places: list = field(default_factory=list)
 
     @property
@@ -160,7 +174,7 @@ class Route:
         anchors = [(s.mile, s.elevation_ft) for s in self.stops if s.elevation_ft]
         anchors += [(p.mile, p.elevation_ft) for p in self.places if p.elevation_ft]
         anchors.sort()
-        sampled = terrain.sample(px, py) if terrain else None
+        sampled = self._valley_floor(terrain, px, py) if terrain else None
         self.elevation_from_terrain = sampled is not None
         if sampled is None:
             if not anchors:
@@ -173,6 +187,11 @@ class Route:
                 # profile to pass exactly through the known stop/pass elevations.
                 offsets = [e - np.interp(m, self.prof_mi, prof) for m, e in anchors]
                 prof = prof + np.interp(self.prof_mi, [a[0] for a in anchors], offsets)
+            # The drawn line can cut across ridges the road goes around. Between two points of
+            # known elevation, a road doesn't climb above both, so cap it there.
+            for (m0, e0), (m1, e1) in zip(anchors, anchors[1:]):
+                span = (self.prof_mi > m0) & (self.prof_mi < m1)
+                prof[span] = np.minimum(prof[span], max(e0, e1))
             # A pass is the high point of the road over it; trim terrain bumps next to it.
             for p in self.stops + self.places:
                 if p.kind == "pass" and p.elevation_ft:
@@ -182,6 +201,22 @@ class Route:
         for s in self.stops:
             if not s.elevation_ft:
                 s.elevation_ft = round(float(np.interp(s.mile, self.prof_mi, prof)))
+
+    @staticmethod
+    def _valley_floor(terrain, px, py, radius_m=250):
+        """Terrain elevation along the line, taking the lowest point within radius_m.
+
+        The drawn line only approximates the road and can clip a ridge the road goes
+        around. Roads keep to valley floors and saddles, so the local minimum tracks
+        the real road better than the exact point does.
+        """
+        lat = math.degrees(math.atan(math.sinh(math.pi * (1 - 2 * float(np.mean(py))))))
+        r = radius_m / (40075016 * math.cos(math.radians(lat)))  # meters -> world units
+        offsets = [(0, 0)] + [(r * math.cos(a), r * math.sin(a)) for a in np.linspace(0, 2 * math.pi, 8, endpoint=False)]
+        rings = [terrain.sample(px + dx, py + dy) for dx, dy in offsets]
+        if any(x is None for x in rings):
+            return None
+        return np.min(rings, axis=0)
 
     # -- lookups -------------------------------------------------------------
 
@@ -228,9 +263,10 @@ class Route:
 
 STOP_KEYS = {"name", "lat", "lon", "kind", "tag", "elevation_ft", "caption", "fact", "narration",
              "info", "photo_query", "photos", "road", "miles", "drive_time", "via",
-             "drive_caption", "drive_fact", "drive_narration"}
+             "drive_caption", "drive_fact", "drive_narration", "sights"}
+SIGHT_KEYS = {"name", "note", "say", "lat", "lon", "photo_query", "photos"}
 ROUTE_KEYS = {"title", "series", "region", "days", "best_season", "hook", "tips", "narration",
-              "inset", "up_next", "thumbnail", "stops"}
+              "inset", "up_next", "thumbnail", "voice", "stops"}
 
 
 def load_route(path):
@@ -256,6 +292,12 @@ def load_route(path):
                                  elevation_ft=v.get("elevation_ft")))
             else:
                 via.append((float(v[0]), float(v[1])))
+        sights = []
+        for raw_sight in raw.get("sights", []):
+            unknown = set(raw_sight) - SIGHT_KEYS
+            if unknown or "name" not in raw_sight:
+                raise ValueError(f"{path}: sight on {raw['name']!r} needs a name; unknown keys {sorted(unknown)}")
+            sights.append(Sight(**{**raw_sight, "photo_query": raw_sight.get("photo_query", raw_sight["name"])}))
         stops.append(Stop(
             name=raw["name"], lat=raw["lat"], lon=raw["lon"], kind=raw.get("kind", "town"),
             tag=raw.get("tag", ""), elevation_ft=raw.get("elevation_ft"), caption=raw.get("caption", ""),
@@ -264,14 +306,14 @@ def load_route(path):
             road=raw.get("road", ""), miles=raw.get("miles"),
             drive_minutes=parse_minutes(raw.get("drive_time")), via=via,
             drive_caption=raw.get("drive_caption", ""), drive_fact=raw.get("drive_fact", ""),
-            drive_narration=raw.get("drive_narration", ""),
+            drive_narration=raw.get("drive_narration", ""), sights=sights,
         ))
     return Route(
         title=data.get("title") or f"{stops[0].name} to {stops[-1].name}", stops=stops, path=path,
         series=data.get("series", ""), region=data.get("region", ""), days=data.get("days", ""),
         best_season=data.get("best_season", ""), hook=data.get("hook", []), tips=data.get("tips", []),
         narration=data.get("narration", {}), inset=data.get("inset", {}), up_next=data.get("up_next", {}),
-        thumbnail=data.get("thumbnail", {}),
+        thumbnail=data.get("thumbnail", {}), voice=data.get("voice", {}),
     )
 
 

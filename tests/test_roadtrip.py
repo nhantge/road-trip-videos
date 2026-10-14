@@ -58,6 +58,14 @@ class RouteTests(unittest.TestCase):
             route = R.load_route(path).build(terrain=None)
         self.assertGreater(route.stops[-1].mile, route.stops[-2].mile)
 
+    def test_sights_load_and_join_the_drive_narration(self):
+        route = R.load_route(ROUTE.parent / "million-dollar-highway.toml").build(terrain=None)
+        pass_stop = next(s for s in route.stops if s.name == "Red Mountain Pass")
+        self.assertEqual([x.name for x in pass_stop.sights], ["Ironton ghost town", "Yankee Girl Mine"])
+        self.assertEqual(pass_stop.sights[0].photo_query, "Ironton Colorado")
+        drive = next(s for s in timeline.build_segments(route) if s.id == f"drive-{pass_stop.index}")
+        self.assertGreaterEqual(drive.min_dur, 3.6 + 6.0)  # each sight adds room for its photo
+
     def test_unknown_keys_are_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "bad.toml"

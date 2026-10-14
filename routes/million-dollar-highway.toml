@@ -1,0 +1,152 @@
+# The Million Dollar Highway: US 550 from Ouray to Silverton over Red Mountain Pass.
+#
+# See README.md for every field. `sights` are "worth a stop" detours on the drive
+# into a stop: each gets its own photo, an on-screen tip and (with lat/lon) a map marker.
+
+title = "The Million Dollar Highway"
+series = "Colorado Road Trips"
+region = "San Juan Mountains"
+days = "1"
+best_season = "June to early October"
+hook = [
+  "A highway that crosses right over a waterfall : Bear Creek Falls",
+  "11,018 feet, sheer drops, barely a guardrail : Red Mountain Pass",
+  "A whole town that's a National Historic Landmark : Silverton",
+]
+tips = [
+  "There's no gas between Ouray and Silverton. Fill up before you go.",
+  "Use the pullouts for photos and let faster traffic by. Never stop in a curve.",
+  "Snow can close Red Mountain Pass outside summer. Check COtrip.org first.",
+  "Give it a full day: the drive is an hour, the stops are the fun part.",
+]
+
+[narration]
+hook = "Get ready for one of the most jaw-dropping drives in America! A highway that crosses right over a waterfall. A mountain pass at eleven thousand feet with barely a guardrail. And a whole town that's a National Historic Landmark!"
+intro = "This is the Million Dollar Highway: just 24 miles, but every single one is a showstopper. And stick around, because the full trip planner is waiting at the end!"
+overview = "Here's the game plan! We start in Ouray, stop at Bear Creek Falls, climb over Red Mountain Pass, and roll into Silverton. Let's go!"
+finale = "And that's it! 24 incredible miles, from Ouray all the way to Silverton, topping out at 11,018 feet on Red Mountain Pass."
+planner = "Okay, here's everything you need to plan this drive yourself. Pause right here and grab a screenshot!"
+end = "Thanks so much for riding along! Hit subscribe, and I'll see you on the road to Durango!"
+
+[inset]
+name = "SW Colorado"
+bounds = [-108.9, 37.0, -106.6, 38.6]   # west, south, east, north
+city = { name = "Durango", lat = 37.2753, lon = -107.8801 }
+
+[thumbnail]
+text = ["24 WILD MILES", "MILLION DOLLAR HWY"]
+stop = "Red Mountain Pass"
+photo = 0
+
+[up_next]
+title = "Silverton to Durango"
+subtitle = "Over Molas and Coal Bank Passes"
+miles = 48
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Ouray"
+lat = 38.0228
+lon = -107.6714
+elevation_ft = 7792
+tag = "THE SWITZERLAND OF AMERICA"
+photo_query = "Ouray Colorado"
+caption = "Welcome to Ouray, tucked into a box canyon with 13,000-foot peaks on every side!"
+fact = "Ouray's Ice Park turns the gorge at the edge of town into a frozen climbing wall every winter."
+narration = "Welcome to Ouray, tucked into a box canyon with thirteen-thousand-foot peaks on every side! Before you hit the road, soak in the hot springs pool and walk out to Box Cañon Falls. Trust me, it's worth it!"
+[stops.info]
+"SEE & DO" = "Box Cañon Falls, and the Ouray Hot Springs Pool."
+"HIKE" = "The Ouray Perimeter Trail loops all the way around town."
+"TIP" = "Start early. Morning light in the gorge is spectacular."
+
+[[stops]]
+name = "Bear Creek Falls"
+lat = 37.9993
+lon = -107.6607
+tag = "THE ROAD CROSSES THE FALLS"
+road = "US 550"
+miles = 2.5
+drive_time = "8 min"
+photo_query = "Bear Creek Falls Ouray"
+via = [[38.0125, -107.6690], [38.0050, -107.6620]]
+drive_caption = "Right out of town, US 550 switchbacks up into the Uncompahgre Gorge!"
+drive_fact = "The highway is carved straight into the canyon wall, with some of the biggest drop-offs of the whole drive."
+drive_narration = "Right out of town, US 550 switchbacks up into the Uncompahgre Gorge, carved straight into the canyon wall. Drivers, eyes on the road. Passengers, eyes on those views!"
+caption = "Bear Creek Falls: the highway goes right over the top of it!"
+fact = "The falls drop more than 200 feet into the gorge below the bridge."
+narration = "This is Bear Creek Falls, and yes, the highway goes right over the top of it! Pull into the lot just past the bridge and walk out to the overlook."
+[stops.info]
+"SEE" = "The falls from the overlook platform right off the highway."
+"HIKE" = "Bear Creek Trail climbs from here, with big views fast."
+"TIP" = "The lot is small. Get there early on summer weekends."
+
+[[stops]]
+name = "Red Mountain Pass"
+lat = 37.8986
+lon = -107.7125
+elevation_ft = 11018
+kind = "pass"
+tag = "TOP OF THE HIGHWAY"
+road = "US 550"
+miles = 10.5
+drive_time = "25 min"
+photo_query = "Red Mountain Pass"
+via = [
+  [37.9850, -107.6580], [37.9650, -107.6630],
+  [37.9450, -107.6700],
+  [37.9300, -107.6850], [37.9150, -107.7040],
+]
+drive_caption = "Up through Ironton Park, past old mines, toward the top of the highway!"
+drive_fact = "Red Mountain gets its color from iron oxide. The whole slope looks rusty!"
+drive_narration = "Up through the gorge and into Ironton Park, where the old mining country begins! Look for the ghost town of Ironton, and the Yankee Girl Mine's wooden headframe right beside the highway. Then those rusty red peaks start showing up, and that's your sign: Red Mountain Pass is close!"
+caption = "Red Mountain Pass: 11,018 feet, the top of the Million Dollar Highway!"
+fact = "Nobody agrees where the name came from: building costs, gold in the road fill, or a driver who said never again for a million dollars!"
+narration = "Red Mountain Pass! Eleven thousand and eighteen feet, the very top of the Million Dollar Highway. And here's a fun one: nobody agrees where the name came from. Building costs? Gold in the road fill? Or a driver who said, never again, not for a million dollars!"
+[[stops.sights]]
+name = "Ironton ghost town"
+note = "Walk among the cabins of an 1880s mining camp, a short stroll off the highway."
+lat = 37.9364
+lon = -107.6728
+photo_query = "Ironton Colorado"
+[[stops.sights]]
+name = "Yankee Girl Mine"
+note = "Its wooden headframe stands right beside the road. One of the richest silver mines of the 1880s."
+lat = 37.9269
+lon = -107.6886
+photo_query = "Yankee Girl Mine"
+[stops.info]
+"SEE" = "The red peaks of Red Mountain and old mines on every slope."
+"DO" = "Walk the summit area. Wildflowers peak in July."
+"TIP" = "It can snow here in any month. Bring a jacket."
+
+[[stops]]
+name = "Silverton"
+lat = 37.8119
+lon = -107.6645
+elevation_ft = 9318
+tag = "NATIONAL HISTORIC LANDMARK"
+road = "US 550"
+miles = 11
+drive_time = "20 min"
+photo_query = "Silverton Colorado"
+via = [
+  [37.8880, -107.7200], [37.8760, -107.7250], [37.8550, -107.7255], [37.8350, -107.7265],
+  [37.8220, -107.7150], [37.8160, -107.6980], [37.8110, -107.6820],
+]
+drive_caption = "Down the south side along Mineral Creek, into Silverton!"
+drive_fact = "Silverton sits at 9,318 feet, one of the highest towns in America."
+drive_narration = "Now it's all downhill along Mineral Creek, and there's one more detour to know about: Ice Lake Basin, one of the most famous hikes in Colorado, starts just west of Silverton. Then, here comes town!"
+caption = "Silverton! Mining-era Main Street, and a steam train that still pulls in every day."
+fact = "The Durango and Silverton Narrow Gauge Railroad has been running here since 1882."
+narration = "We made it to Silverton! The whole town is a National Historic Landmark, and in summer the steam train from Durango pulls right into town, just like it has since 1882!"
+[[stops.sights]]
+name = "Ice Lake Basin"
+note = "Bright blue alpine lakes. The trail starts up South Mineral Creek Road; plan a full day."
+lat = 37.8060
+lon = -107.7730
+photo_query = "Ice Lake Basin"
+[stops.info]
+"SEE & DO" = "Ride the steam train, or tour the Old Hundred Gold Mine."
+"EAT" = "Handlebars Food & Saloon, right on Greene Street."
+"STAY" = "The Grand Imperial Hotel, built in 1883."

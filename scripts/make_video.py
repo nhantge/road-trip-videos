@@ -54,14 +54,17 @@ def main():
     photos.ensure_photos(route, fetch=not args.no_fetch)
     if args.photo_sheets:
         for st in route.stops:
-            path = photos.contact_sheet(st, out / "photos" / f"{st.index + 1}-{photos.folder_for(st.photo_query).name}.jpg")
-            print(path or f"{st.name}: no photos in {photos.folder_for(st.photo_query)}")
+            for item in (st, *st.sights):
+                folder = photos.folder_for(item.photo_query)
+                path = photos.contact_sheet(item, out / "photos" / f"{st.index + 1}-{folder.name}.jpg")
+                print(path or f"{item.name}: no photos in {folder}")
         return
 
     terrain = Terrain(REPO_ROOT / ".cache" / "terrain", offline=args.offline)
     route.build(terrain)
     brand = audio.load_brand()
-    segs, total, notes = layout(route, use_voiceover=not args.no_voiceover, voice=brand.get("voice"))
+    brand["voice"] = {**brand.get("voice", {}), **route.voice}
+    segs, total, notes = layout(route, use_voiceover=not args.no_voiceover, voice=brand["voice"])
     for note in notes:
         print(f"warning: {note}", file=sys.stderr)
     sting = audio.BRAND_DIR / brand["intro_sting"] if brand.get("intro_sting") else None

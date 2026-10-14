@@ -41,6 +41,8 @@ def description(route, segs, offset, brand):
                                                f"{fmt_minutes(st.drive_minutes)} from {route.stops[st.index - 1].name}"
                                                + (f" via {st.road}" if st.road else ""))
         lines.append(f"{st.index + 1}. {st.name} ({fmt_int(st.elevation_ft)} ft) · {where}")
+        for sight in st.sights:
+            lines.append(f"   On the way, worth a stop: {sight.name}. {sight.note}")
         for label, value in st.info.items():
             lines.append(f"   {label.title()}: {value}")
     lines.append("")
@@ -53,9 +55,10 @@ def description(route, segs, offset, brand):
     lines.append("")
     credits = []
     for st in route.stops:
-        for _, entry in pick_photos(st):
-            if entry.get("attribution") and entry["attribution"] not in credits:
-                credits.append(entry["attribution"])
+        for item in [st, *st.sights]:
+            for _, entry in pick_photos(item, limit=1 if item is not st else 4):
+                if entry.get("attribution") and entry["attribution"] not in credits:
+                    credits.append(entry["attribution"])
     if credits:
         lines += ["PHOTO CREDITS"] + [f"- {c}" for c in credits] + [""]
     lines.append("CREDITS")

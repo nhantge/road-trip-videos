@@ -23,6 +23,12 @@ tips = [
   "Leave Denver early on Fridays. US 285 backs up with weekend traffic.",
 ]
 
+[voice]                             # this episode was narrated by Sadie (the channel now uses Marie)
+name = "Sadie"
+voice_id = "bD9maNcCuQQS75DGuteM"
+credit = "ElevenLabs voice \"Sadie\""
+tempo = 1.08
+
 [inset]
 name = "Colorado"
 bounds = [-109.05, 37.0, -102.04, 41.0]   # west, south, east, north

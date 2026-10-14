@@ -28,7 +28,7 @@ USER_AGENT = f"road-trip-videos/1.0 ({REPO_URL})"
 REPO_ROOT = Path(__file__).resolve().parent.parent
 WIKIMEDIA_API = "https://commons.wikimedia.org/w/api.php"
 PIXABAY_API = "https://pixabay.com/api/"
-MAX_RETRIES = 5
+MAX_RETRIES = 8
 
 
 def slugify(text):
@@ -150,7 +150,7 @@ def fetch_place(place, sources, count, width, pixabay_key):
         added += 1
         print(f"  {filename}  [{item['license']}] {item['author']}")
         if item["source"] == "wikimedia":
-            time.sleep(1)  # stay well under Wikimedia's rate limits
+            time.sleep(3)  # stay well under Wikimedia's rate limits (shared IPs get throttled)
 
     credits_path.write_text(json.dumps(credits, indent=2, ensure_ascii=False) + "\n")
     print(f"{place}: {added} new image(s) in {folder.relative_to(REPO_ROOT)}")

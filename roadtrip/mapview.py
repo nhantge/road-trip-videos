@@ -195,6 +195,11 @@ class MapView:
                 labels.append((1, x, y, "pass", p, S.font("medium", 13 * s), S.LABEL_DIM, 12 * s))
             else:
                 labels.append((1, x, y, "town", p, S.font("semibold", 14 * s), S.LABEL_DIM, 10 * s))
+        for st in route.stops:
+            for sight in st.sights:
+                if sight.lat is not None and sight.lon is not None:
+                    x, y = screen(*lonlat_to_world(sight.lon, sight.lat))
+                    labels.append((1, x, y, "sight", sight, S.font("semibold", 14 * s), S.ORANGE, 11 * s))
         for prio, x, y, marker, obj, fnt, color, gap in labels:
             if not (-150 < x < S.MAP_W + 150 and -50 < y < S.MAP_H + 50):
                 continue
@@ -205,6 +210,8 @@ class MapView:
                 S.paste_center(img, S.circle(int(13 * s), S.BG_MAP + (255,), S.LABEL + (255,), 3), x, y)
             elif marker == "pass":
                 S.paste_center(img, S.triangle(int(12 * s), (150, 160, 170, 255)), x, y)
+            elif marker == "sight":
+                S.paste_center(img, S.diamond(int(15 * s), S.ORANGE + (255,), S.BG_MAP + (255,)), x, y)
             elif marker == "town":
                 S.paste_center(img, S.circle(int(9 * s), None, S.LABEL_DIM + (255,), 2), x, y)
             tw, th = fnt.getlength(obj.name), fnt.size

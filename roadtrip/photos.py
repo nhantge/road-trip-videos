@@ -11,7 +11,7 @@ from PIL import Image, ImageOps
 from .style import REPO_ROOT
 
 IMAGES = REPO_ROOT / "images"
-PER_STOP = 2
+PER_STOP = 4
 
 
 def _fetcher():
@@ -27,7 +27,8 @@ def folder_for(query):
 
 def ensure_photos(route, fetch=True, count=5):
     """Run fetch_photos for any stop whose folder has no credits.json yet."""
-    missing = [s.photo_query for s in route.stops if not (folder_for(s.photo_query) / "credits.json").exists()]
+    items = [s for st in route.stops for s in (st, *st.sights)]
+    missing = [s.photo_query for s in items if not (folder_for(s.photo_query) / "credits.json").exists()]
     if not missing or not fetch:
         return
     mod = _fetcher()

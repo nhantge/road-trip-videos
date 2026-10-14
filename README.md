@@ -98,12 +98,15 @@ The leg that arrives at a stop is described on that stop:
 | `via` | points the line passes through: `[lat, lon]` to shape it, or `{ name = "Fairplay", lat = ..., lon = ..., kind = "town" }` to also label a town or pass (`elevation_ft` optional) |
 | `drive_caption` | caption on the map during the drive |
 | `drive_fact` | "On this stretch" card during the drive |
+| `sights` | "worth a stop" detours on the way: `[[stops.sights]]` with `name`, `note` (on-screen tip), optional `say` (narration), `lat`/`lon` (map marker), `photo_query`, `photos` |
 
 There is no routing service in the loop, so the map line is a smooth curve through the
 stops and `via` points: add a point at each town and wherever the road bends. Mileage
 comes from `miles`, so the counter matches the real road even where the curve cuts a
-corner. Elevations come from free terrain tiles and are pinned to any `elevation_ft`
-you give, so the HUD, stop cards and profile always agree.
+corner. Elevations come from free terrain tiles, taking the lowest ground within 250 m
+of the line (roads keep to valley floors), and are pinned to any `elevation_ft` you
+give, so the HUD, stop cards and profile always agree. If the profile shows a climb the
+real road doesn't make, a `via` point is probably on a ridge: nudge it into the valley.
 
 Narration is built from the captions and facts. To word a line differently, set
 `narration` (stop), `drive_narration` (leg), or `[narration]` keys `hook`, `intro`,
@@ -116,8 +119,10 @@ Clips go in `voiceover/<route>/<segment>.mp3` (or `.wav`/`.m4a`). When a clip ex
 segment stretches to fit it, so narration is never cut off; without clips the video
 renders at default timings with the narration space left empty.
 
-The channel voice is ElevenLabs **Sadie** (`bD9maNcCuQQS75DGuteM`), set in
-`assets/brand/brand.json`. To generate a route's narration with it:
+The channel voice is ElevenLabs **Marie – Young & Optimistic** (`ijbjxuucMt4vnA0kA9IO`),
+set in `assets/brand/brand.json`. A route can override any voice setting with its own
+`[voice]` table (Denver to Ouray keeps Sadie that way). Write the script
+to match her: short, upbeat sentences and exclamation where it's earned. To generate a route's narration with it:
 
 ```sh
 export ELEVENLABS_API_KEY=...
@@ -131,9 +136,9 @@ renderer warns when a line has changed since. You can also drop in your own reco
 with the same file names.
 
 At render time, clips are tidied: pauses longer than `voice.max_pause` (0.45 s) are
-shortened and the pace is lifted by `voice.tempo` (1.08, pitch unchanged). Sadie's
-natural delivery is slow, and dead air loses viewers. Set `max_pause` to 0 and `tempo`
-to 1.0 to use clips as recorded.
+shortened, and `voice.tempo` can speed up a slow voice (pitch unchanged; Sadie used
+1.08, Marie needs 1.0). Dead air loses viewers. Set `max_pause` to 0 and `tempo` to 1.0
+to use clips as recorded.
 
 ## Brand assets
 
@@ -173,8 +178,9 @@ The generator doesn't upload; do this in YouTube Studio:
    days, passes over 10,000 ft (all computed from the route)
 4. Route overview: the whole map and the list of stops, then the camera flies to the start
 5. For each stop: the drive (camera follows the car; next-stop panel with miles to go,
-   drive time, an elevation chart of the leg and an "On this stretch" fact), then the
-   stop (photo card, see/do/eat/stay rows, "Did you know?" fact)
+   drive time, an elevation chart of the leg, an "On this stretch" fact, then a photo
+   and tip for each "worth a stop" sight), then the stop (a slideshow of up to four
+   photos, see/do/eat/stay rows, "Did you know?" fact)
 6. Finale: zoom out to the whole route with trip totals
 7. Trip planner: the itinerary with miles, elevations and leg drive times, plus tips
 8. End card: subscribe and "Up next"
