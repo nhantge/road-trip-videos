@@ -104,6 +104,7 @@ class Route:
     up_next: dict = field(default_factory=dict)
     thumbnail: dict = field(default_factory=dict)
     voice: dict = field(default_factory=dict)  # overrides brand.json "voice" for this route
+    rim_road: bool = False  # road runs along cliff tops: sample the terrain at the line itself
     places: list = field(default_factory=list)
 
     @property
@@ -174,7 +175,12 @@ class Route:
         anchors = [(s.mile, s.elevation_ft) for s in self.stops if s.elevation_ft]
         anchors += [(p.mile, p.elevation_ft) for p in self.places if p.elevation_ft]
         anchors.sort()
-        sampled = self._valley_floor(terrain, px, py) if terrain else None
+        if not terrain:
+            sampled = None
+        elif self.rim_road:
+            sampled = terrain.sample(px, py)
+        else:
+            sampled = self._valley_floor(terrain, px, py)
         self.elevation_from_terrain = sampled is not None
         if sampled is None:
             if not anchors:
@@ -276,7 +282,7 @@ STOP_KEYS = {"name", "lat", "lon", "kind", "tag", "elevation_ft", "caption", "fa
              "drive_caption", "drive_fact", "drive_narration", "sights"}
 SIGHT_KEYS = {"name", "note", "say", "lat", "lon", "photo_query", "photos"}
 ROUTE_KEYS = {"title", "series", "region", "days", "best_season", "hook", "tips", "narration",
-              "inset", "up_next", "thumbnail", "voice", "stops"}
+              "inset", "up_next", "thumbnail", "voice", "rim_road", "stops"}
 
 
 def load_route(path):
@@ -324,6 +330,7 @@ def load_route(path):
         best_season=data.get("best_season", ""), hook=data.get("hook", []), tips=data.get("tips", []),
         narration=data.get("narration", {}), inset=data.get("inset", {}), up_next=data.get("up_next", {}),
         thumbnail=data.get("thumbnail", {}), voice=data.get("voice", {}),
+        rim_road=bool(data.get("rim_road", False)),
     )
 
 

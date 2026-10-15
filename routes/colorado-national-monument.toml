@@ -1,0 +1,140 @@
+# Colorado National Monument: Rim Rock Drive from Fruita to Grand Junction.
+# Open year-round; spring and fall are the best months.
+
+title = "Colorado National Monument"
+series = "Colorado Road Trips"
+region = "Grand Valley"
+days = "1"
+best_season = "Spring and fall"
+rim_road = true
+hook = [
+  "A 450-foot sandstone tower standing all alone : Independence Monument View",
+  "Canyon drop-offs right beside the road : Cold Shivers Point",
+  "Desert bighorn sheep on the roadside : Saddlehorn",
+]
+tips = [
+  "There's an entrance fee, or use an America the Beautiful pass.",
+  "Turn your headlights on in the three tunnels, and share the road with cyclists.",
+  "Bring water. There's no food or gas on Rim Rock Drive.",
+  "Summer afternoons are hot. Drive early, or come in spring and fall.",
+]
+
+[narration]
+hook = "This one is pure red rock canyon country! A four-hundred-fifty-foot sandstone tower standing all by itself. Canyon drop-offs right beside the road. And desert bighorn sheep just hanging out!"
+intro = "This is Colorado National Monument: Rim Rock Drive, 23 miles right along the edge of the canyons, between Fruita and Grand Junction. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We leave Fruita, climb up to the Saddlehorn visitor center, see Independence Monument, peek over Cold Shivers Point, and roll down into Grand Junction!"
+finale = "And that's the drive! 29 miles from Fruita to Grand Junction, with 23 of them on Rim Rock Drive, right along the canyon rims."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Hit subscribe, and next time we're heading south to the tallest sand dunes in North America!"
+
+[inset]
+name = "Colorado"
+bounds = [-109.05, 37.0, -102.04, 41.0]
+city = { name = "Denver", lat = 39.7392, lon = -104.9903 }
+
+[thumbnail]
+text = ["RED ROCK CANYONS", "RIM ROCK DRIVE"]
+stop = "Independence Monument View"
+photo = 0
+
+[up_next]
+title = "Great Sand Dunes"
+subtitle = "Alamosa to the dunes"
+miles = 38
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Fruita"
+lat = 39.1589
+lon = -108.7290
+tag = "THE WEST ENTRANCE"
+photo_query = "Fruita Colorado"
+caption = "We start in Fruita, right at the foot of the canyons!"
+fact = "Dinosaur fossils have been dug up all around Fruita for more than a hundred years."
+narration = "We're starting in Fruita, right at the foot of the canyons! This area is famous for dinosaur fossils, so check out the dinosaur museum in town. Okay, up we go!"
+[stops.info]
+"SEE & DO" = "Dinosaur Journey Museum, and downtown Fruita."
+"TIP" = "Fill up and grab snacks here. There's nothing on Rim Rock Drive."
+
+[[stops]]
+name = "Saddlehorn"
+lat = 39.1021
+lon = -108.7332
+tag = "VISITOR CENTER"
+road = "Rim Rock Drive"
+miles = 6
+drive_time = "15 min"
+photo_query = "Saddlehorn Colorado National Monument"
+via = [[39.1450, -108.7350], { name = "West entrance", lat = 39.1350, lon = -108.7300 }, [39.1150, -108.7380], [39.1081, -108.7359]]
+drive_caption = "Switchbacks and tunnels straight up the canyon wall!"
+drive_fact = "Rim Rock Drive was built in the 1930s, much of it by the Civilian Conservation Corps."
+drive_narration = "Right away, the road switchbacks straight up the cliffs, through tunnels carved in the rock! Much of it was built by hand in the 1930s. Watch for Balanced Rock on the way up!"
+caption = "Saddlehorn: the visitor center, perched on the canyon rim!"
+fact = "Desert bighorn sheep live in the monument, and they often wander right onto the road."
+narration = "This is the Saddlehorn visitor center, perched right on the rim! Keep your eyes peeled, because desert bighorn sheep love to wander onto the road around here!"
+[stops.info]
+"SEE" = "Canyon Rim Trail, an easy walk along the edge."
+"DO" = "Talk to a ranger, and fill your water bottles."
+"TIP" = "Open daily except Thanksgiving, Christmas and New Year's Day."
+
+[[stops]]
+name = "Independence Monument View"
+lat = 39.0936
+lon = -108.7280
+tag = "A 450-FOOT TOWER"
+road = "Rim Rock Drive"
+miles = 2
+drive_time = "5 min"
+photo_query = "Independence Monument Colorado"
+via = [[39.0980, -108.7300]]
+drive_caption = "Along the rim to the most famous view in the monument!"
+drive_fact = "Grand View overlook looks straight down Monument Canyon."
+drive_narration = "Just down the rim, and here comes the most famous view in the whole monument!"
+caption = "Independence Monument: a 450-foot sandstone tower standing all alone!"
+fact = "John Otto, who campaigned to create the monument, first climbed it in 1911 and planted a flag on top."
+narration = "That's Independence Monument, a four-hundred-fifty-foot sandstone tower standing all by itself! John Otto, the man who fought to create this park, climbed it back in 1911 and planted a flag on top!"
+[stops.info]
+"SEE" = "Independence Monument from the Grand View overlook."
+"HIKE" = "The Monument Canyon Trail goes right past its base."
+"TIP" = "Sunset turns these cliffs bright orange."
+
+[[stops]]
+name = "Cold Shivers Point"
+lat = 39.0313
+lon = -108.6544
+tag = "SHEER DROP-OFFS"
+road = "Rim Rock Drive"
+miles = 12
+drive_time = "25 min"
+photo_query = "Cold Shivers Point"
+via = [[39.0729, -108.7238], [39.0600, -108.7050], [39.0450, -108.6850], [39.0350, -108.6700]]
+drive_caption = "Along the rim past Artists Point and the high country!"
+drive_fact = "Up here, the road runs right along the edge of the canyons."
+drive_narration = "Now we follow the rim, past Artists Point and up onto the high mesa, way above the valley floor!"
+caption = "Cold Shivers Point: peek over the edge of a sheer canyon wall!"
+fact = "The canyon walls here drop hundreds of feet straight down to the canyon floor."
+narration = "Welcome to Cold Shivers Point! Walk out to the railing and peek over the edge. Yep, that's where the name comes from. Shivers!"
+[stops.info]
+"SEE" = "Columbus Canyon, straight down from the railing."
+"TIP" = "Hold onto little ones. The rim is a long way down."
+
+[[stops]]
+name = "Grand Junction"
+lat = 39.0639
+lon = -108.5506
+tag = "THE EAST ENTRANCE"
+road = "Rim Rock Drive"
+miles = 9
+drive_time = "20 min"
+photo_query = "Grand Junction Colorado"
+via = [[39.0350, -108.6300], [39.0450, -108.6050], { name = "East entrance", lat = 39.0550, lon = -108.5850 }, [39.0600, -108.5700]]
+drive_caption = "Switchbacks down the east side, into Grand Junction!"
+drive_fact = "The Grand Valley below is famous for peaches and wineries."
+drive_narration = "Down the switchbacks on the east side and into Grand Junction! The valley down below is famous for peaches and wineries."
+caption = "Grand Junction! Peaches, wineries, and a great little downtown."
+fact = "Grand Junction is named for the junction of the Colorado and Gunnison Rivers."
+narration = "Welcome to Grand Junction, named for the spot where the Colorado and Gunnison Rivers meet. Head out to nearby Palisade for wineries and peaches. What a day!"
+[stops.info]
+"SEE & DO" = "Main Street's sculptures, and wineries in nearby Palisade."
+"TIP" = "Peach season peaks in August."

@@ -107,6 +107,8 @@ corner. Elevations come from free terrain tiles, taking the lowest ground within
 of the line (roads keep to valley floors), and are pinned to any `elevation_ft` you
 give, so the HUD, stop cards and profile always agree. If the profile shows a climb the
 real road doesn't make, a `via` point is probably on a ridge: nudge it into the valley.
+For a road that runs along cliff tops (Rim Rock Drive), set `rim_road = true` at the top of
+the route file so the profile follows the rim instead of the canyon floor below it.
 
 Narration is built from the captions and facts. To word a line differently, set
 `narration` (stop), `drive_narration` (leg), or `[narration]` keys `hook`, `intro`,

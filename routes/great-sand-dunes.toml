@@ -1,0 +1,123 @@
+# Great Sand Dunes: US 160 and CO 150 from Alamosa to the dunes, with Zapata Falls.
+# The park is open 24 hours a day, year-round.
+
+title = "Great Sand Dunes"
+series = "Colorado Road Trips"
+region = "San Luis Valley"
+days = "1 to 2"
+best_season = "Late spring for Medano Creek; fall for cool sand"
+hook = [
+  "The tallest sand dunes in North America : Great Sand Dunes",
+  "A waterfall hidden inside a rock crevice : Zapata Falls",
+  "A creek that flows like waves across the sand : Medano Creek",
+]
+tips = [
+  "In summer the sand can hit 150 degrees. Climb early or late in the day.",
+  "Rent a sandboard or sand sled in Alamosa or Mosca before you arrive.",
+  "Medano Creek flows from late April into June, and peaks in late May.",
+  "It's an International Dark Sky Park. Stay after sunset for the stars.",
+]
+
+[narration]
+hook = "Get ready for something wild! The tallest sand dunes in North America. A waterfall hidden inside a rock crevice. And a creek that flows like ocean waves across the sand!"
+intro = "This is Great Sand Dunes: 38 miles from Alamosa to the tallest dunes in North America, with a hidden waterfall on the way. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We leave Alamosa, hike to Zapata Falls, stop at the visitor center, and head out onto the dunes at Medano Creek!"
+finale = "And that's the drive! 38 miles from Alamosa to the tallest sand dunes in North America."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Hit subscribe, and next time we're driving from Colorado Springs to the Royal Gorge Bridge!"
+
+[inset]
+name = "Colorado"
+bounds = [-109.05, 37.0, -102.04, 41.0]
+city = { name = "Denver", lat = 39.7392, lon = -104.9903 }
+
+[thumbnail]
+text = ["TALLEST DUNES IN AMERICA", "GREAT SAND DUNES"]
+stop = "Great Sand Dunes"
+photo = 0
+
+[up_next]
+title = "Colorado Springs to Royal Gorge"
+subtitle = "Garden of the Gods to the bridge"
+miles = 66
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Alamosa"
+lat = 37.4695
+lon = -105.8700
+elevation_ft = 7544
+tag = "SAN LUIS VALLEY"
+photo_query = "Alamosa Colorado"
+caption = "We start in Alamosa, in the huge, flat San Luis Valley!"
+fact = "The San Luis Valley is one of the largest high mountain valleys in the world."
+narration = "We're starting in Alamosa, right in the middle of the San Luis Valley, one of the biggest high mountain valleys in the world! Grab a sandboard, because we're going to the dunes!"
+[stops.info]
+"SEE & DO" = "Rent sandboards and sleds in town."
+"WILDLIFE" = "Sandhill cranes stop over near Monte Vista every spring and fall."
+"TIP" = "Fill up and stock up here."
+
+[[stops]]
+name = "Zapata Falls"
+lat = 37.6202
+lon = -105.5540
+elevation_ft = 9000
+tag = "HIDDEN WATERFALL"
+road = "US 160 and CO 150"
+miles = 30
+drive_time = "40 min"
+photo_query = "Zapata Falls Colorado"
+via = [[37.4720, -105.7800], [37.4900, -105.6900], [37.5400, -105.6400], [37.5900, -105.5900], [37.6067, -105.5728]]
+drive_caption = "Across the valley, with the Sangre de Cristo Mountains ahead!"
+drive_fact = "Blanca Peak, towering to the east, is one of Colorado's tallest fourteeners."
+drive_narration = "Across the valley floor, with the Sangre de Cristo Mountains straight ahead! Then a bumpy gravel road takes us up to a hidden waterfall."
+caption = "Zapata Falls: a waterfall hidden inside a crack in the rock!"
+fact = "The falls drop about 30 feet inside a narrow rock crevice. In winter they freeze solid."
+narration = "This is Zapata Falls! It's a short hike, then you wade into a crack in the rock, and there's a waterfall hiding inside! In winter it freezes into a column of ice!"
+[stops.info]
+"HIKE" = "About half a mile each way from the parking area."
+"TIP" = "Wear shoes that can get wet, and watch for slippery ice in winter."
+
+[[stops]]
+name = "Visitor Center"
+lat = 37.7331
+lon = -105.5127
+elevation_ft = 8175
+tag = "GREAT SAND DUNES NATIONAL PARK"
+road = "CO 150"
+miles = 7
+drive_time = "10 min"
+photo_query = "Great Sand Dunes visitor center"
+via = [[37.6500, -105.5450], [37.7000, -105.5250]]
+drive_caption = "Here come the dunes, piled up against the mountains!"
+drive_fact = "Winds pile the sand against the Sangre de Cristo Mountains, which trap it here."
+drive_narration = "And here come the dunes, piled up right against the mountains! The winds blow sand across the valley, and the mountains trap it right here."
+caption = "The visitor center, with the whole dunefield spread out behind it!"
+fact = "Great Sand Dunes is also an International Dark Sky Park."
+narration = "Here's the visitor center, with the whole dunefield right behind it! Grab a map, and ask a ranger about Medano Creek. Then let's hit the sand!"
+[stops.info]
+"SEE" = "The dunefield view from the visitor center."
+"DO" = "Pick up a map and check the sand temperature forecast."
+"TIP" = "There's an entrance fee, or use an America the Beautiful pass."
+
+[[stops]]
+name = "Great Sand Dunes"
+lat = 37.7403
+lon = -105.5177
+tag = "TALLEST DUNES IN NORTH AMERICA"
+road = "Park road"
+miles = 1
+drive_time = "5 min"
+photo_query = "Great Sand Dunes"
+via = [[37.7370, -105.5130]]
+drive_caption = "Just down the road to the dunes parking lot!"
+drive_fact = "Star Dune, the tallest, rises about 750 feet from base to crest."
+drive_narration = "Just down the road to the dunes parking lot. Shoes off, let's go!"
+caption = "The tallest sand dunes in North America, up to 750 feet tall!"
+fact = "Medano Creek flows across the sand in late spring, with surges that roll like little waves."
+narration = "This is it, the tallest sand dunes in North America! Star Dune rises about seven hundred fifty feet. And in late spring, Medano Creek flows right across the sand in little waves, like a beach in the mountains!"
+[stops.info]
+"DO" = "Climb High Dune, then sandboard back down."
+"SEE" = "Medano Creek in late spring, and the stars after dark."
+"TIP" = "The sand gets dangerously hot on summer afternoons."

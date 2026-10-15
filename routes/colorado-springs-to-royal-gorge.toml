@@ -1,0 +1,123 @@
+# Colorado Springs to the Royal Gorge: Garden of the Gods, Manitou Springs, CO 115 and US 50
+# to Canon City and the Royal Gorge Bridge. Open year-round.
+
+title = "Colorado Springs to Royal Gorge"
+series = "Colorado Road Trips"
+region = "Pikes Peak Region"
+days = "1"
+best_season = "Year-round; fall for cool, clear days"
+hook = [
+  "Giant red rock towers you can visit for free : Garden of the Gods",
+  "A one-lane road on a razor-thin ridge : Cañon City",
+  "America's highest suspension bridge, 955 feet up : Royal Gorge Bridge",
+]
+tips = [
+  "Garden of the Gods is free. Go early for parking and golden light.",
+  "The Royal Gorge Bridge is inside a ticketed park. Buy tickets online.",
+  "Skyline Drive is one-way and narrow. Leave the trailer at home.",
+  "Ride the Royal Gorge Route train from Cañon City for the view from below.",
+]
+
+[narration]
+hook = "This drive has it all! Giant red rock towers you can visit for free. A one-lane road on a razor-thin ridge. And America's highest suspension bridge, nine hundred fifty-five feet above the river!"
+intro = "This is Colorado Springs to the Royal Gorge: 66 miles from Garden of the Gods to one of the most famous bridges in America. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We start at Garden of the Gods, stop in Manitou Springs, head south to Cañon City, and finish at the Royal Gorge Bridge!"
+finale = "And that's the drive! 66 miles from Garden of the Gods to the Royal Gorge Bridge."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Hit subscribe, and next time we're heading to Arizona, for the red rocks of Sedona!"
+
+[inset]
+name = "Colorado"
+bounds = [-109.05, 37.0, -102.04, 41.0]
+city = { name = "Denver", lat = 39.7392, lon = -104.9903 }
+
+[thumbnail]
+text = ["955 FEET UP", "ROYAL GORGE BRIDGE"]
+stop = "Royal Gorge Bridge"
+photo = 0
+
+[up_next]
+title = "Sedona"
+subtitle = "Flagstaff through Oak Creek Canyon"
+miles = 30
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Garden of the Gods"
+lat = 38.8777
+lon = -104.8807
+elevation_ft = 6400
+tag = "FREE RED ROCK PARK"
+photo_query = "Garden of the Gods"
+caption = "We start at Garden of the Gods, with Pikes Peak right behind the red rocks!"
+fact = "Garden of the Gods is a National Natural Landmark, and admission is free."
+narration = "We're starting at Garden of the Gods! Giant red rock towers, Pikes Peak right behind them, and it's totally free. Walk the paved loop and check out Balanced Rock!"
+[stops.info]
+"SEE" = "The Central Garden loop and Balanced Rock."
+"DO" = "Walk the easy paved Perkins Central Garden Trail."
+"TIP" = "Parking fills by mid-morning. Come early."
+
+[[stops]]
+name = "Manitou Springs"
+lat = 38.8587
+lon = -104.9177
+elevation_ft = 6412
+tag = "SPRINGS TOWN"
+road = "US 24"
+miles = 4
+drive_time = "10 min"
+photo_query = "Manitou Springs Colorado"
+via = [[38.8648, -104.8974], [38.8600, -104.9050]]
+drive_caption = "Past Balanced Rock and into Manitou Springs!"
+drive_fact = "Manitou Springs has natural mineral springs you can drink from right in town."
+drive_narration = "Past Balanced Rock, and just down the hill into Manitou Springs!"
+caption = "Manitou Springs: mineral springs, and the base of the Pikes Peak Cog Railway!"
+fact = "The Pikes Peak Cog Railway climbs to the 14,115-foot summit of Pikes Peak."
+narration = "Welcome to Manitou Springs! Taste the natural mineral springs around town, and if you have time, ride the cog railway all the way to the top of Pikes Peak!"
+[stops.info]
+"SEE & DO" = "The mineral springs, and the Pikes Peak Cog Railway."
+"HIKE" = "The Manitou Incline, if you're feeling brave."
+"TIP" = "Book the cog railway ahead. It sells out."
+
+[[stops]]
+name = "Cañon City"
+lat = 38.4410
+lon = -105.2425
+elevation_ft = 5332
+tag = "SKYLINE DRIVE"
+road = "CO 115 and US 50"
+miles = 50
+drive_time = "1 hr"
+photo_query = "Skyline Drive Canon City"
+via = [[38.8400, -104.8500], [38.7900, -104.8400], [38.7300, -104.8600], [38.6200, -104.9300], [38.5200, -105.0000], { name = "Penrose", lat = 38.4250, lon = -105.0240 }, [38.4400, -105.1000], [38.4450, -105.1800]]
+drive_caption = "South on Highway 115 toward Cañon City!"
+drive_fact = "Cañon City is home to Skyline Drive, a one-way road on top of a narrow ridge."
+drive_narration = "South on Highway 115, past Cheyenne Mountain and out into the open country, all the way to Cañon City!"
+caption = "Cañon City: drive Skyline Drive, a one-lane road on a razor-thin ridge!"
+fact = "Skyline Drive was built in the early 1900s using prison labor."
+narration = "Welcome to Cañon City! Don't miss Skyline Drive, a one-lane road right along the top of a razor-thin ridge, built with prison labor back in the early 1900s. Hold on tight!"
+[stops.info]
+"SEE & DO" = "Skyline Drive, and the Royal Gorge Route Railroad depot."
+"TIP" = "Skyline Drive is one-way and narrow. No trailers."
+
+[[stops]]
+name = "Royal Gorge Bridge"
+lat = 38.4615
+lon = -105.3247
+elevation_ft = 6500
+tag = "955 FEET UP"
+road = "US 50"
+miles = 12
+drive_time = "20 min"
+photo_query = "Royal Gorge Bridge"
+via = [[38.4480, -105.2700], [38.4600, -105.3000]]
+drive_caption = "West on US 50 and up to the rim of the Royal Gorge!"
+drive_fact = "The bridge was built in 1929, in just six months."
+drive_narration = "West on US 50, then up to the rim of the gorge. And there it is!"
+caption = "The Royal Gorge Bridge: America's highest suspension bridge, 955 feet up!"
+fact = "The bridge deck is 955 feet above the Arkansas River."
+narration = "This is the Royal Gorge Bridge, America's highest suspension bridge, nine hundred fifty-five feet above the Arkansas River! Walk across it, and look straight down through the gaps. Whoa!"
+[stops.info]
+"SEE & DO" = "Walk the bridge, ride the gondola, or try the zipline."
+"TIP" = "It's a ticketed park. Buy online to save time."

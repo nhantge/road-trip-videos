@@ -1,0 +1,156 @@
+# Peak to Peak Highway: CO 7, CO 72 and CO 119 from Estes Park to Black Hawk.
+# Colorado's oldest scenic byway. Open year-round; best in late September for aspens.
+
+title = "Peak to Peak Highway"
+series = "Colorado Road Trips"
+region = "Front Range"
+days = "1"
+best_season = "Mid to late September for aspens"
+hook = [
+  "A stone chapel built right on top of a rock : Chapel on the Rock",
+  "An old gold camp hanging on the mountainside : Ward",
+  "The gulch where Colorado's gold rush began : Black Hawk",
+]
+tips = [
+  "Aspens peak in mid to late September. Go on a weekday to beat the crowds.",
+  "The road is open year-round, but it's snowy and icy in winter. Check COtrip.org.",
+  "Brainard Lake needs a timed-entry reservation in summer. Book on Recreation.gov.",
+  "Casinos in Black Hawk and Central City are 21 and up.",
+]
+
+[narration]
+hook = "This is Colorado's oldest scenic byway! A stone chapel built right on top of a rock. An old gold camp hanging on the mountainside. And the gulch where Colorado's gold rush began!"
+intro = "This is the Peak to Peak Highway: 55 miles along the Front Range, from Estes Park all the way to Black Hawk. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We leave Estes Park, stop at Chapel on the Rock, climb to the old gold camp of Ward, cruise into Nederland, and finish in Black Hawk!"
+finale = "And that's the Peak to Peak Highway! 55 miles from Estes Park to Black Hawk, through the oldest scenic byway in Colorado."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Hit subscribe, and next time we're taking I-70 from Denver to the hot springs in Glenwood Springs!"
+
+[inset]
+name = "Colorado"
+bounds = [-109.05, 37.0, -102.04, 41.0]
+city = { name = "Denver", lat = 39.7392, lon = -104.9903 }
+
+[thumbnail]
+text = ["COLORADO'S OLDEST BYWAY", "PEAK TO PEAK"]
+stop = "Chapel on the Rock"
+photo = 0
+
+[up_next]
+title = "Denver to Glenwood Springs"
+subtitle = "I-70 to the hot springs"
+miles = 157
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Estes Park"
+lat = 40.3772
+lon = -105.5217
+elevation_ft = 7522
+tag = "WHERE IT BEGINS"
+photo_query = "Estes Park Colorado"
+photos = ["wikimedia-154080818.jpg", "pixabay-4728503.jpg", "wikimedia-74520997.jpg"]
+caption = "We start in Estes Park, at the doorstep of Rocky Mountain National Park!"
+fact = "The Peak to Peak Highway dates to 1918, making it Colorado's oldest scenic byway."
+narration = "We're starting in Estes Park! Grab a coffee, because today we're driving Colorado's oldest scenic byway, first laid out way back in 1918!"
+[stops.info]
+"SEE & DO" = "Elkhorn Avenue, and elk grazing right in town in the fall."
+"TIP" = "Fill up here. Gas gets sparse until Nederland."
+
+[[stops]]
+name = "Chapel on the Rock"
+lat = 40.2172
+lon = -105.5356
+tag = "BUILT ON A ROCK"
+road = "CO 7"
+miles = 9
+drive_time = "15 min"
+photo_query = "Chapel on the Rock Colorado"
+via = [[40.3550, -105.5310], [40.3300, -105.5400], [40.2800, -105.5400], [40.2450, -105.5370]]
+drive_caption = "South on CO 7, with Longs Peak filling the windshield!"
+drive_fact = "Longs Peak, 14,259 feet, is the only fourteener in Rocky Mountain National Park."
+drive_narration = "South on Highway 7, and look at Longs Peak filling the windshield! Quick stop at Lily Lake for a flat, easy loop with a huge mountain view."
+caption = "Chapel on the Rock: a stone chapel sitting right on top of a boulder!"
+fact = "Pope John Paul II visited the chapel in 1993."
+narration = "This is Chapel on the Rock, a stone chapel built right on top of a giant boulder, with Mount Meeker towering behind it. Even Pope John Paul the Second stopped here, back in 1993!"
+[[stops.sights]]
+name = "Lily Lake"
+note = "A flat, easy loop around a lake with a big view of Longs Peak."
+lat = 40.3072
+lon = -105.5382
+photo_query = "Lily Lake Estes Park"
+[stops.info]
+"SEE" = "The chapel and Mount Meeker right behind it."
+"TIP" = "The grounds are open to visitors. Please be quiet and respectful."
+
+[[stops]]
+name = "Ward"
+lat = 40.0728
+lon = -105.5097
+elevation_ft = 9450
+tag = "OLD GOLD CAMP"
+road = "CO 7 and CO 72"
+miles = 21
+drive_time = "35 min"
+photo_query = "Ward Colorado"
+via = [{ name = "Allenspark", lat = 40.1947, lon = -105.5264 }, [40.1650, -105.5150], [40.1350, -105.5050], [40.1050, -105.5070]]
+drive_caption = "Through Allenspark and deep into aspen country!"
+drive_fact = "In late September, whole hillsides of aspens here turn gold at once."
+drive_narration = "Through tiny Allenspark and deep into aspen country! Come in late September and whole hillsides turn gold. And just past Ward, Brainard Lake is one of the prettiest spots in the Front Range!"
+caption = "Ward: an old gold camp hanging on the mountainside at 9,450 feet!"
+fact = "Gold was found here in 1860, and the camp boomed in the 1860s and 1870s."
+narration = "Welcome to Ward, an old gold camp hanging right on the mountainside at nine thousand four hundred fifty feet! Miners found gold here back in 1860."
+[[stops.sights]]
+name = "Brainard Lake"
+note = "An alpine lake under the Indian Peaks. Timed-entry reservations in summer."
+lat = 40.0784
+lon = -105.5727
+photo_query = "Brainard Lake Colorado"
+[stops.info]
+"SEE" = "Old miners' cabins and mine ruins on the hillsides."
+"HIKE" = "Brainard Lake and the Indian Peaks are just up the road."
+"TIP" = "Ward is tiny and residential. Look from the road."
+
+[[stops]]
+name = "Nederland"
+lat = 39.9614
+lon = -105.5108
+elevation_ft = 8228
+tag = "QUIRKY MOUNTAIN TOWN"
+road = "CO 72"
+miles = 12
+drive_time = "20 min"
+photo_query = "Nederland Colorado"
+via = [[40.0450, -105.5150], [40.0100, -105.5170], [39.9850, -105.5120]]
+drive_caption = "Down to Nederland, with the Indian Peaks behind us!"
+drive_fact = "This stretch rolls along at around 9,000 feet the whole way."
+drive_narration = "Now we roll south toward Nederland, with the Indian Peaks behind us. This whole stretch stays up around nine thousand feet!"
+caption = "Nederland: a quirky mountain town with a hand-carved carousel!"
+fact = "Nederland means \"low lands\" in Dutch, named after a Dutch mining company."
+narration = "Welcome to Nederland! The name means low lands in Dutch, after a Dutch mining company. Don't miss the Carousel of Happiness, with hand-carved animals. It's adorable!"
+[stops.info]
+"SEE & DO" = "The Carousel of Happiness and Barker Reservoir."
+"EAT" = "Grab lunch in town. It's the biggest stop on the byway."
+"TIP" = "Fill up here before the drive down to Black Hawk."
+
+[[stops]]
+name = "Black Hawk"
+lat = 39.7969
+lon = -105.4939
+elevation_ft = 8042
+tag = "WHERE THE GOLD RUSH BEGAN"
+road = "CO 119"
+miles = 13
+drive_time = "25 min"
+photo_query = "Black Hawk Colorado"
+via = [[39.9350, -105.5050], { name = "Rollinsville", lat = 39.9172, lon = -105.4983 }, [39.8750, -105.4900], [39.8350, -105.4950]]
+drive_caption = "Down Highway 119 to where it all began!"
+drive_fact = "In 1859, John Gregory struck gold in the gulch here, kicking off Colorado's gold rush."
+drive_narration = "Down Highway 119 we go, through Rollinsville and into the canyon. Get ready, because we're heading to the spot where Colorado's gold rush began!"
+caption = "Black Hawk: where Colorado's gold rush began, now a casino town."
+fact = "Black Hawk and Central City sit in Gregory Gulch, once called the richest square mile on Earth."
+narration = "We made it to Black Hawk! In 1859, John Gregory struck gold right here, and it kicked off Colorado's gold rush. Today it's a casino town, and Central City is right next door!"
+[stops.info]
+"SEE & DO" = "Central City's Victorian main street and its 1878 opera house."
+"TIP" = "Casinos are 21 and up. Parking garages are usually free."

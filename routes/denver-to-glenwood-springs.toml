@@ -1,0 +1,174 @@
+# Denver to Glenwood Springs on I-70: Georgetown, the Eisenhower Tunnel, Vail Pass and
+# Glenwood Canyon. Open year-round (winter traction laws apply).
+
+title = "Denver to Glenwood Springs"
+series = "Colorado Road Trips"
+region = "I-70 Mountain Corridor"
+days = "1 to 2"
+best_season = "Year-round; fall and winter for the hot springs"
+hook = [
+  "A Victorian mining town with a high-bridge railroad : Georgetown",
+  "One of the most beautiful stretches of interstate in America : Glenwood Canyon",
+  "A giant hot springs pool at the end of the road : Glenwood Springs",
+]
+tips = [
+  "Fall to spring, Colorado's traction law can apply on I-70. Check COtrip.org first.",
+  "Avoid eastbound I-70 on Sunday afternoons, when ski traffic backs up for hours.",
+  "Hanging Lake needs a permit year-round. Book ahead.",
+  "Glenwood Canyon can close for rockfall. Check before you go.",
+]
+
+[narration]
+hook = "Today we cross the Rockies on I-70! A Victorian mining town with a sky-high railroad bridge. One of the most beautiful stretches of interstate in America. And a giant hot springs pool waiting at the end!"
+intro = "This is Denver to Glenwood Springs: 157 miles over the Continental Divide, from the Mile High City to the hot springs. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We leave Denver, stop in Georgetown, tunnel under the Continental Divide, stop in Frisco and Vail, drive Glenwood Canyon, and soak in Glenwood Springs!"
+finale = "And that's the drive! 157 miles from Denver to Glenwood Springs, topping out at 11,158 feet in the Eisenhower Tunnel."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Hit subscribe, and next time we're heading west to the red rock canyons of Colorado National Monument!"
+
+[inset]
+name = "Colorado"
+bounds = [-109.05, 37.0, -102.04, 41.0]
+city = { name = "Denver", lat = 39.7392, lon = -104.9903 }
+
+[thumbnail]
+text = ["I-70 TO THE HOT SPRINGS", "DENVER → GLENWOOD"]
+stop = "Glenwood Canyon"
+photo = 0
+
+[up_next]
+title = "Colorado National Monument"
+subtitle = "Rim Rock Drive"
+miles = 29
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Denver"
+lat = 39.7392
+lon = -104.9903
+elevation_ft = 5280
+tag = "THE MILE HIGH CITY"
+photo_query = "Denver skyline"
+caption = "We start in Denver, exactly one mile above sea level!"
+fact = "One step on the Colorado State Capitol is marked at exactly 5,280 feet."
+narration = "We're starting in Denver, the Mile High City! There's even a step on the State Capitol marked at exactly one mile high. Okay, let's head for the mountains!"
+[stops.info]
+"TIP" = "Leave early. I-70 traffic builds fast on weekends."
+
+[[stops]]
+name = "Georgetown"
+lat = 39.7061
+lon = -105.6975
+elevation_ft = 8530
+tag = "VICTORIAN MINING TOWN"
+road = "I-70"
+miles = 45
+drive_time = "55 min"
+photo_query = "Georgetown Colorado"
+via = [[39.7350, -105.1600], [39.7030, -105.3000], [39.7300, -105.4000], { name = "Idaho Springs", lat = 39.7425, lon = -105.5136 }, [39.7330, -105.6000]]
+drive_caption = "Into the mountains on I-70, past Idaho Springs!"
+drive_fact = "Idaho Springs was one of Colorado's first gold rush towns, in 1859."
+drive_narration = "Up into the foothills on I-70, and past Idaho Springs, one of Colorado's very first gold rush towns. The mountains close in fast!"
+caption = "Georgetown: a Victorian mining town with a famous railroad!"
+fact = "The Georgetown Loop Railroad crosses the Devil's Gate High Bridge, 95 feet above Clear Creek."
+narration = "Welcome to Georgetown, a perfectly preserved Victorian mining town! Ride the Georgetown Loop Railroad over the Devil's Gate High Bridge, ninety-five feet above the creek!"
+[stops.info]
+"SEE & DO" = "Victorian main street, and the Georgetown Loop Railroad."
+"TIP" = "Watch for bighorn sheep on the cliffs by Georgetown Lake."
+
+[[stops]]
+name = "Frisco"
+lat = 39.5744
+lon = -106.0975
+tag = "MAIN STREET OF THE ROCKIES"
+road = "I-70"
+miles = 27
+drive_time = "35 min"
+photo_query = "Frisco Colorado"
+via = [[39.6960, -105.7260], [39.6800, -105.7900], { name = "Eisenhower Tunnel", lat = 39.6792, lon = -105.9058, kind = "summit", elevation_ft = 11158 }, [39.6300, -106.0300], [39.6100, -106.0700]]
+drive_caption = "Under the Continental Divide in the Eisenhower Tunnel!"
+drive_fact = "At 11,158 feet, the Eisenhower Tunnel is the highest point on the Interstate Highway System."
+drive_narration = "Now we drive straight under the Continental Divide, through the Eisenhower Tunnel! At eleven thousand one hundred fifty-eight feet, it's the highest point on the entire Interstate Highway System!"
+caption = "Frisco: a mountain town on the shore of Dillon Reservoir!"
+fact = "Dillon Reservoir supplies drinking water to Denver, on the other side of the Divide."
+narration = "Welcome to Frisco, right on the shore of Dillon Reservoir, with the Tenmile Range towering over town. Walk Main Street and grab a snack!"
+[[stops.sights]]
+name = "Dillon Reservoir"
+note = "A huge mountain lake with a paved bike path all the way around."
+lat = 39.5986
+lon = -106.0857
+photo_query = "Dillon Reservoir"
+[stops.info]
+"SEE & DO" = "Main Street, and the marina on Dillon Reservoir."
+"TIP" = "Ski areas all around: Breckenridge, Keystone and Copper Mountain."
+
+[[stops]]
+name = "Vail"
+lat = 39.6403
+lon = -106.3742
+elevation_ft = 8150
+tag = "ALPINE VILLAGE"
+road = "I-70"
+miles = 25
+drive_time = "30 min"
+photo_query = "Vail Colorado"
+via = [[39.5010, -106.1510], { name = "Vail Pass", lat = 39.5306, lon = -106.2167, kind = "pass", elevation_ft = 10662 }, [39.5800, -106.2700], [39.6250, -106.3200]]
+drive_caption = "Over Vail Pass, 10,662 feet, and down into Vail!"
+drive_fact = "Vail Pass is plowed all winter. Use the lower gears on the steep descent."
+drive_narration = "Up and over Vail Pass, ten thousand six hundred sixty-two feet, and down the other side into Vail. Use those lower gears!"
+caption = "Vail: a European-style village tucked under the Gore Range!"
+fact = "Vail ski resort opened in 1962, on land that was sheep pasture before that."
+narration = "Welcome to Vail! It looks like a little European village tucked under the Gore Range. Stroll Vail Village and Lionshead, and ride the gondola for a big view!"
+[stops.info]
+"SEE & DO" = "Vail Village, Lionshead, and the Gore Creek path."
+"TIP" = "Park in the town parking structures."
+
+[[stops]]
+name = "Glenwood Canyon"
+lat = 39.5621
+lon = -107.2498
+tag = "ENGINEERING MARVEL"
+road = "I-70"
+miles = 54
+drive_time = "55 min"
+photo_query = "Glenwood Canyon"
+via = [[39.6314, -106.5220], [39.6450, -106.5940], [39.7030, -106.6770], { name = "Eagle", lat = 39.6553, lon = -106.8287 }, [39.6460, -106.9510], [39.6450, -107.0600], [39.6430, -107.0700], [39.6330, -107.0950], [39.6170, -107.1200], [39.6000, -107.1450], [39.5920, -107.1700], [39.5860, -107.1950], [39.5760, -107.2200]]
+drive_caption = "Into Glenwood Canyon, the most beautiful stretch of I-70!"
+drive_fact = "I-70 through Glenwood Canyon was finished in 1992, built in layers to protect the canyon."
+drive_narration = "And now, the best part! I-70 squeezes into Glenwood Canyon, with the Colorado River right beside you. Hike to Hanging Lake if you can grab a permit. It's stunning!"
+caption = "Glenwood Canyon: cliffs, the Colorado River, and a highway built in layers!"
+fact = "Engineers stacked the lanes and built viaducts to fit the highway into the narrow canyon."
+narration = "This is Glenwood Canyon, with cliffs towering over the Colorado River. Engineers stacked the highway in layers to squeeze it into the canyon. Pull off at Grizzly Creek and walk the bike path!"
+[[stops.sights]]
+name = "Hanging Lake"
+note = "A turquoise lake below a waterfall, up a steep 1.2-mile trail. Permit required."
+lat = 39.5901
+lon = -107.1897
+photo_query = "Hanging Lake Colorado"
+[stops.info]
+"SEE" = "The canyon walls and the Colorado River."
+"DO" = "Walk or bike the Glenwood Canyon Recreation Path."
+"TIP" = "Westbound, there's no Hanging Lake exit. Use Grizzly Creek and double back."
+
+[[stops]]
+name = "Glenwood Springs"
+lat = 39.5505
+lon = -107.3248
+elevation_ft = 5761
+tag = "HOT SPRINGS TOWN"
+road = "I-70"
+miles = 6
+drive_time = "10 min"
+photo_query = "Glenwood Springs Colorado"
+via = [[39.5560, -107.2900]]
+drive_caption = "Out of the canyon and into Glenwood Springs!"
+drive_fact = "The hot springs here have drawn visitors since the 1880s."
+drive_narration = "Out of the canyon and into town. Time to soak!"
+caption = "Glenwood Springs: a giant hot springs pool at the end of the road!"
+fact = "Doc Holliday, of the O.K. Corral, is buried in Glenwood Springs."
+narration = "We made it to Glenwood Springs! The hot springs pool here is huge, and it's been open since 1888. And fun fact: Doc Holliday from the O.K. Corral is buried right here in town!"
+[stops.info]
+"SEE & DO" = "Glenwood Hot Springs Pool, and the Glenwood Caverns Adventure Park."
+"HISTORY" = "Doc Holliday's grave is in Linwood Cemetery, a short hike up from town."
+"TIP" = "Hot springs are best on a cold winter evening."
