@@ -1,0 +1,69 @@
+Independence Pass | Colorado Road Trips
+
+57 miles · 5 stops · about 1 hr 50 min of driving · 1 day recommended
+
+CHAPTERS
+0:00 Intro
+0:38 Leadville
+0:54 Twin Lakes
+1:19 Independence Pass
+1:43 Independence Ghost Town
+2:07 Aspen
+2:42 Trip planner
+
+THE ROUTE
+1. Leadville (10,152 ft) · start
+   See & Do: Harrison Avenue's Victorian main street and the Tabor Opera House.
+   Eat: Grab breakfast on Harrison Avenue before you head out.
+   Tip: Fill up here. Services are few until Aspen.
+2. Twin Lakes (9,200 ft) · mile 20 · 20 mi / 30 min from Leadville via US 24
+   On the way, worth a stop: Mount Elbert. Colorado's highest peak, over 14,400 feet. Its summit trail is a classic first fourteener.
+   See: The lakes, with Mount Elbert rising right behind them.
+   Do: Paddle, fish or picnic on the shore.
+   Tip: This is your last easy stop before the big climb.
+3. Independence Pass (12,095 ft) · mile 38 · 18 mi / 35 min from Twin Lakes via CO 82
+   See: The Continental Divide sign and views across the Sawatch Range.
+   Do: Walk the short paved trail to the overlook.
+   Tip: It's cold and windy up here, even in July. Bring a jacket.
+4. Independence Ghost Town (10,830 ft) · mile 41 · 3 mi / 10 min from Independence Pass via CO 82
+   See: Weathered log cabins from the 1880s.
+   History: The gold ran out within a few years, and the miners moved on to Aspen's silver.
+   Tip: It's a protected historic site. Look, but don't touch.
+5. Aspen (7,908 ft) · mile 57 · 16 mi / 35 min from Independence Ghost Town via CO 82
+   On the way, worth a stop: The Grottos. Smooth granite, waterfalls and ice caves along the Roaring Fork, an easy walk from the road.
+   See: The Maroon Bells, Colorado's most photographed peaks. Reservations required.
+   Do: Ride the Silver Queen Gondola up Aspen Mountain in summer.
+   Tip: Downtown parking is tight. Use the free town buses.
+
+Best season: Late June to September
+
+GOOD TO KNOW
+- The pass closes in winter, usually November to late May. Check COtrip.org first.
+- The road narrows to about one lane in spots. Go slow, and long RVs should check CDOT limits.
+- Fill up in Leadville. Services are few until Aspen.
+- Storms build fast up top on summer afternoons. Cross the pass in the morning.
+
+Mileage and drive times are approximate and don't include stops. Check road conditions before you go.
+
+PHOTO CREDITS
+- "2022-09-10 18 11 59 View east along U.S. Route 24 (Harrison Avenue) at Eighth Street in Leadville, Lake County, Colorado" by Famartin, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=122875048
+- "Leadville, United States (Unsplash sSN3kRQ-TO0)" by Nathan Anderson nathananderson, CC0, https://commons.wikimedia.org/?curid=61799242
+- "Leadville, United States (Unsplash iAW5QyehNcc)" by Nathan Anderson nathananderson, CC0, https://commons.wikimedia.org/?curid=61849238
+- "Twin Lakes, Colorado11" by dconvertini, CC BY-SA 2.0, https://commons.wikimedia.org/?curid=151370527
+- psaudio / Pixabay, https://pixabay.com/photos/twin-lakes-colorado-aspen-fall-669338/
+- "Twin Lakes, Colorado1" by dconvertini, CC BY-SA 2.0, https://commons.wikimedia.org/?curid=151370506
+- "Mount Elbert and Surrounding Sawatch Range, Colorado (9179291029)" by Ken Lund from Reno, Nevada, USA, CC BY-SA 2.0, https://commons.wikimedia.org/?curid=45409126
+- "Independence Pass Continental Divide - July 2011 (5902799447)" by Nan Palmero from San Antonio, TX, USA, CC BY 2.0, https://commons.wikimedia.org/?curid=93389348
+- "Independence Pass Continental Divide - July 2011 (5902795605)" by Nan Palmero from San Antonio, TX, USA, CC BY 2.0, https://commons.wikimedia.org/?curid=93389276
+- "Independence Pass Continental Divide - July 2011 (5902810559)" by Nan Palmero from San Antonio, TX, USA, CC BY 2.0, https://commons.wikimedia.org/?curid=93389363
+- "Independence, Colorado" by Jeffrey Beall, CC BY-SA 3.0, https://commons.wikimedia.org/?curid=17042702
+- "Cabin in Independence Ghost Town, just off State Highway 82 through the "Top of the Rockies" route through Independence Pass in Pitkin County, below the Continental Divide in the Colorado Rockies LCCN2015633628" by Carol M. Highsmith, Public domain, https://commons.wikimedia.org/?curid=51463591
+- Abhardphoto / Pixabay, https://pixabay.com/photos/colorado-aspen-usa-scenic-5156229/
+- 12019 / Pixabay, https://pixabay.com/photos/colorado-autumn-fall-colors-2552777/
+- "Aspen, United States (Unsplash cgO39sAIXpc)" by Nathan Anderson nathananderson, CC0, https://commons.wikimedia.org/?curid=61767161
+- "Roaring Fork River (Grottos Day Use Area) on Independence Pass, Colorado (30624681277)" by Tony Webster from Minneapolis, Minnesota, United States, CC BY 2.0, https://commons.wikimedia.org/?curid=74520992
+
+CREDITS
+- Intro sting and outro music: original music by Colorado Road Trips
+- Voiceover: ElevenLabs voice "Marie"
+- Elevation: AWS Terrain Tiles (USGS 3DEP, SRTM, GMTED2010, ETOPO1 and others, https://registry.opendata.aws/terrain-tiles/)
