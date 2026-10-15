@@ -49,7 +49,7 @@ Useful flags: `--stills` (one PNG per segment instead of the video, for a quick 
 
 ```toml
 title = "Denver to Ouray"           # shown on the title card, HUD and end card
-series = "Colorado Road Trips"      # kicker above the title
+series = "Colorado Road Trips"      # state series: kicker above the title, "Subscribe to <channel> for more Colorado road trips"
 region = "Central Colorado"         # under the title in the HUD
 days = "2 to 3"
 best_season = "Late June to early October"
@@ -151,7 +151,7 @@ to use clips as recorded.
   ducks about 10 dB whenever the narrator talks and hands over to the outro
 - `outro_music.m4a`: music for the end; its last `outro_seconds` (10) play under the
   planner and end card, so the final chord lands on the last frame
-- `brand.json`: channel name, tagline, the file names above, and the voice settings
+- `brand.json`: channel name (shown as "A <channel> series" on the title card and in the subscribe lines), tagline, the file names above, and the voice settings
 
 Both media files are original and were synthesized by `scripts/make_brand_assets.py`
 (no samples or licensed audio). Re-run it after changing the channel name or tagline

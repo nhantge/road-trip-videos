@@ -12,7 +12,19 @@ from PIL import Image, ImageDraw, ImageFilter
 from . import style as S
 from .mapview import ZFOLLOW, MapView
 from .photos import load_cover, pick_photos, short_credit
+from .audio import load_brand
 from .timeline import hook_items
+
+
+def state_name(route):
+    """'Arizona' from the series 'Arizona Road Trips'."""
+    return route.series.removesuffix(" Road Trips").strip()
+
+
+def subscribe_text(route, channel):
+    state = state_name(route)
+    more = f"for more {state} road trips" if state else "for more road trips"
+    return f"to {channel} {more}" if channel else more
 
 XFADE = 0.4         # crossfade between full-screen scenes
 PANEL_XFADE = 0.35  # crossfade of the right-hand panel between map segments
@@ -25,6 +37,7 @@ class Renderer:
     def __init__(self, route, segments, terrain):
         self.route = route
         self.segs = segments
+        self.channel = load_brand().get("channel", "")
         self.map = MapView(route, terrain)
         self.n = len(route.stops)
         self.photos = {s.index: pick_photos(s) for s in route.stops}
@@ -506,7 +519,10 @@ class Renderer:
         img = Image.new("RGBA", (S.W, S.H), S.BG_TITLE + (255,))
         layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
         d = ImageDraw.Draw(layer)
-        d.text((S.W / 2, 412), (route.series or "Road trips").upper(), font=S.font("bold", 26), fill=S.ORANGE, anchor="mm")
+        d.text((S.W / 2, 372), (route.series or "Road trips").upper(), font=S.font("bold", 26), fill=S.ORANGE, anchor="mm")
+        if self.channel:
+            d.text((S.W / 2, 412), f"A {self.channel} series".upper(), font=S.font("semibold", 20),
+                   fill=S.TEXT_DIM, anchor="mm")
         f = S.font("display", 120)
         if f.getlength(route.title) > 1700:
             f = S.font("display", int(120 * 1700 / f.getlength(route.title)))
@@ -663,7 +679,7 @@ class Renderer:
         d.text((140, 440), "  ·  ".join(bits), font=S.font("regular", 30), fill=S.TEXT_DIM, anchor="lm")
         layer.alpha_composite(S.rounded_box(258, 76, 38, S.ORANGE + (255,)), (140, 538))
         d.text((269, 576), "SUBSCRIBE", font=S.font("bold", 25), fill=S.BG_TITLE, anchor="mm")
-        d.text((428, 576), "for more road trips", font=S.font("medium", 27), fill=S.TEXT, anchor="lm")
+        d.text((428, 576), subscribe_text(route, self.channel), font=S.font("medium", 27), fill=S.TEXT, anchor="lm")
         img.alpha_composite(S.with_alpha(layer, a), (0, int((1 - a) * 16)))
         up = route.up_next
         if up.get("title"):

@@ -117,6 +117,8 @@ def main():
         for seg in segs:
             t = seg.start + min(seg.dur * 0.7, seg.dur - 0.1)
             _renderer.frame(t).save(out / f"still-{seg.id}.png")
+            if seg.id == "intro":  # the title card comes first, before the stats
+                _renderer.frame(seg.start + 1.5).save(out / "still-title.png")
         print(f"stills in {out}")
         return
 

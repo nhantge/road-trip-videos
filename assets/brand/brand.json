@@ -1,12 +1,12 @@
 {
-  "channel": "Colorado Road Trips",
+  "channel": "Road Trip Atlas",
   "tagline": "Plan the drive. Then go.",
   "intro_sting": "intro_sting.mp4",
   "outro_music": "outro_music.m4a",
   "music_bed": "music_bed.m4a",
   "music_bed_volume": 0.16,
   "outro_seconds": 10,
-  "music_credit": "original music by Colorado Road Trips",
+  "music_credit": "original music by Road Trip Atlas",
   "voice": {
     "provider": "elevenlabs",
     "name": "Marie",

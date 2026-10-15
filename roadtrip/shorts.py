@@ -14,7 +14,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
 from . import style as S
-from .scenes import Renderer, days_text, drive_progress, plural
+from .scenes import Renderer, days_text, drive_progress, plural, state_name, subscribe_text
 from .timeline import layout
 
 SW, SH = 1080, 1920
@@ -304,6 +304,10 @@ class ShortRenderer(Renderer):
         bw = int(bf.getlength(label) + 76)
         layer.alpha_composite(S.rounded_box(bw, 92, 46, S.ORANGE + (255,)), (X0, y))
         d.text((X0 + bw / 2, y + 46), label, font=bf, fill=S.BG_TITLE, anchor="mm")
+        if self.channel:
+            d.text((X0, y + 140), f"Subscribe {subscribe_text(route, self.channel)}", font=S.font("semibold", 32),
+                   fill=S.TEXT, anchor="lm")
+            y += 70
         y += 150
         up = route.up_next.get("title")
         if up:
@@ -336,7 +340,7 @@ def caption_text(route, brand, total, credits=()):
     high, _ = route.high_point()
     hook = route.hook[0].partition(" : ")[0] if route.hook else ""
     title = f"{route.title}: {S.fmt_int(route.total_miles)} miles in {round(total)} seconds #shorts"
-    state = route.series.removesuffix(" Road Trips").replace(" ", "").lower() or "usa"
+    state = state_name(route).replace(" ", "").lower() or "usa"
     tags = ["#shorts", "#roadtrip", "#" + state,
             "#" + "".join(w.capitalize() for w in route.title.split() if w.isalpha())]
     lines = [
@@ -348,7 +352,7 @@ def caption_text(route, brand, total, credits=()):
         + ("." if S.fmt_int(high) in hook else f", topping out at {S.fmt_int(high)} ft."),
         "",
         "Full episode with every stop, drive times and a trip planner is on the channel. "
-        f"Subscribe to {brand.get('channel', 'the channel')} for more road trips!",
+        f"Subscribe {subscribe_text(route, brand.get('channel', ''))}!",
         "",
         " ".join(tags + ["#travel", "#scenicdrive", "#roadtripideas"]),
         "",
