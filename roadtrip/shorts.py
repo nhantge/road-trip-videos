@@ -343,8 +343,8 @@ def caption_text(route, brand, total, credits=()):
         title,
         "",
         "DESCRIPTION / CAPTION",
-        f"{hook}. {route.title}: {S.fmt_int(route.total_miles)} miles, {len(route.stops)} stops, "
-        f"topping out at {S.fmt_int(high)} ft.",
+        f"{hook}. {route.title}: {S.fmt_int(route.total_miles)} miles, {len(route.stops)} stops"
+        + ("." if S.fmt_int(high) in hook else f", topping out at {S.fmt_int(high)} ft."),
         "",
         "Full episode with every stop, drive times and a trip planner is on the channel. "
         f"Subscribe to {brand.get('channel', 'the channel')} for more road trips!",

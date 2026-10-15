@@ -34,7 +34,7 @@ city = { name = "Denver", lat = 39.7392, lon = -104.9903 }
 [thumbnail]
 text = ["12,095 FEET", "INDEPENDENCE PASS"]
 stop = "Independence Pass"
-photo = 0
+photo = 1
 
 [up_next]
 title = "Peak to Peak Highway"
@@ -50,6 +50,7 @@ lon = -106.2925
 elevation_ft = 10152
 tag = "AMERICA'S HIGHEST CITY"
 photo_query = "Leadville Colorado"
+photos = ["wikimedia-122875048.jpg", "wikimedia-61799242.jpg", "wikimedia-61849238.jpg"]
 caption = "We start in Leadville, at 10,152 ft the highest incorporated city in America!"
 fact = "Leadville's silver boom in the late 1870s made it one of the richest towns in the West."
 narration = "We're starting in Leadville, the highest incorporated city in America, at ten thousand one hundred fifty-two feet! Back in the silver boom, this was one of the richest towns in the West. Okay, let's roll!"
@@ -68,6 +69,7 @@ miles = 20
 road = "US 24"
 drive_time = "30 min"
 photo_query = "Twin Lakes Colorado"
+photos = ["wikimedia-151370527.jpg", "pixabay-669338.jpg", "wikimedia-151370506.jpg"]
 via = [[39.2280, -106.3300], [39.1900, -106.3330], [39.1500, -106.3150], [39.1150, -106.3020],
        [39.0950, -106.3000], [39.0900, -106.3250], [39.0880, -106.3500], [39.0850, -106.3700]]
 drive_caption = "South down the Arkansas Valley, with Colorado's highest peaks on the right!"
@@ -82,6 +84,7 @@ note = "Colorado's highest peak, over 14,400 feet. Its summit trail is a classic
 lat = 39.1178
 lon = -106.4454
 photo_query = "Mount Elbert"
+photos = ["wikimedia-45409126.jpg"]
 [stops.info]
 "SEE" = "The lakes, with Mount Elbert rising right behind them."
 "DO" = "Paddle, fish or picnic on the shore."
@@ -98,6 +101,7 @@ miles = 18
 road = "CO 82"
 drive_time = "35 min"
 photo_query = "Independence Pass Colorado"
+photos = ["wikimedia-93389348.jpg", "wikimedia-93389276.jpg", "wikimedia-93389363.jpg"]
 via = [[39.0760, -106.4000], [39.0700, -106.4300], [39.0690, -106.4650], [39.0720, -106.5000],
        [39.0780, -106.5250], [39.0840, -106.5370], [39.0950, -106.5430], [39.1040, -106.5480]]
 drive_caption = "Up the Lake Creek valley, then switchbacks to the top!"
@@ -121,6 +125,7 @@ road = "CO 82"
 miles = 3
 drive_time = "10 min"
 photo_query = "Independence ghost town Colorado"
+photos = ["wikimedia-17042702.jpg", "wikimedia-51463591.jpg"]
 via = [[39.1075, -106.5800]]
 drive_caption = "Down the west side, following the Roaring Fork River!"
 drive_fact = "The Roaring Fork River starts just below the pass and runs all the way to Aspen."
@@ -143,6 +148,7 @@ road = "CO 82"
 miles = 16
 drive_time = "35 min"
 photo_query = "Aspen Colorado"
+photos = ["pixabay-5156229.jpg", "pixabay-2552777.jpg", "wikimedia-61767161.jpg"]
 via = [[39.1100, -106.6300], [39.1160, -106.6600], [39.1185, -106.6900], [39.1230, -106.7250],
        [39.1350, -106.7500], [39.1550, -106.7750], [39.1750, -106.7980]]
 drive_caption = "Down the Roaring Fork Valley, with a few tight one-lane squeezes!"
@@ -157,6 +163,7 @@ note = "Smooth granite, waterfalls and ice caves along the Roaring Fork, an easy
 lat = 39.1185
 lon = -106.7033
 photo_query = "Grottos Independence Pass"
+photos = ["wikimedia-74520992.jpg"]
 [stops.info]
 "SEE" = "The Maroon Bells, Colorado's most photographed peaks. Reservations required."
 "DO" = "Ride the Silver Queen Gondola up Aspen Mountain in summer."

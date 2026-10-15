@@ -1,0 +1,65 @@
+Trail Ridge Road | Colorado Road Trips
+
+48 miles · 6 stops · about 1 hr 50 min of driving · 1 day recommended
+
+CHAPTERS
+0:00 Intro
+0:46 Estes Park
+1:00 Many Parks Curve
+1:24 Forest Canyon Overlook
+1:56 Alpine Visitor Center
+2:30 Milner Pass
+2:56 Grand Lake
+3:38 Trip planner
+
+THE ROUTE
+1. Estes Park (7,522 ft) · start
+2. Many Parks Curve (9,640 ft) · mile 9 · 9 mi / 20 min from Estes Park via US 36
+3. Forest Canyon Overlook (11,716 ft) · mile 16 · 7 mi / 20 min from Many Parks Curve via US 34
+   On the way, worth a stop: Rainbow Curve.
+4. Alpine Visitor Center (11,796 ft) · mile 22 · 6 mi / 15 min from Forest Canyon Overlook via US 34
+   On the way, worth a stop: Tundra Communities Trail.
+5. Milner Pass (10,758 ft) · mile 26 · 4 mi / 10 min from Alpine Visitor Center via US 34
+6. Grand Lake (8,369 ft) · mile 48 · 22 mi / 45 min from Milner Pass via US 34
+   On the way, worth a stop: Farview Curve.
+   On the way, worth a stop: Holzwarth Historic Site.
+
+Best season: Late June to September
+
+GOOD TO KNOW
+- The road is usually open late May to mid-October. Check the park's road status first.
+- In peak season the park needs timed entry reservations. Book ahead on Recreation.gov.
+- There's no gas in the park. Fill up in Estes Park or Grand Lake.
+- It's often 15 to 20 degrees colder up top. Bring layers, and go early to beat the storms.
+
+Mileage and drive times are approximate and don't include stops. Check road conditions before you go.
+
+PHOTO CREDITS
+- "West Elkhorn Avenue, Estes Park (2024)-104A4568" by Frank Schulenburg, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=154080818
+- MikeGoad / Pixabay, https://pixabay.com/photos/estes-parks-stanley-hotel-mountain-3893837/
+- "Historic Park Theatre and Park Theatre Mall, Estes Park, Colorado (30624723807)" by Tony Webster from Minneapolis, Minnesota, United States, CC BY 2.0, https://commons.wikimedia.org/?curid=74520997
+- Jon_Michael / Pixabay, https://pixabay.com/photos/elk-colorado-herd-wildlife-river-4728503/
+- "Many Park Curve Overlook - panoramio" by Thomson M, CC BY 3.0, https://commons.wikimedia.org/?curid=61020390
+- "Twin Sisters Peaks, Many Parks Curve Overlook, July 2016" by Thomson200, CC0, https://commons.wikimedia.org/?curid=50131250
+- "Longs Peak from Trail Ridge Road in Autumn, Rocky Mountain National Park" by Anne Dirkse, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=35951936
+- "Rocky Mountain National Park view from Forest Canyon Overlook" by Dough4872, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=106899884
+- "Forest Canyon Overlook - panoramio" by Thomson M, CC BY 3.0, https://commons.wikimedia.org/?curid=61020482
+- "Forest Canyon Overlook Rocky Mountains NP 2024" by Larry D. Moore, CC BY 4.0, https://commons.wikimedia.org/?curid=150219796
+- "Longs Peak from Forest Canyon Overlook, Trail Ridge Road, Rocky Mountain National Park" by Anne Dirkse, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=35951910
+- "Rainbow Curve Overlook - panoramio" by Thomson M, CC BY 3.0, https://commons.wikimedia.org/?curid=61020397
+- "Alpine Visitor Center Rocky Mountain National Park 2024" by Larry D. Moore, CC BY 4.0, https://commons.wikimedia.org/?curid=150235211
+- "Glacial Cirque Rocky Mountain National Park 2024" by Larry D. Moore, CC BY 4.0, https://commons.wikimedia.org/?curid=150248179
+- "Rocky Mount N.P., Alpine Visitor Center 8-28-12 (8083927552)" by inkknife_2000 (7.5 million views +), CC BY-SA 2.0, https://commons.wikimedia.org/?curid=57489964
+- "Viewed from the Tundra Communities Trail - panoramio" by Thomson M, CC BY 3.0, https://commons.wikimedia.org/?curid=61026230
+- "Poudre Lake - panoramio" by Thomson M, CC BY 3.0, https://commons.wikimedia.org/?curid=61026349
+- "Continental Divide sign high in Rocky Mountain National Park in the Front Range of the spectacular and high Rockies in north-central Colorado LCCN2015633370" by Carol M. Highsmith, Public domain, https://commons.wikimedia.org/?curid=51394955
+- "Grand Lake Water Front Aerial (37440887821)" by Heath Alseike, CC BY 2.0, https://commons.wikimedia.org/?curid=105386312
+- "Sunrise, Grand Lake, CO 2012 (14702864510)" by inkknife_2000 (7.5 million views +), CC BY-SA 2.0, https://commons.wikimedia.org/?curid=57478066
+- "Grand Lake, Co 8-2012 (8122742044)" by inkknife_2000 (7.5 million views +), CC BY-SA 2.0, https://commons.wikimedia.org/?curid=57488451
+- "Never Summer Mountains from Trail Ridge Road (6280676325)" by Greg Willis from Denver, CO, usa, CC BY-SA 2.0, https://commons.wikimedia.org/?curid=24309817
+- "Holzwarth Historic Site - panoramio" by Thomson M, CC BY 3.0, https://commons.wikimedia.org/?curid=61026360
+
+CREDITS
+- Intro sting and outro music: original music by Colorado Road Trips
+- Voiceover: ElevenLabs voice "Marie"
+- Elevation: AWS Terrain Tiles (USGS 3DEP, SRTM, GMTED2010, ETOPO1 and others, https://registry.opendata.aws/terrain-tiles/)

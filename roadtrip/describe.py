@@ -32,10 +32,13 @@ YOUTUBE_LIMIT = 5000  # characters; YouTube also rejects "<" and ">"
 
 def description(route, segs, offset, brand):
     """YouTube description, kept under YouTube's 5,000-character limit."""
-    text = _description(route, segs, offset, brand)
-    if len(text) > YOUTUBE_LIMIT:  # the per-stop see/eat/stay rows are also in the video
-        text = _description(route, segs, offset, brand, details=False)
-    if len(text) > YOUTUBE_LIMIT:
+    # Trim what the video already shows: first the per-stop see/eat/stay rows, then the
+    # notes on "worth a stop" sights (their names stay).
+    for details, notes in ((True, True), (False, True), (False, False)):
+        text = _description(route, segs, offset, brand, details=details, notes=notes)
+        if len(text) <= YOUTUBE_LIMIT:
+            break
+    else:
         raise ValueError(f"description is {len(text)} characters; YouTube allows {YOUTUBE_LIMIT}")
     return text.replace("<", "(").replace(">", ")")
 
@@ -53,7 +56,7 @@ def short_attribution(entry):
     link = f"https://commons.wikimedia.org/?curid={entry['id']}" if entry.get("id") else entry.get("page_url", "")
     return f'"{title}" by {author}, {entry.get("license", "")}, {link}'
 
-def _description(route, segs, offset, brand, details=True):
+def _description(route, segs, offset, brand, details=True, notes=True):
     lines = [f"{route.title} | {route.series}" if route.series else route.title, ""]
     bits = [f"{fmt_int(route.total_miles)} miles", f"{len(route.stops)} stops",
             f"about {fmt_minutes(route.total_drive_minutes)} of driving"]
@@ -68,7 +71,7 @@ def _description(route, segs, offset, brand, details=True):
                                                + (f" via {st.road}" if st.road else ""))
         lines.append(f"{st.index + 1}. {st.name} ({fmt_int(st.elevation_ft)} ft) · {where}")
         for sight in st.sights:
-            lines.append(f"   On the way, worth a stop: {sight.name}. {sight.note}")
+            lines.append(f"   On the way, worth a stop: {sight.name}." + (f" {sight.note}" if notes else ""))
         for label, value in (st.info.items() if details else ()):
             lines.append(f"   {label.title()}: {value}")
     lines.append("")
