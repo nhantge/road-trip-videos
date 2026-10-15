@@ -336,8 +336,9 @@ def caption_text(route, brand, total, credits=()):
     high, _ = route.high_point()
     hook = route.hook[0].partition(" : ")[0] if route.hook else ""
     title = f"{route.title}: {S.fmt_int(route.total_miles)} miles in {round(total)} seconds #shorts"
-    tags = ["#shorts", "#roadtrip", "#colorado", "#" + "".join(w.capitalize() for w in route.title.split()
-                                                                  if w.isalpha() and w.lower() != "to")]
+    state = route.series.removesuffix(" Road Trips").replace(" ", "").lower() or "usa"
+    tags = ["#shorts", "#roadtrip", "#" + state,
+            "#" + "".join(w.capitalize() for w in route.title.split() if w.isalpha())]
     lines = [
         "TITLE (under 100 characters)",
         title,
