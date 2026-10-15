@@ -1,0 +1,41 @@
+[
+  {
+    "file": "flickr-53015876504.jpg",
+    "place": "Garden of the Gods",
+    "source": "flickr",
+    "id": "53015876504",
+    "title": "Golden Garden of the Gods",
+    "page_url": "https://www.flickr.com/photos/82955120@N05/53015876504/",
+    "author": "Bold Frontiers",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "attribution_required": true,
+    "attribution": "\"Golden Garden of the Gods\" by Bold Frontiers, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/), via https://www.flickr.com/photos/82955120@N05/53015876504/"
+  },
+  {
+    "file": "flickr-25900964747.jpg",
+    "place": "Garden of the Gods",
+    "source": "flickr",
+    "id": "25900964747",
+    "title": "garden prow",
+    "page_url": "https://www.flickr.com/photos/17094005@N00/25900964747/",
+    "author": "Christian Collins",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "attribution_required": true,
+    "attribution": "\"garden prow\" by Christian Collins, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/), via https://www.flickr.com/photos/17094005@N00/25900964747/"
+  },
+  {
+    "file": "flickr-23472923108.jpg",
+    "place": "Garden of the Gods",
+    "source": "flickr",
+    "id": "23472923108",
+    "title": "garden storm",
+    "page_url": "https://www.flickr.com/photos/17094005@N00/23472923108/",
+    "author": "Christian Collins",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "attribution_required": true,
+    "attribution": "\"garden storm\" by Christian Collins, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/), via https://www.flickr.com/photos/17094005@N00/23472923108/"
+  }
+]

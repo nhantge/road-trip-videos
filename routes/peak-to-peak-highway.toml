@@ -67,6 +67,7 @@ road = "CO 7"
 miles = 9
 drive_time = "15 min"
 photo_query = "Chapel on the Rock Colorado"
+photos = ["flickr-40181152703.jpg", "flickr-47093952082.jpg", "flickr-7763211714.jpg", "flickr-26733657639.jpg"]
 via = [[40.3550, -105.5310], [40.3300, -105.5400], [40.2800, -105.5400], [40.2450, -105.5370]]
 drive_caption = "South on CO 7, with Longs Peak filling the windshield!"
 drive_fact = "Longs Peak, 14,259 feet, is the only fourteener in Rocky Mountain National Park."
@@ -80,6 +81,7 @@ note = "A flat, easy loop around a lake with a big view of Longs Peak."
 lat = 40.3072
 lon = -105.5382
 photo_query = "Lily Lake Estes Park"
+photos = ["flickr-54584653268.jpg"]
 [stops.info]
 "SEE" = "The chapel and Mount Meeker right behind it."
 "TIP" = "The grounds are open to visitors. Please be quiet and respectful."
@@ -94,6 +96,7 @@ road = "CO 7 and CO 72"
 miles = 21
 drive_time = "35 min"
 photo_query = "Ward Colorado"
+photos = ["flickr-53325052053.jpg", "flickr-4509926242.jpg", "flickr-53325062763.jpg"]
 via = [{ name = "Allenspark", lat = 40.1947, lon = -105.5264 }, [40.1650, -105.5150], [40.1350, -105.5050], [40.1050, -105.5070]]
 drive_caption = "Through Allenspark and deep into aspen country!"
 drive_fact = "In late September, whole hillsides of aspens here turn gold at once."
@@ -107,6 +110,7 @@ note = "An alpine lake under the Indian Peaks. Timed-entry reservations in summe
 lat = 40.0784
 lon = -105.5727
 photo_query = "Brainard Lake Colorado"
+photos = ["flickr-212277776.jpg"]
 [stops.info]
 "SEE" = "Old miners' cabins and mine ruins on the hillsides."
 "HIKE" = "Brainard Lake and the Indian Peaks are just up the road."
@@ -122,6 +126,7 @@ road = "CO 72"
 miles = 12
 drive_time = "20 min"
 photo_query = "Nederland Colorado"
+photos = ["flickr-269904396.jpg", "flickr-6525288841.jpg", "flickr-4009010964.jpg"]
 via = [[40.0450, -105.5150], [40.0100, -105.5170], [39.9850, -105.5120]]
 drive_caption = "Down to Nederland, with the Indian Peaks behind us!"
 drive_fact = "This stretch rolls along at around 9,000 feet the whole way."
@@ -144,6 +149,7 @@ road = "CO 119"
 miles = 13
 drive_time = "25 min"
 photo_query = "Black Hawk Colorado"
+photos = ["flickr-8326166360.jpg", "flickr-15401255194.jpg", "flickr-52607818625.jpg"]
 via = [[39.9350, -105.5050], { name = "Rollinsville", lat = 39.9172, lon = -105.4983 }, [39.8750, -105.4900], [39.8350, -105.4950]]
 drive_caption = "Down Highway 119 to where it all began!"
 drive_fact = "In 1859, John Gregory struck gold in the gulch here, kicking off Colorado's gold rush."

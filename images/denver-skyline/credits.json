@@ -25,5 +25,44 @@
     "license_url": "https://pixabay.com/service/license-summary/",
     "attribution_required": false,
     "attribution": "Image by 12019 from Pixabay (https://pixabay.com/photos/denver-colorado-mountains-city-2228782/)"
+  },
+  {
+    "file": "flickr-6014456082.jpg",
+    "place": "Denver skyline",
+    "source": "flickr",
+    "id": "6014456082",
+    "title": "Denver Skyline (August, 2011)",
+    "page_url": "https://www.flickr.com/photos/31437555@N00/6014456082/",
+    "author": "Jeffrey Beall",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "attribution_required": true,
+    "attribution": "\"Denver Skyline (August, 2011)\" by Jeffrey Beall, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/), via https://www.flickr.com/photos/31437555@N00/6014456082/"
+  },
+  {
+    "file": "flickr-6780699435.jpg",
+    "place": "Denver skyline",
+    "source": "flickr",
+    "id": "6780699435",
+    "title": "Denver Skyline from Sports Authority Field at Mile High, Denver, Colorado",
+    "page_url": "https://www.flickr.com/photos/75683070@N00/6780699435/",
+    "author": "Ken Lund",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "attribution_required": true,
+    "attribution": "\"Denver Skyline from Sports Authority Field at Mile High, Denver, Colorado\" by Ken Lund, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/), via https://www.flickr.com/photos/75683070@N00/6780699435/"
+  },
+  {
+    "file": "flickr-9586610664.jpg",
+    "place": "Denver skyline",
+    "source": "flickr",
+    "id": "9586610664",
+    "title": "Thunderstorm Forming over Downtown Denver",
+    "page_url": "https://www.flickr.com/photos/31437555@N00/9586610664/",
+    "author": "Jeffrey Beall",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "attribution_required": true,
+    "attribution": "\"Thunderstorm Forming over Downtown Denver\" by Jeffrey Beall, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/), via https://www.flickr.com/photos/31437555@N00/9586610664/"
   }
 ]

@@ -50,6 +50,7 @@ lon = -104.9903
 elevation_ft = 5280
 tag = "THE MILE HIGH CITY"
 photo_query = "Denver skyline"
+photos = ["flickr-6014456082.jpg", "flickr-6780699435.jpg", "flickr-9586610664.jpg"]
 caption = "We start in Denver, exactly one mile above sea level!"
 fact = "One step on the Colorado State Capitol is marked at exactly 5,280 feet."
 narration = "We're starting in Denver, the Mile High City! There's even a step on the State Capitol marked at exactly one mile high. Okay, let's head for the mountains!"
@@ -66,6 +67,7 @@ road = "I-70"
 miles = 45
 drive_time = "55 min"
 photo_query = "Georgetown Colorado"
+photos = ["flickr-30360719065.jpg", "flickr-4329156950.jpg", "flickr-10632550273.jpg", "flickr-5507458289.jpg"]
 via = [[39.7350, -105.1600], [39.7030, -105.3000], [39.7300, -105.4000], { name = "Idaho Springs", lat = 39.7425, lon = -105.5136 }, [39.7330, -105.6000]]
 drive_caption = "Into the mountains on I-70, past Idaho Springs!"
 drive_fact = "Idaho Springs was one of Colorado's first gold rush towns, in 1859."
@@ -86,6 +88,7 @@ road = "I-70"
 miles = 27
 drive_time = "35 min"
 photo_query = "Frisco Colorado"
+photos = ["flickr-36224594742.jpg", "flickr-5168643312.jpg"]
 via = [[39.6960, -105.7260], [39.6800, -105.7900], { name = "Eisenhower Tunnel", lat = 39.6792, lon = -105.9058, kind = "summit", elevation_ft = 11158 }, [39.6300, -106.0300], [39.6100, -106.0700]]
 drive_caption = "Under the Continental Divide in the Eisenhower Tunnel!"
 drive_fact = "At 11,158 feet, the Eisenhower Tunnel is the highest point on the Interstate Highway System."
@@ -99,6 +102,7 @@ note = "A huge mountain lake with a paved bike path all the way around."
 lat = 39.5986
 lon = -106.0857
 photo_query = "Dillon Reservoir"
+photos = ["flickr-44420399720.jpg"]
 [stops.info]
 "SEE & DO" = "Main Street, and the marina on Dillon Reservoir."
 "TIP" = "Ski areas all around: Breckenridge, Keystone and Copper Mountain."
@@ -113,6 +117,7 @@ road = "I-70"
 miles = 25
 drive_time = "30 min"
 photo_query = "Vail Colorado"
+photos = ["flickr-54710215642.jpg", "flickr-54711254088.jpg"]
 via = [[39.5010, -106.1510], { name = "Vail Pass", lat = 39.5306, lon = -106.2167, kind = "pass", elevation_ft = 10662 }, [39.5800, -106.2700], [39.6250, -106.3200]]
 drive_caption = "Over Vail Pass, 10,662 feet, and down into Vail!"
 drive_fact = "Vail Pass is plowed all winter. Use the lower gears on the steep descent."
@@ -133,6 +138,7 @@ road = "I-70"
 miles = 54
 drive_time = "55 min"
 photo_query = "Glenwood Canyon"
+photos = ["flickr-52709117876.jpg", "flickr-52709529100.jpg", "flickr-4491658830.jpg", "flickr-8006891255.jpg"]
 via = [[39.6314, -106.5220], [39.6450, -106.5940], [39.7030, -106.6770], { name = "Eagle", lat = 39.6553, lon = -106.8287 }, [39.6460, -106.9510], [39.6450, -107.0600], [39.6430, -107.0700], [39.6330, -107.0950], [39.6170, -107.1200], [39.6000, -107.1450], [39.5920, -107.1700], [39.5860, -107.1950], [39.5760, -107.2200]]
 drive_caption = "Into Glenwood Canyon, the most beautiful stretch of I-70!"
 drive_fact = "I-70 through Glenwood Canyon was finished in 1992, built in layers to protect the canyon."
@@ -146,6 +152,7 @@ note = "A turquoise lake below a waterfall, up a steep 1.2-mile trail. Permit re
 lat = 39.5901
 lon = -107.1897
 photo_query = "Hanging Lake Colorado"
+photos = ["flickr-14903433427.jpg"]
 [stops.info]
 "SEE" = "The canyon walls and the Colorado River."
 "DO" = "Walk or bike the Glenwood Canyon Recreation Path."
@@ -161,6 +168,7 @@ road = "I-70"
 miles = 6
 drive_time = "10 min"
 photo_query = "Glenwood Springs Colorado"
+photos = ["flickr-8553826603.jpg", "flickr-52745281872.jpg", "flickr-55164246056.jpg"]
 via = [[39.5560, -107.2900]]
 drive_caption = "Out of the canyon and into Glenwood Springs!"
 drive_fact = "The hot springs here have drawn visitors since the 1880s."
