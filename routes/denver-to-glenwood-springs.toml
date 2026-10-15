@@ -33,8 +33,8 @@ city = { name = "Denver", lat = 39.7392, lon = -104.9903 }
 
 [thumbnail]
 text = ["I-70 TO THE HOT SPRINGS", "DENVER → GLENWOOD"]
-stop = "Glenwood Canyon"
-photo = 0
+stop = "Glenwood Springs"
+photo = 1
 
 [up_next]
 title = "Colorado National Monument"
@@ -138,7 +138,7 @@ road = "I-70"
 miles = 54
 drive_time = "55 min"
 photo_query = "Glenwood Canyon"
-photos = ["flickr-52709117876.jpg", "flickr-52709529100.jpg", "flickr-4491658830.jpg", "flickr-8006891255.jpg"]
+photos = ["flickr-4491658830.jpg", "flickr-52709529100.jpg", "flickr-52709117876.jpg", "flickr-8006891255.jpg"]
 via = [[39.6314, -106.5220], [39.6450, -106.5940], [39.7030, -106.6770], { name = "Eagle", lat = 39.6553, lon = -106.8287 }, [39.6460, -106.9510], [39.6450, -107.0600], [39.6430, -107.0700], [39.6330, -107.0950], [39.6170, -107.1200], [39.6000, -107.1450], [39.5920, -107.1700], [39.5860, -107.1950], [39.5760, -107.2200]]
 drive_caption = "Into Glenwood Canyon, the most beautiful stretch of I-70!"
 drive_fact = "I-70 through Glenwood Canyon was finished in 1992, built in layers to protect the canyon."

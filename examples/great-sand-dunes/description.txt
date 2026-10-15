@@ -1,0 +1,58 @@
+Great Sand Dunes | Colorado Road Trips
+
+38 miles · 4 stops · about 55 min of driving · 1 to 2 days recommended
+
+CHAPTERS
+0:00 Intro
+0:37 Alamosa
+0:49 Zapata Falls
+1:11 Visitor Center
+1:32 Great Sand Dunes
+2:00 Trip planner
+
+THE ROUTE
+1. Alamosa (7,544 ft) · start
+   See & Do: Rent sandboards and sleds in town.
+   Wildlife: Sandhill cranes stop over near Monte Vista every spring and fall.
+   Tip: Fill up and stock up here.
+2. Zapata Falls (9,000 ft) · mile 30 · 30 mi / 40 min from Alamosa via US 160 and CO 150
+   Hike: About half a mile each way from the parking area.
+   Tip: Wear shoes that can get wet, and watch for slippery ice in winter.
+3. Visitor Center (8,175 ft) · mile 37 · 7 mi / 10 min from Zapata Falls via CO 150
+   See: The dunefield view from the visitor center.
+   Do: Pick up a map and check the sand temperature forecast.
+   Tip: There's an entrance fee, or use an America the Beautiful pass.
+4. Great Sand Dunes (8,112 ft) · mile 38 · 1 mi / 5 min from Visitor Center via Park road
+   Do: Climb High Dune, then sandboard back down.
+   See: Medano Creek in late spring, and the stars after dark.
+   Tip: The sand gets dangerously hot on summer afternoons.
+
+Best season: Late spring for Medano Creek; fall for cool sand
+
+GOOD TO KNOW
+- In summer the sand can hit 150 degrees. Climb early or late in the day.
+- Rent a sandboard or sand sled in Alamosa or Mosca before you arrive.
+- Medano Creek flows from late April into June, and peaks in late May.
+- It's an International Dark Sky Park. Stay after sunset for the stars.
+
+Mileage and drive times are approximate and don't include stops. Check road conditions before you go.
+
+PHOTO CREDITS
+- "Alamosa County Courthouse" by Jeffrey Beall, CC BY-SA 2.0, https://www.flickr.com/photos/31437555@N00/7546947308/
+- "Sacred Heart Catholic Church (Alamosa, Colorado)" by Jeffrey Beall, CC BY-SA 2.0, https://www.flickr.com/photos/31437555@N00/7546952518/
+- "St. Thomas Episcopal Church" by Jeffrey Beall, CC BY-SA 2.0, https://www.flickr.com/photos/31437555@N00/7546963992/
+- "Zapata Falls" by TexasExplorer98, CC BY 2.0, https://www.flickr.com/photos/76792851@N07/48275028842/
+- "Zapata Falls" by daveynin, CC BY 2.0, https://www.flickr.com/photos/44124370018@N01/9462644944/
+- "Zapata Falls trailhead" by daveynin, CC BY 2.0, https://www.flickr.com/photos/44124370018@N01/9462647692/
+- "View from Visitor Center, Great Sand Dunes National Park and Preserve, Colorado" by Ken Lund, CC BY-SA 2.0, https://www.flickr.com/photos/75683070@N00/15398902394/
+- "View from Visitor Center, Great Sand Dunes National Park and Preserve, Colorado" by Ken Lund, CC BY-SA 2.0, https://www.flickr.com/photos/75683070@N00/15835118319/
+- "View from Visitor Center, Great Sand Dunes National Park and Preserve, Colorado" by Ken Lund, CC BY-SA 2.0, https://www.flickr.com/photos/75683070@N00/15835416127/
+- "medano creek morning" by Christian Collins, CC BY-SA 2.0, https://www.flickr.com/photos/17094005@N00/37443024175/
+- "mt herard from dunefield" by Christian Collins, CC BY-SA 2.0, https://www.flickr.com/photos/17094005@N00/42696260094/
+- "point of no return" by Christian Collins, CC BY-SA 2.0, https://www.flickr.com/photos/17094005@N00/37397174634/
+- "blue medano" by Christian Collins, CC BY-SA 2.0, https://www.flickr.com/photos/17094005@N00/37587285200/
+
+CREDITS
+- Intro sting and outro music: original music by Colorado Road Trips
+- Voiceover: ElevenLabs voice "Marie"
+- Elevation: AWS Terrain Tiles (USGS 3DEP, SRTM, GMTED2010, ETOPO1 and others, https://registry.opendata.aws/terrain-tiles/)

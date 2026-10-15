@@ -1,0 +1,73 @@
+Denver to Glenwood Springs | Colorado Road Trips
+
+157 miles · 6 stops · about 3 hr 5 min of driving · 1 to 2 days recommended
+
+CHAPTERS
+0:00 Intro
+0:41 Denver
+0:52 Georgetown
+1:13 Frisco
+1:36 Vail
+1:57 Glenwood Canyon
+2:22 Glenwood Springs
+2:53 Trip planner
+
+THE ROUTE
+1. Denver (5,280 ft) · start
+   Tip: Leave early. I-70 traffic builds fast on weekends.
+2. Georgetown (8,530 ft) · mile 45 · 45 mi / 55 min from Denver via I-70
+   See & Do: Victorian main street, and the Georgetown Loop Railroad.
+   Tip: Watch for bighorn sheep on the cliffs by Georgetown Lake.
+3. Frisco (9,106 ft) · mile 72 · 27 mi / 35 min from Georgetown via I-70
+   On the way, worth a stop: Dillon Reservoir. A huge mountain lake with a paved bike path all the way around.
+   See & Do: Main Street, and the marina on Dillon Reservoir.
+   Tip: Ski areas all around: Breckenridge, Keystone and Copper Mountain.
+4. Vail (8,150 ft) · mile 97 · 25 mi / 30 min from Frisco via I-70
+   See & Do: Vail Village, Lionshead, and the Gore Creek path.
+   Tip: Park in the town parking structures.
+5. Glenwood Canyon (5,977 ft) · mile 151 · 54 mi / 55 min from Vail via I-70
+   On the way, worth a stop: Hanging Lake. A turquoise lake below a waterfall, up a steep 1.2-mile trail. Permit required.
+   See: The canyon walls and the Colorado River.
+   Do: Walk or bike the Glenwood Canyon Recreation Path.
+   Tip: Westbound, there's no Hanging Lake exit. Use Grizzly Creek and double back.
+6. Glenwood Springs (5,761 ft) · mile 157 · 6 mi / 10 min from Glenwood Canyon via I-70
+   See & Do: Glenwood Hot Springs Pool, and the Glenwood Caverns Adventure Park.
+   History: Doc Holliday's grave is in Linwood Cemetery, a short hike up from town.
+   Tip: Hot springs are best on a cold winter evening.
+
+Best season: Year-round; fall and winter for the hot springs
+
+GOOD TO KNOW
+- Fall to spring, Colorado's traction law can apply on I-70. Check COtrip.org first.
+- Avoid eastbound I-70 on Sunday afternoons, when ski traffic backs up for hours.
+- Hanging Lake needs a permit year-round. Book ahead.
+- Glenwood Canyon can close for rockfall. Check before you go.
+
+Mileage and drive times are approximate and don't include stops. Check road conditions before you go.
+
+PHOTO CREDITS
+- "Denver Skyline (August, 2011)" by Jeffrey Beall, CC BY-SA 2.0, https://www.flickr.com/photos/31437555@N00/6014456082/
+- "Denver Skyline from Sports Authority Field at Mile High, Denver, Colorado" by Ken Lund, CC BY-SA 2.0, https://www.flickr.com/photos/75683070@N00/6780699435/
+- "Thunderstorm Forming over Downtown Denver" by Jeffrey Beall, CC BY-SA 2.0, https://www.flickr.com/photos/31437555@N00/9586610664/
+- "Georgetown Loop" by chief_huddleston, CC BY 2.0, https://www.flickr.com/photos/9265232@N04/30360719065/
+- "Gorgetown Loop railroad" by Loco Steve, CC BY 2.0, https://www.flickr.com/photos/36989019@N08/4329156950/
+- "Old Home, Georgetown, CO 7-24-13" by inkknife_2000 (14 million views), CC BY-SA 2.0, https://www.flickr.com/photos/23155134@N06/10632550273/
+- "McClellan House" by Jeffrey Beall, CC BY-SA 2.0, https://www.flickr.com/photos/31437555@N00/5507458289/
+- "Frisco, Colorado" by ChrisYunker, CC BY 2.0, https://www.flickr.com/photos/99785739@N00/36224594742/
+- "Blue sky over Frisco" by iagoarchangel, CC BY-SA 2.0, https://www.flickr.com/photos/81376848@N00/5168643312/
+- "USA - Colorado - Dillon Reservoir/Swan Mountain" by TerryDOtt, CC BY 2.0, https://www.flickr.com/photos/146878425@N05/44420399720/
+- "VAIL VILLAGE (3)" by marsupilami92, CC BY 4.0, https://www.flickr.com/photos/41538865@N06/54710215642/
+- "VAIL SKI RESORT" by marsupilami92, CC BY 4.0, https://www.flickr.com/photos/41538865@N06/54711254088/
+- "Zephyr westbound in Glenwood Canyon" by iagoarchangel, CC BY-SA 2.0, https://www.flickr.com/photos/81376848@N00/4491658830/
+- "20220613 17 Glenwood Canyon, Colorado" by davidwilson1949, CC BY 2.0, https://www.flickr.com/photos/32693718@N07/52709529100/
+- "20220613 16 Glenwood Canyon, Colorado" by davidwilson1949, CC BY 2.0, https://www.flickr.com/photos/32693718@N07/52709117876/
+- "Glenwood Springs and Glenwood Canyon, CO 8-27-12" by inkknife_2000 (14 million views), CC BY-SA 2.0, https://www.flickr.com/photos/23155134@N06/8006891255/
+- "Hanging Lake" by Max and Dee, CC BY 2.0, https://www.flickr.com/photos/61112853@N06/14903433427/
+- "Glenwood Hot Springs Pool" by Loco Steve, CC BY-SA 2.0, https://www.flickr.com/photos/36989019@N08/8553826603/
+- "20220614 52 Spa of the Rockies, Glenwood Springs, Colorado" by davidwilson1949, CC BY 2.0, https://www.flickr.com/photos/32693718@N07/52745281872/
+- "The Moving Canvas: @ Glenwood springs" by Loco Steve, CC BY-SA 4.0, https://www.flickr.com/photos/36989019@N08/55164246056/
+
+CREDITS
+- Intro sting and outro music: original music by Colorado Road Trips
+- Voiceover: ElevenLabs voice "Marie"
+- Elevation: AWS Terrain Tiles (USGS 3DEP, SRTM, GMTED2010, ETOPO1 and others, https://registry.opendata.aws/terrain-tiles/)
