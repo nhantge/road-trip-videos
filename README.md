@@ -170,6 +170,27 @@ The generator doesn't upload; do this in YouTube Studio:
 
 `examples/denver-to-ouray/UPLOAD.md` has the full checklist used for the demo.
 
+## Shorts
+
+Every episode can also be cut down to a vertical short (1080x1920, about 30-35 s) for
+YouTube Shorts, Instagram Reels and TikTok:
+
+```sh
+python3 scripts/make_short.py routes/silverton-to-durango.toml   # --stills for a quick look
+```
+
+It reuses the episode's own voiceover clips (`hook`, `finale`, `end`), photos and map,
+so it needs no new narration. It has three beats:
+
+1. The hook line over full-screen photos of each highlight.
+2. The whole route drawing itself on the map, with the stops stacking up beneath it.
+3. A "full episode on the channel" card.
+
+Text stays clear of the Shorts buttons on the right and its caption area at the bottom.
+Output goes to `out/<route>/short/`. That folder has the MP4 and `short.txt`, which holds
+the title, caption, hashtags and photo credits to paste when you post. Rendered shorts
+are in `examples/<route>/short.mp4`.
+
 ## How an episode is laid out
 
 1. Intro sting
