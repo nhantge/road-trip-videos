@@ -33,11 +33,14 @@ def ensure_photos(route, fetch=True, count=5):
         return
     mod = _fetcher()
     key = os.environ.get("PIXABAY_API_KEY", "")
-    sources = {"wikimedia", "pixabay"} if key else {"wikimedia"}
+    flickr_key = os.environ.get("FLICKR_API_KEY", "")
+    sources = {"wikimedia"} | ({"pixabay"} if key else set()) | ({"flickr"} if flickr_key else set())
+    where = {s.photo_query: (s.lat, s.lon) for s in items}
     for query in dict.fromkeys(missing):
         print(f"fetching photos for {query!r}")
+        lat, lon = where.get(query, (None, None))
         try:
-            mod.fetch_place(query, sources, count, 1280, key)
+            mod.fetch_place(query, sources, count, 1280, key, flickr_key=flickr_key, lat=lat, lon=lon)
         except OSError as err:
             print(f"  could not fetch photos for {query!r}: {err}", file=sys.stderr)
 
@@ -62,10 +65,10 @@ def pick_photos(stop, limit=PER_STOP):
             else:
                 print(f"  {stop.name}: pinned photo {name} not found", file=sys.stderr)
         return chosen[:limit] if limit else chosen
-    # Wikimedia results are tagged to the place; Pixabay keyword hits often aren't
-    # (search "Monarch Pass" and you get butterflies), so they only fill gaps.
-    # Your own photos come first.
-    ranked = sorted(entries, key=lambda e: {"own": 0, "wikimedia": 1}.get(e.get("source"), 2))
+    # Wikimedia and Flickr (searched by location) results are tagged to the place; Pixabay
+    # keyword hits often aren't (search "Monarch Pass" and you get butterflies), so they
+    # only fill gaps. Your own photos come first.
+    ranked = sorted(entries, key=lambda e: {"own": 0, "wikimedia": 1, "flickr": 1}.get(e.get("source"), 2))
     for entry in ranked:
         path = folder / entry["file"]
         if not path.exists():

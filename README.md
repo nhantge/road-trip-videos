@@ -223,18 +223,23 @@ photos first, then Wikimedia, then Pixabay.
 
 ## Fetching photos
 
-`scripts/fetch_photos.py` searches Wikimedia Commons and Pixabay by place name and
-downloads the results into `images/<place-slug>/`. Each folder gets a `credits.json`
+`scripts/fetch_photos.py` searches Wikimedia Commons, Flickr and Pixabay by place name and
+downloads the results into `images/<place-slug>/`. Flickr (set `FLICKR_API_KEY`) searches
+around each stop's coordinates, so it finds photos actually taken there, and only returns
+licenses that allow reuse with edits (CC BY, CC BY-SA, CC0, public domain). Each folder gets a `credits.json`
 listing every file's source page, author, license and a ready-to-paste attribution line.
 `make_video.py` calls it for you and puts the credits for the photos it uses in
 `description.txt`; it also prints a small credit on each photo.
 
 ```sh
-export PIXABAY_API_KEY=...        # optional; without it only Wikimedia is searched
+export PIXABAY_API_KEY=...        # optional; without keys only Wikimedia is searched
+export FLICKR_API_KEY=...         # optional; free at flickr.com/services/api
 python3 scripts/fetch_photos.py "Grand Canyon" "Monument Valley" --count 5
+python3 scripts/fetch_photos.py "Molas Pass" --source flickr --lat 37.7406 --lon -107.6969
 ```
 
-Options: `--source wikimedia|pixabay|both` (default both), `--count N` per source
+Options: `--source all|wikimedia|flickr|pixabay|both` (default all), `--lat`/`--lon`/`--radius KM`
+for Flickr's location search, `--count N` per source
 per place (default 5), `--width PX` for Wikimedia thumbnails (default 1920), `--dest DIR`
 to download somewhere else first (handy for vetting photos before they enter `images/`).
 Wikimedia throttles busy shared IPs (cloud servers especially); the script backs off and

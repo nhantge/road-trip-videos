@@ -52,8 +52,11 @@ def short_attribution(entry):
         return f"{author} / Pixabay, {entry['page_url']}"
     if entry.get("source") == "own":
         return f"Photo: {author}"
-    title = entry.get("title", "").rsplit(".", 1)[0]
-    link = f"https://commons.wikimedia.org/?curid={entry['id']}" if entry.get("id") else entry.get("page_url", "")
+    title = entry.get("title", "").rsplit(".", 1)[0] if entry.get("source") == "wikimedia" else entry.get("title", "")
+    if entry.get("source") == "wikimedia" and entry.get("id"):
+        link = f"https://commons.wikimedia.org/?curid={entry['id']}"
+    else:
+        link = entry.get("page_url", "")
     return f'"{title}" by {author}, {entry.get("license", "")}, {link}'
 
 def _description(route, segs, offset, brand, details=True, notes=True):

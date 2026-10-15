@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Search Wikimedia Commons and Pixabay for photos of a place and download them.
+"""Search Wikimedia Commons, Flickr and Pixabay for photos of a place and download them.
 
 Images land in images/<place-slug>/ alongside a credits.json that records the
 source, license and author of every file, plus a ready-to-paste attribution line.
@@ -8,7 +8,11 @@ Usage:
     python3 scripts/fetch_photos.py "Grand Canyon"
     python3 scripts/fetch_photos.py "Route 66" "Monument Valley" --count 8 --source wikimedia
 
-Pixabay needs PIXABAY_API_KEY in the environment; without it only Wikimedia is used.
+    python3 scripts/fetch_photos.py "Molas Pass" --source flickr --lat 37.7406 --lon -107.6969
+
+Pixabay needs PIXABAY_API_KEY and Flickr needs FLICKR_API_KEY in the environment; sources
+without a key are skipped. Flickr searches near --lat/--lon when given, which finds photos
+taken at the place itself, and only returns licenses that allow reuse with edits.
 """
 
 import argparse
@@ -28,6 +32,18 @@ USER_AGENT = f"road-trip-videos/1.0 ({REPO_URL})"
 REPO_ROOT = Path(__file__).resolve().parent.parent
 WIKIMEDIA_API = "https://commons.wikimedia.org/w/api.php"
 PIXABAY_API = "https://pixabay.com/api/"
+FLICKR_API = "https://api.flickr.com/services/rest/"
+# Flickr license ids that allow commercial reuse with edits (we crop and pan).
+FLICKR_LICENSES = {
+    "4": ("CC BY 2.0", "https://creativecommons.org/licenses/by/2.0/", True),
+    "5": ("CC BY-SA 2.0", "https://creativecommons.org/licenses/by-sa/2.0/", True),
+    "7": ("No known copyright restrictions", "https://www.flickr.com/commons/usage/", False),
+    "8": ("United States Government Work", "http://www.usa.gov/copyright.shtml", False),
+    "9": ("CC0 1.0", "https://creativecommons.org/publicdomain/zero/1.0/", False),
+    "10": ("Public Domain Mark 1.0", "https://creativecommons.org/publicdomain/mark/1.0/", False),
+    "11": ("CC BY 4.0", "https://creativecommons.org/licenses/by/4.0/", True),
+    "12": ("CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/", True),
+}
 MAX_RETRIES = 8
 MAX_WAIT = 90  # seconds; Wikimedia may ask for 600 but often answers much sooner
 
@@ -113,12 +129,54 @@ def search_pixabay(place, count, api_key):
     } for hit in data.get("hits", [])[:count]]
 
 
+def search_flickr(place, count, api_key, lat=None, lon=None, radius_km=1.0):
+    """Flickr photos of a place: near lat/lon when given (best), else by keyword."""
+    def search(**extra):
+        data = json.loads(http_get(FLICKR_API, {
+            "method": "flickr.photos.search", "api_key": api_key, "format": "json", "nojsoncallback": 1,
+            "license": ",".join(FLICKR_LICENSES), "media": "photos", "content_type": 1, "safe_search": 1,
+            "sort": "interestingness-desc", "per_page": max(count * 3, 10),
+            "extras": "license,owner_name,url_k,url_l,o_dims", **extra,
+        }))
+        if data.get("stat") != "ok":
+            raise urllib.error.URLError(f"Flickr: {data.get('message', data)}")
+        return data["photos"]["photo"]
+    if lat is not None and lon is not None:
+        geo = {"lat": lat, "lon": lon, "radius": radius_km, "radius_units": "km"}
+        hits = search(text=place, **geo)
+        if len(hits) < count:  # fill with anything shot right there, still sorted by interest
+            seen = {h["id"] for h in hits}
+            hits += [h for h in search(**geo) if h["id"] not in seen]
+    else:
+        hits = search(text=place)
+    results = []
+    for hit in hits:
+        url = hit.get("url_k") or hit.get("url_l")
+        if not url or hit["license"] not in FLICKR_LICENSES:
+            continue
+        name, license_url, required = FLICKR_LICENSES[hit["license"]]
+        results.append({
+            "source": "flickr",
+            "id": hit["id"],
+            "title": hit.get("title") or place,
+            "download_url": url,
+            "page_url": f"https://www.flickr.com/photos/{hit['owner']}/{hit['id']}/",
+            "author": hit.get("ownername") or "Unknown",
+            "license": name,
+            "license_url": license_url,
+            "attribution_required": required,
+        })
+        if len(results) == count:
+            break
+    return results
+
+
 def extension_for(url):
     ext = Path(urllib.parse.urlparse(url).path).suffix.lower()
     return ".jpg" if ext in ("", ".jpeg") else ext
 
 
-def fetch_place(place, sources, count, width, pixabay_key, dest=None):
+def fetch_place(place, sources, count, width, pixabay_key, dest=None, flickr_key="", lat=None, lon=None, radius_km=1.0):
     folder = Path(dest or REPO_ROOT / "images") / slugify(place)
     folder.mkdir(parents=True, exist_ok=True)
     credits_path = folder / "credits.json"
@@ -128,6 +186,8 @@ def fetch_place(place, sources, count, width, pixabay_key, dest=None):
     candidates = []
     if "wikimedia" in sources:
         candidates += search_wikimedia(place, count, width)
+    if "flickr" in sources:
+        candidates += search_flickr(place, count, flickr_key, lat, lon, radius_km)
     if "pixabay" in sources:
         candidates += search_pixabay(place, count, pixabay_key)
 
@@ -163,21 +223,27 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("places", nargs="+", help="place names to search for")
     parser.add_argument("--count", type=int, default=5, help="images per source per place (default 5)")
-    parser.add_argument("--source", choices=["both", "wikimedia", "pixabay"], default="both")
+    parser.add_argument("--source", choices=["all", "both", "wikimedia", "flickr", "pixabay"], default="all",
+                        help="where to search (default all; both = wikimedia and pixabay)")
+    parser.add_argument("--lat", type=float, help="search Flickr near this latitude (with --lon)")
+    parser.add_argument("--lon", type=float, help="search Flickr near this longitude (with --lat)")
+    parser.add_argument("--radius", type=float, default=1.0, help="Flickr search radius in km (default 1)")
     parser.add_argument("--width", type=int, default=1920, help="Wikimedia thumbnail width (default 1920)")
     parser.add_argument("--dest", help="folder to download into instead of images/ (e.g. to vet photos first)")
     args = parser.parse_args()
 
-    sources = {"wikimedia", "pixabay"} if args.source == "both" else {args.source}
-    pixabay_key = os.environ.get("PIXABAY_API_KEY", "")
-    if "pixabay" in sources and not pixabay_key:
-        if args.source == "pixabay":
-            parser.error("PIXABAY_API_KEY is not set")
-        print("PIXABAY_API_KEY not set; using Wikimedia only", file=sys.stderr)
-        sources.discard("pixabay")
+    sources = {"all": {"wikimedia", "flickr", "pixabay"}, "both": {"wikimedia", "pixabay"}}.get(args.source, {args.source})
+    keys = {"pixabay": os.environ.get("PIXABAY_API_KEY", ""), "flickr": os.environ.get("FLICKR_API_KEY", "")}
+    for source, key in keys.items():
+        if source in sources and not key:
+            if args.source == source:
+                parser.error(f"{source.upper()}_API_KEY is not set")
+            print(f"{source.upper()}_API_KEY not set; skipping {source.title()}", file=sys.stderr)
+            sources.discard(source)
 
     for place in args.places:
-        fetch_place(place, sources, args.count, args.width, pixabay_key, args.dest)
+        fetch_place(place, sources, args.count, args.width, keys["pixabay"], args.dest,
+                    keys["flickr"], args.lat, args.lon, args.radius)
 
 
 if __name__ == "__main__":
