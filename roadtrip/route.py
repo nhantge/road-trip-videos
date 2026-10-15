@@ -193,9 +193,17 @@ class Route:
                 span = (self.prof_mi > m0) & (self.prof_mi < m1)
                 prof[span] = np.minimum(prof[span], max(e0, e1))
             # A pass is the high point of the road over it; trim terrain bumps next to it.
+            # Stop at the neighboring known elevations, which may be higher (passes close together).
             for p in self.stops + self.places:
-                if p.kind == "pass" and p.elevation_ft:
-                    near = np.abs(self.prof_mi - p.mile) < 5
+                if p.kind in ("pass", "summit") and p.elevation_ft:
+                    before = [(m, e) for m, e in anchors if m < p.mile - 0.01]
+                    after = [(m, e) for m, e in anchors if m > p.mile + 0.01]
+                    lo, e_lo = before[-1] if before else (-1e9, 0)
+                    hi, e_hi = after[0] if after else (1e9, 0)
+                    # A side that climbs to something higher than the pass is left alone.
+                    lo = lo if e_lo <= p.elevation_ft else p.mile
+                    hi = hi if e_hi <= p.elevation_ft else p.mile
+                    near = ((np.abs(self.prof_mi - p.mile) < 5) & (self.prof_mi > lo) & (self.prof_mi < hi))
                     prof[near] = np.minimum(prof[near], p.elevation_ft)
         self.prof_ft = prof
         for s in self.stops:

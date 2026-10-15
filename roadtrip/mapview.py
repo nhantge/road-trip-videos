@@ -191,7 +191,7 @@ class MapView:
             labels.append((0, x, y, marker, st, S.font("semibold", 17 * s), S.LABEL, gap))
         for p in route.places:
             x, y = screen(*lonlat_to_world(p.lon, p.lat))
-            if p.kind == "pass":
+            if p.kind in ("pass", "summit"):
                 labels.append((1, x, y, "pass", p, S.font("medium", 13 * s), S.LABEL_DIM, 12 * s))
             else:
                 labels.append((1, x, y, "town", p, S.font("semibold", 14 * s), S.LABEL_DIM, 10 * s))
@@ -219,7 +219,8 @@ class MapView:
                 left = lx if anchor == "lm" else lx - tw if anchor == "rm" else lx - tw / 2
                 top = ly - th / 2 if anchor in ("lm", "rm") else ly - th if anchor == "ms" else ly
                 rect = (left - 3, top - 2, left + tw + 3, top + th + 2)
-                if not any(rect[0] < r[2] and rect[2] > r[0] and rect[1] < r[3] and rect[3] > r[1] for r in taken):
+                off = rect[0] < 4 or rect[2] > S.MAP_W - 4  # would run off the map
+                if not off and not any(rect[0] < r[2] and rect[2] > r[0] and rect[1] < r[3] and rect[3] > r[1] for r in taken):
                     break
             else:
                 if prio:

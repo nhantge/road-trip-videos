@@ -1,0 +1,163 @@
+# Independence Pass: US 24 and CO 82 from Leadville to Aspen, over the Continental Divide.
+# See README.md for every field. Coordinates come from geotagged photos along the road.
+
+title = "Independence Pass"
+series = "Colorado Road Trips"
+region = "Sawatch Range"
+days = "1"
+best_season = "Late June to September"
+hook = [
+  "Start in the highest incorporated city in America : Leadville",
+  "Over the Continental Divide at 12,095 feet : Independence Pass",
+  "A gold rush ghost town you can walk through : Independence Ghost Town",
+]
+tips = [
+  "The pass closes in winter, usually November to late May. Check COtrip.org first.",
+  "The road narrows to about one lane in spots. Go slow, and long RVs should check CDOT limits.",
+  "Fill up in Leadville. Services are few until Aspen.",
+  "Storms build fast up top on summer afternoons. Cross the pass in the morning.",
+]
+
+[narration]
+hook = "Get ready for a big one! We start in the highest city in America, climb over the Continental Divide at twelve thousand ninety-five feet, explore a real gold rush ghost town, and finish in Aspen!"
+intro = "This is Independence Pass: 57 miles from Leadville to Aspen, right over the Continental Divide. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We leave Leadville, stop at Twin Lakes, climb Independence Pass, explore a ghost town, and roll into Aspen!"
+finale = "And that's the drive! 57 miles from Leadville to Aspen, topping out at 12,095 feet on Independence Pass."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Hit subscribe, and next time we're driving the Peak to Peak Highway!"
+
+[inset]
+name = "Colorado"
+bounds = [-109.05, 37.0, -102.04, 41.0]
+city = { name = "Denver", lat = 39.7392, lon = -104.9903 }
+
+[thumbnail]
+text = ["12,095 FEET", "INDEPENDENCE PASS"]
+stop = "Independence Pass"
+photo = 0
+
+[up_next]
+title = "Peak to Peak Highway"
+subtitle = "Estes Park to Black Hawk"
+miles = 55
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Leadville"
+lat = 39.2508
+lon = -106.2925
+elevation_ft = 10152
+tag = "AMERICA'S HIGHEST CITY"
+photo_query = "Leadville Colorado"
+caption = "We start in Leadville, at 10,152 ft the highest incorporated city in America!"
+fact = "Leadville's silver boom in the late 1870s made it one of the richest towns in the West."
+narration = "We're starting in Leadville, the highest incorporated city in America, at ten thousand one hundred fifty-two feet! Back in the silver boom, this was one of the richest towns in the West. Okay, let's roll!"
+[stops.info]
+"SEE & DO" = "Harrison Avenue's Victorian main street and the Tabor Opera House."
+"EAT" = "Grab breakfast on Harrison Avenue before you head out."
+"TIP" = "Fill up here. Services are few until Aspen."
+
+[[stops]]
+name = "Twin Lakes"
+lat = 39.0825
+lon = -106.3814
+elevation_ft = 9200
+tag = "UNDER COLORADO'S TALLEST PEAKS"
+miles = 20
+road = "US 24"
+drive_time = "30 min"
+photo_query = "Twin Lakes Colorado"
+via = [[39.2280, -106.3300], [39.1900, -106.3330], [39.1500, -106.3150], [39.1150, -106.3020],
+       [39.0950, -106.3000], [39.0900, -106.3250], [39.0880, -106.3500], [39.0850, -106.3700]]
+drive_caption = "South down the Arkansas Valley, with Colorado's highest peaks on the right!"
+drive_fact = "Mount Elbert, the tallest peak in Colorado, rises more than 14,400 feet above sea level."
+drive_narration = "We head south down the Arkansas River valley. Look out your right window! That giant is Mount Elbert, the tallest peak in Colorado, at over fourteen thousand four hundred feet!"
+caption = "Twin Lakes: two glacial lakes right under Colorado's tallest peaks."
+fact = "Twin Lakes village grew up as a stop on the old wagon road over Independence Pass."
+narration = "Welcome to Twin Lakes! Two sparkling glacial lakes, with Colorado's tallest peaks right behind them. This little village was a stop on the old wagon road over the pass."
+[[stops.sights]]
+name = "Mount Elbert"
+note = "Colorado's highest peak, over 14,400 feet. Its summit trail is a classic first fourteener."
+lat = 39.1178
+lon = -106.4454
+photo_query = "Mount Elbert"
+[stops.info]
+"SEE" = "The lakes, with Mount Elbert rising right behind them."
+"DO" = "Paddle, fish or picnic on the shore."
+"TIP" = "This is your last easy stop before the big climb."
+
+[[stops]]
+name = "Independence Pass"
+lat = 39.1083
+lon = -106.5639
+elevation_ft = 12095
+kind = "pass"
+tag = "CONTINENTAL DIVIDE"
+miles = 18
+road = "CO 82"
+drive_time = "35 min"
+photo_query = "Independence Pass Colorado"
+via = [[39.0760, -106.4000], [39.0700, -106.4300], [39.0690, -106.4650], [39.0720, -106.5000],
+       [39.0780, -106.5250], [39.0840, -106.5370], [39.0950, -106.5430], [39.1040, -106.5480]]
+drive_caption = "Up the Lake Creek valley, then switchbacks to the top!"
+drive_fact = "The pass is named after the gold rush town of Independence, just over the top."
+drive_narration = "Now the climb begins! We follow Lake Creek up the valley, then switchback our way above treeline. Hold on, it gets steep!"
+caption = "Independence Pass, 12,095 ft, right on the Continental Divide!"
+fact = "Snow closes the pass every winter, usually from November until late May."
+narration = "We made it! Independence Pass, twelve thousand ninety-five feet, right on the Continental Divide! Walk the short paved trail out to the overlook. The views go on forever!"
+[stops.info]
+"SEE" = "The Continental Divide sign and views across the Sawatch Range."
+"DO" = "Walk the short paved trail to the overlook."
+"TIP" = "It's cold and windy up here, even in July. Bring a jacket."
+
+[[stops]]
+name = "Independence Ghost Town"
+lat = 39.1066
+lon = -106.6045
+elevation_ft = 10830
+tag = "GOLD RUSH GHOST TOWN"
+road = "CO 82"
+miles = 3
+drive_time = "10 min"
+photo_query = "Independence ghost town Colorado"
+via = [[39.1075, -106.5800]]
+drive_caption = "Down the west side, following the Roaring Fork River!"
+drive_fact = "The Roaring Fork River starts just below the pass and runs all the way to Aspen."
+drive_narration = "Down the west side we go! That little stream is the Roaring Fork River, and it's about to lead us all the way to Aspen!"
+caption = "Independence: a gold rush town from 1879, now a ghost town you can walk through!"
+fact = "Prospectors struck gold here around July 4th, 1879, which is how the town got its name."
+narration = "This is Independence, a gold rush town from 1879! Miners struck gold here around the Fourth of July, and that's how it got its name. Walk through the old cabins. It's so cool!"
+[stops.info]
+"SEE" = "Weathered log cabins from the 1880s."
+"HISTORY" = "The gold ran out within a few years, and the miners moved on to Aspen's silver."
+"TIP" = "It's a protected historic site. Look, but don't touch."
+
+[[stops]]
+name = "Aspen"
+lat = 39.1911
+lon = -106.8175
+elevation_ft = 7908
+tag = "END OF THE ROAD"
+road = "CO 82"
+miles = 16
+drive_time = "35 min"
+photo_query = "Aspen Colorado"
+via = [[39.1100, -106.6300], [39.1160, -106.6600], [39.1185, -106.6900], [39.1230, -106.7250],
+       [39.1350, -106.7500], [39.1550, -106.7750], [39.1750, -106.7980]]
+drive_caption = "Down the Roaring Fork Valley, with a few tight one-lane squeezes!"
+drive_fact = "In a few spots the road narrows to about one lane. Yield, and take it slow."
+drive_narration = "Now it's down the Roaring Fork Valley, with a couple of tight one-lane squeezes, so take it slow! Then stop at the Grottos, with waterfalls and ice caves just a short walk from the road!"
+caption = "Aspen! A silver mining camp turned world-famous mountain town."
+fact = "Aspen began as a silver mining camp in 1879. Skiing arrived in the 1940s."
+narration = "Welcome to Aspen! It started as a silver mining camp, and today it's one of the most famous mountain towns in the world. If you have time, the Maroon Bells are just up the road. What a way to finish!"
+[[stops.sights]]
+name = "The Grottos"
+note = "Smooth granite, waterfalls and ice caves along the Roaring Fork, an easy walk from the road."
+lat = 39.1185
+lon = -106.7033
+photo_query = "Grottos Independence Pass"
+[stops.info]
+"SEE" = "The Maroon Bells, Colorado's most photographed peaks. Reservations required."
+"DO" = "Ride the Silver Queen Gondola up Aspen Mountain in summer."
+"TIP" = "Downtown parking is tight. Use the free town buses."

@@ -1,0 +1,207 @@
+# Trail Ridge Road: US 34 across Rocky Mountain National Park, Estes Park to Grand Lake.
+# See README.md for every field. Coordinates come from geotagged photos at each overlook.
+
+title = "Trail Ridge Road"
+series = "Colorado Road Trips"
+region = "Rocky Mountain National Park"
+days = "1"
+best_season = "Late June to September"
+hook = [
+  "11 miles above treeline, topping out at 12,183 feet : Forest Canyon Overlook",
+  "The highest visitor center in the National Park Service : Alpine Visitor Center",
+  "Colorado's largest natural lake at the end of the road : Grand Lake",
+]
+tips = [
+  "The road is usually open late May to mid-October. Check the park's road status first.",
+  "In peak season the park needs timed entry reservations. Book ahead on Recreation.gov.",
+  "There's no gas in the park. Fill up in Estes Park or Grand Lake.",
+  "It's often 15 to 20 degrees colder up top. Bring layers, and go early to beat the storms.",
+]
+
+[narration]
+hook = "Get ready for the highest continuous paved road in America! Eleven miles above treeline, topping out at twelve thousand one hundred eighty-three feet. The highest visitor center in the whole National Park Service. And Colorado's biggest natural lake waiting at the end!"
+intro = "This is Trail Ridge Road: 48 miles across Rocky Mountain National Park, right over the top of the Rockies. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We leave Estes Park, climb to Many Parks Curve and Forest Canyon Overlook, stop at the Alpine Visitor Center, cross the Continental Divide at Milner Pass, and roll down to Grand Lake!"
+finale = "And that's Trail Ridge Road! 48 miles from Estes Park to Grand Lake, topping out at 12,183 feet."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Hit subscribe, and next time we're heading over Independence Pass to Aspen!"
+
+[inset]
+name = "Colorado"
+bounds = [-109.05, 37.0, -102.04, 41.0]
+city = { name = "Denver", lat = 39.7392, lon = -104.9903 }
+
+[thumbnail]
+text = ["12,183 FEET", "TRAIL RIDGE ROAD"]
+stop = "Forest Canyon Overlook"
+photo = 0
+
+[up_next]
+title = "Independence Pass"
+subtitle = "Leadville to Aspen"
+miles = 57
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Estes Park"
+lat = 40.3772
+lon = -105.5217
+elevation_ft = 7522
+tag = "GATEWAY TO THE PARK"
+photo_query = "Estes Park Colorado"
+caption = "We start in Estes Park, the gateway to Rocky Mountain National Park!"
+fact = "The Stanley Hotel, on the hill above town, inspired Stephen King to write The Shining."
+narration = "We're starting in Estes Park, the gateway to Rocky Mountain National Park! Fun fact: the Stanley Hotel up on the hill inspired Stephen King to write The Shining. Spooky! Okay, let's go!"
+[stops.info]
+"SEE & DO" = "Shops and cafes on Elkhorn Avenue, and the historic Stanley Hotel."
+"EAT" = "Pack snacks and water. Food is limited once you're in the park."
+"TIP" = "Fill up here. There's no gas inside the park."
+
+[[stops]]
+name = "Many Parks Curve"
+lat = 40.3877
+lon = -105.6312
+elevation_ft = 9640
+tag = "THE FIRST BIG VIEW"
+road = "US 36"
+miles = 9
+drive_time = "20 min"
+photo_query = "Many Parks Curve"
+via = [
+  [40.3740, -105.5420], [40.3665, -105.5640], [40.3675, -105.5880], [40.3790, -105.5990],
+  { name = "Deer Ridge Jct", lat = 40.3870, lon = -105.6080 },
+  [40.3885, -105.6200],
+]
+drive_caption = "Into Rocky Mountain National Park through the Beaver Meadows Entrance!"
+drive_fact = "Trail Ridge Road was built in the early 1930s, and it still feels like an adventure."
+drive_narration = "We roll into Rocky Mountain National Park through the Beaver Meadows Entrance, and the climb starts right away! This road was built back in the early 1930s, and it still feels like an adventure!"
+caption = "Many Parks Curve: a boardwalk overlook high above the meadows!"
+fact = "In Colorado a \"park\" is a big mountain meadow, and from here you can see several of them."
+narration = "Welcome to Many Parks Curve! In Colorado, a park is a big mountain meadow, and from this boardwalk you can spot a bunch of them. Watch for elk down below!"
+[stops.info]
+"SEE" = "Moraine Park, Horseshoe Park and Beaver Meadows spread out below."
+"WILDLIFE" = "Elk graze the meadows, especially early and late in the day."
+"TIP" = "Parking is tight. If it's full, try again on the way back."
+
+[[stops]]
+name = "Forest Canyon Overlook"
+lat = 40.3957
+lon = -105.7133
+elevation_ft = 11716
+tag = "ABOVE TREELINE"
+road = "US 34"
+miles = 7
+drive_time = "20 min"
+photo_query = "Forest Canyon Overlook"
+via = [[40.3925, -105.6400], [40.3955, -105.6520], [40.3985, -105.6590],
+       [40.4003, -105.6637], [40.3985, -105.6760], [40.3955, -105.6950]]
+drive_caption = "Past Rainbow Curve and up above treeline!"
+drive_fact = "About 11 miles of Trail Ridge Road cross the alpine tundra, above the trees."
+drive_narration = "Next up, Rainbow Curve, at nearly eleven thousand feet. Pull over, because the views are huge! Then we pop up above treeline, where about eleven miles of this road cross the alpine tundra. It feels like the top of the world!"
+caption = "Forest Canyon Overlook, 11,716 ft: a short walk to a view down a glacier-carved canyon!"
+fact = "Ice Age glaciers carved Forest Canyon. The Big Thompson River still runs along its floor."
+narration = "This is Forest Canyon Overlook, eleven thousand seven hundred feet! Take the short walk out to the viewpoint. Glaciers carved this canyon, and those jagged peaks across the way are the Continental Divide!"
+[[stops.sights]]
+name = "Rainbow Curve"
+note = "A pullout at 10,829 feet with a huge view over Horseshoe Park and the twisted, wind-shaped trees."
+lat = 40.4003
+lon = -105.6637
+photo_query = "Rainbow Curve Trail Ridge"
+[stops.info]
+"SEE" = "Forest Canyon and the peaks of the Continental Divide."
+"DO" = "A short paved walk out to the overlook."
+"TIP" = "Stay on the path. Tundra plants can take decades to recover from one footprint."
+
+[[stops]]
+name = "Alpine Visitor Center"
+lat = 40.4413
+lon = -105.7546
+elevation_ft = 11796
+tag = "HIGHEST VISITOR CENTER IN THE NPS"
+road = "US 34"
+miles = 6
+drive_time = "15 min"
+photo_query = "Alpine Visitor Center Rocky Mountain"
+via = [
+  [40.4000, -105.7200], [40.4111, -105.7277], [40.4140, -105.7370], [40.4181, -105.7463],
+  { name = "Lava Cliffs", lat = 40.4235, lon = -105.7520, kind = "summit", elevation_ft = 12183 },
+  [40.4295, -105.7570], [40.4327, -105.7684], [40.4375, -105.7625],
+]
+drive_caption = "Over the top: the highest point on Trail Ridge Road, 12,183 ft!"
+drive_fact = "Trail Ridge Road is the highest continuous paved road in the United States."
+drive_narration = "Now for the big one! Stretch your legs on the Tundra Communities Trail at Rock Cut, and say hi to the marmots. Then we hit the highest point on the whole road, twelve thousand one hundred eighty-three feet! This is the highest continuous paved road in America!"
+caption = "The Alpine Visitor Center, 11,796 ft: the highest visitor center in the National Park Service!"
+fact = "It sits on Fall River Pass, where the old dirt Fall River Road, finished in 1920, meets Trail Ridge."
+narration = "Welcome to the Alpine Visitor Center, eleven thousand seven hundred ninety-six feet! It's the highest visitor center in the whole National Park Service. Grab a snack, then climb the Alpine Ridge Trail for an even bigger view!"
+[[stops.sights]]
+name = "Tundra Communities Trail"
+note = "A short paved trail across the tundra from Rock Cut. Watch for marmots and pikas!"
+lat = 40.4111
+lon = -105.7277
+photo_query = "Tundra Communities Trail"
+[stops.info]
+"SEE" = "Fall River Cirque, right behind the visitor center."
+"HIKE" = "The Alpine Ridge Trail: short, steep, and over 12,000 feet."
+"TIP" = "Move slowly up here. The air has about a third less oxygen."
+
+[[stops]]
+name = "Milner Pass"
+lat = 40.4200
+lon = -105.8114
+elevation_ft = 10758
+kind = "pass"
+tag = "CONTINENTAL DIVIDE"
+road = "US 34"
+miles = 4
+drive_time = "10 min"
+photo_query = "Milner Pass"
+via = [[40.4390, -105.7700], [40.4355, -105.7780], [40.4320, -105.7920], [40.4265, -105.8050]]
+drive_caption = "Down past Medicine Bow Curve toward the Continental Divide!"
+drive_fact = "Medicine Bow Curve looks out on the Medicine Bow Mountains, which run north into Wyoming."
+drive_narration = "From here it's downhill to the Continental Divide! At Medicine Bow Curve, look north. Those are the Medicine Bow Mountains, running all the way into Wyoming!"
+caption = "Milner Pass, 10,758 ft: we're crossing the Continental Divide!"
+fact = "Water from Poudre Lake flows east to the Atlantic side. Streams just to the west head for the Pacific."
+narration = "Milner Pass, ten thousand seven hundred fifty-eight feet, right on the Continental Divide! That's Poudre Lake. Its water flows east toward the Atlantic, and everything west of here heads for the Pacific!"
+[stops.info]
+"SEE" = "Poudre Lake and the Continental Divide sign."
+"HIKE" = "The Mount Ida trail starts here: long, but with huge views."
+"TIP" = "Lake Irene, just down the road, is a quiet picnic spot."
+
+[[stops]]
+name = "Grand Lake"
+lat = 40.2522
+lon = -105.8233
+elevation_ft = 8369
+tag = "END OF THE ROAD"
+road = "US 34"
+miles = 22
+drive_time = "45 min"
+photo_query = "Grand Lake Colorado"
+via = [
+  [40.4140, -105.8180], [40.4070, -105.8260], [40.4000, -105.8340], [40.3900, -105.8460],
+  [40.3800, -105.8540], [40.3700, -105.8570], [40.3400, -105.8580], [40.3100, -105.8540],
+  [40.2850, -105.8480], [40.2650, -105.8380],
+]
+drive_caption = "Switchbacks down into the Kawuneeche Valley. Moose country!"
+drive_fact = "The Colorado River starts as a small stream at the top of this valley."
+drive_narration = "Now we switchback down into the Kawuneeche Valley! Stop at Farview Curve for a view of the Never Summer Mountains, then visit Holzwarth Historic Site, an old dude ranch. And keep your eyes peeled for moose! The Colorado River starts right here as a tiny stream!"
+caption = "Grand Lake! Colorado's largest natural lake, with a boardwalk town right on the shore."
+fact = "Grand Lake is the largest and deepest natural lake in Colorado."
+narration = "Welcome to Grand Lake! It's Colorado's largest natural lake, with a wooden boardwalk town right on the shore. Rent a boat, grab an ice cream, and watch the sunset. What a finish!"
+[[stops.sights]]
+name = "Farview Curve"
+note = "A pullout with a huge view down the Kawuneeche Valley to the Never Summer Mountains."
+lat = 40.4050
+lon = -105.8330
+photo_query = "Kawuneeche Valley"
+[[stops.sights]]
+name = "Holzwarth Historic Site"
+note = "A 1920s dude ranch you can walk through, in a meadow where moose often graze."
+lat = 40.3725
+lon = -105.8607
+photo_query = "Holzwarth Historic Site"
+[stops.info]
+"SEE & DO" = "Stroll the boardwalk on Grand Avenue and rent a boat on the lake."
+"STAY" = "Lakeside cabins and lodges, or camp in the park at Timber Creek."
+"TIP" = "Fill up here. It's the first gas since Estes Park."
