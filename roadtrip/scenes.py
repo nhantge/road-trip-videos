@@ -29,6 +29,10 @@ def subscribe_text(route, channel):
 XFADE = 0.4         # crossfade between full-screen scenes
 PANEL_XFADE = 0.35  # crossfade of the right-hand panel between map segments
 PHOTO_BOX = (1206, 92, 672, 330)
+# Photo spotlight: on up to two stops the panel photo grows over a shrunken, dimmed map, then
+# settles back. Starts SPOT_START s into the stop, grows/shrinks over SPOT_GROW, holds SPOT_HOLD.
+SPOT_BOX = (160, 70, 1600, 900)
+SPOT_START, SPOT_GROW, SPOT_HOLD = 1.6, 0.55, 1.9
 SKY = [(180, 105, 60), (75, 125, 100), (165, 80, 80), (70, 120, 150), (190, 80, 55),
        (110, 105, 165), (95, 135, 70), (160, 120, 60)]
 
@@ -47,6 +51,7 @@ class Renderer:
         self._covers = {}
         self.hook = hook_items(route)
         self._stats = self._stat_cards()
+        self.spotlights = self._pick_spotlights()
 
     # -- helpers ---------------------------------------------------------------
 
@@ -82,6 +87,60 @@ class Renderer:
         cy = src.height / 2
         box = (cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2)
         return src.resize(size, Image.BILINEAR, box=box), entry
+
+    def _pick_spotlights(self):
+        """Segment ids of the (up to two) stops whose photo gets a full-size moment: the thumbnail
+        stop (or the one with the most photos), plus the stop farthest from it. Only stops with
+        real photos and time for the whole move qualify; the start is a last resort."""
+        need = SPOT_START + 2 * SPOT_GROW + SPOT_HOLD + 0.6
+        segs = [g for g in self.segs if g.kind == "stop" and self.photos.get(g.stop) and g.dur >= need]
+        segs = [g for g in segs if g.stop] or segs
+        if not segs:
+            return set()
+        want = self.route.thumbnail.get("stop")
+        first = next((g for g in segs if self.route.stops[g.stop].name == want), None) \
+            or max(segs, key=lambda g: (len(self.photos[g.stop]), g.stop))
+        rest = [g for g in segs if g is not first]
+        picks = [first] + ([max(rest, key=lambda g: abs(g.stop - first.stop))] if rest else [])
+        return {g.id for g in picks}
+
+    def spotlight(self, img, seg, t):
+        """The panel photo grows to SPOT_BOX while the map shrinks and dims behind it."""
+        lt, total = t - SPOT_START, 2 * SPOT_GROW + SPOT_HOLD
+        if lt <= 0 or lt >= total:
+            return img
+        e = S.smooth(min(1.0, lt / SPOT_GROW, (total - lt) / SPOT_GROW))
+        base = img.convert("RGB")
+        k = 1 - 0.07 * e
+        small = base.resize((round(S.W * k), round(S.H * k)), Image.BILINEAR)
+        out = Image.new("RGB", (S.W, S.H), S.BG_TITLE)
+        out.paste(small, ((S.W - small.width) // 2, (S.H - small.height) // 2))
+        out = Image.blend(out, Image.new("RGB", out.size, S.BG_TITLE), 0.6 * e).convert("RGBA")
+        slides, i, lt0, _ = self.slide_at(seg, SPOT_START)
+        key, which = slides[i][0], slides[i][1]
+        X0, Y0, W0, H0 = PHOTO_BOX
+        X1, Y1, W1, H1 = SPOT_BOX
+        x, y, w, h = (round(a + (b - a) * e) for a, b in ((X0, X1), (Y0, Y1), (W0, W1), (H0, H1)))
+        big, entry = self.photo_frame(key, (W1, H1), lt0 + i * 1.5, which)  # the panel's frame, so the handoff is seamless
+        push = 1 + 0.05 * math.sin(math.pi * lt / total)                  # slow push-in that settles back
+        cw = min(W1, H1 * w / h) / push; ch = cw * h / w  # crop to the current aspect so nothing squashes
+        photo = big.resize((w, h), Image.BILINEAR, box=((W1 - cw) / 2, (H1 - ch) / 2, (W1 + cw) / 2, (H1 + ch) / 2))
+        out.paste(photo, (x, y), S.rounded_box(w, h, round(14 + 8 * e), (255, 255, 255, 255)).getchannel("A"))
+        la = S.clamp((e - 0.6) / 0.4)
+        if la > 0:
+            st = self.route.stops[seg.stop]
+            layer = Image.new("RGBA", out.size, (0, 0, 0, 0))
+            d = ImageDraw.Draw(layer)
+            d.text((x + 40, y + h - 40), st.name, font=S.font("display", 64), fill=S.TEXT, anchor="ls",
+                   stroke_width=4, stroke_fill=(0, 0, 0))
+            credit = short_credit(entry)
+            if credit:
+                f = S.font("medium", 15)
+                cw_ = int(f.getlength(credit) + 20)
+                d.rounded_rectangle((x + w - cw_ - 16, y + h - 46, x + w - 16, y + h - 18), 6, fill=(6, 10, 14, 200))
+                d.text((x + w - 16 - cw_ / 2, y + h - 32), credit, font=f, fill=(215, 220, 224), anchor="mm")
+            out.alpha_composite(S.with_alpha(layer, la))
+        return out
 
     def segment_at(self, t):
         for seg in self.segs:
@@ -171,6 +230,8 @@ class Renderer:
             panel = Image.blend(self.panel(prev, prev.dur), panel, S.smooth(t / PANEL_XFADE))
         img.alpha_composite(panel, (S.PANEL_X, 0))
         ImageDraw.Draw(img).line((S.MAP_W, 0, S.MAP_W, S.H), fill=(36, 48, 60), width=2)
+        if seg.id in self.spotlights:
+            img = self.spotlight(img, seg, t)
         return img.convert("RGB")
 
     def caption_for(self, seg):
@@ -217,7 +278,12 @@ class Renderer:
 
     def slide_at(self, seg, t):
         slides = self.slides_for(seg)
-        per = seg.dur / len(slides)
+        dur = seg.dur
+        if seg.id in self.spotlights:  # the slideshow pauses while its photo is in the spotlight
+            w = 2 * SPOT_GROW + SPOT_HOLD
+            dur -= w
+            t = t if t < SPOT_START else max(SPOT_START, t - w)
+        per = dur / len(slides)
         k = min(int(t / per), len(slides) - 1)
         return slides, k, t - k * per, per
 

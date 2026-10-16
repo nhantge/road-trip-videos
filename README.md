@@ -203,7 +203,9 @@ are in `examples/<route>/short.mp4`.
 5. For each stop: the drive (camera follows the car; next-stop panel with miles to go,
    drive time, an elevation chart of the leg, an "On this stretch" fact, then a photo
    and tip for each "worth a stop" sight), then the stop (a slideshow of up to four
-   photos, see/do/eat/stay rows, "Did you know?" fact)
+   photos, see/do/eat/stay rows, "Did you know?" fact). On two stops, the thumbnail stop
+   (or the one with the most photos) and the stop farthest from it, the photo grows to
+   fill most of the frame for about 2 seconds while the map shrinks and dims behind it
 6. Finale: zoom out to the whole route with trip totals
 7. Trip planner: the itinerary with miles, elevations and leg drive times, plus tips
 8. End card: subscribe and "Up next"
