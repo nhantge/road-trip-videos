@@ -1,0 +1,19 @@
+{
+  "voice": "Marie (ElevenLabs ijbjxuucMt4vnA0kA9IO)",
+  "model": "eleven_v3",
+  "hook": "0ef23c1bf7",
+  "intro": "e59da03230",
+  "overview": "bff8a442c1",
+  "stop-0": "74f2110b8e",
+  "drive-1": "e17ea66033",
+  "stop-1": "5e1a64ed76",
+  "drive-2": "1423e847bf",
+  "stop-2": "983fbe90ea",
+  "drive-3": "7e328689ac",
+  "stop-3": "a9434f9caf",
+  "drive-4": "76844a353e",
+  "stop-4": "31d48d4c31",
+  "finale": "6adc0a05bc",
+  "end": "d70abcc2fd",
+  "planner": "3505725f1d"
+}
