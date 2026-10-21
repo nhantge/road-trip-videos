@@ -1,0 +1,145 @@
+# Scenic A1A from St. Augustine past Fort Matanzas, Marineland and Flagler Beach to Daytona Beach.
+
+title = "St. Augustine to Daytona Beach"
+series = "Florida Road Trips"
+region = "Scenic A1A"
+days = "1"
+best_season = "Fall and spring"
+flat = true
+numbers = [
+  { value = "1565", label = "Year St. Augustine was founded", note = "The nation's oldest city" },
+  { value = 10, label = "MPH speed limit on the sand", note = "Driving on Daytona Beach" },
+]
+hook = [
+  "A Spanish fort from 1742, reached by a free ferry : Fort Matanzas",
+  "The world's first oceanarium : Marineland",
+  "A beach you can drive on : Daytona Beach",
+]
+tips = [
+  "Park once in St. Augustine and walk the old town.",
+  "Fort Matanzas ferry tickets are free but limited. Go early.",
+  "Beach driving in Daytona has a fee and set hours. Check before you go.",
+  "A1A runs right along the dunes. Watch for bikes and walkers.",
+]
+
+[narration]
+hook = "The oldest city in America, and a beach you can drive on! A Spanish fort you reach by a free ferry. The world's first oceanarium. And Daytona's famous sand!"
+intro = "This is St. Augustine to Daytona Beach on Scenic A1A: about 60 miles down the Atlantic coast. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We start in St. Augustine, then Fort Matanzas, Marineland and Flagler Beach, and we finish in Daytona Beach!"
+finale = "And that's the drive! About 60 miles from the nation's oldest city to the World's Most Famous Beach."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Subscribe to Road Trip Atlas for more Florida road trips, and next time we're heading to the Panhandle for Scenic Highway 30A!"
+
+[inset]
+name = "Florida"
+bounds = [-87.63, 24.40, -80.03, 31.00]
+city = { name = "Orlando", lat = 28.5383, lon = -81.3792 }
+
+[thumbnail]
+text = ["AMERICA'S OLDEST CITY", "TO DAYTONA BEACH"]
+stop = "St. Augustine"
+photo = 0
+
+[up_next]
+title = "Scenic Highway 30A"
+subtitle = "Rosemary Beach to Grayton Beach"
+miles = 17
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "St. Augustine"
+lat = 29.8977
+lon = -81.3124
+elevation_ft = 10
+tag = "OLDEST CITY"
+photo_query = "St. Augustine Castillo"
+caption = "We start in St. Augustine, founded in 1565!"
+fact = "The Castillo de San Marcos is the oldest masonry fort in the continental United States."
+narration = "We're starting in St. Augustine, founded way back in 1565! Walk the stone walls of the Castillo de San Marcos, then wander down St. George Street."
+[stops.info]
+"SEE & DO" = "Castillo de San Marcos and St. George Street."
+"TIP" = "Use the Historic Downtown Parking Facility, then walk."
+
+[[stops]]
+name = "Fort Matanzas"
+lat = 29.7151
+lon = -81.2393
+elevation_ft = 10
+tag = "FREE FERRY"
+road = "A1A"
+miles = 15
+drive_time = "25 min"
+photo_query = "Fort Matanzas"
+via = [[29.8850, -81.2800], [29.8200, -81.2700], [29.7600, -81.2500]]
+drive_caption = "Over the Bridge of Lions and south on A1A!"
+drive_fact = "The Bridge of Lions opened in 1927."
+drive_narration = "Over the Bridge of Lions, then south on A1A, right along the dunes!"
+caption = "Fort Matanzas: a free ferry to a Spanish fort!"
+fact = "The little stone fort was finished in 1742 to guard St. Augustine's back door."
+narration = "This is Fort Matanzas! Hop on the free ferry across the river to a little Spanish fort, built in 1742 to guard St. Augustine's back door."
+[stops.info]
+"DO" = "The free ferry out to the fort."
+"TIP" = "Ferry tickets are free but limited. Get there early."
+
+[[stops]]
+name = "Marineland"
+lat = 29.6694
+lon = -81.2147
+elevation_ft = 10
+tag = "FIRST OCEANARIUM"
+road = "A1A"
+miles = 4
+drive_time = "10 min"
+photo_query = "Marineland Florida"
+drive_caption = "Just down the road to Marineland!"
+drive_fact = "Marineland was first built as an underwater movie studio."
+drive_narration = "Just a few miles down A1A to a Florida legend!"
+caption = "Marineland: the world's first oceanarium, opened in 1938!"
+fact = "Marineland opened in 1938 as Marine Studios, built to film underwater."
+narration = "Welcome to Marineland! It opened in 1938 as the world's first oceanarium, built to film movies underwater. Today you can meet the dolphins!"
+[stops.info]
+"SEE & DO" = "Dolphin encounters at Marineland."
+"TIP" = "Book dolphin programs ahead."
+
+[[stops]]
+name = "Flagler Beach"
+lat = 29.4747
+lon = -81.1270
+elevation_ft = 15
+tag = "OCEAN VIEWS"
+road = "A1A"
+miles = 14
+drive_time = "25 min"
+photo_query = "Flagler Beach"
+via = [[29.6000, -81.1900], [29.5400, -81.1600]]
+drive_caption = "A1A hugs the ocean all the way to Flagler Beach!"
+drive_fact = "From Marineland to Flagler Beach, A1A runs right beside the dunes."
+drive_narration = "Now A1A runs right along the ocean, with the dunes on one side and the beach just over them!"
+caption = "Flagler Beach: an old-Florida beach town with a fishing pier!"
+fact = "Flagler Beach is known for its orange-tinted sand, full of tiny coquina shells."
+narration = "Welcome to Flagler Beach! Walk out on the fishing pier, and check out the orange-tinted sand. It's full of tiny crushed coquina shells!"
+[stops.info]
+"SEE & DO" = "Walk the Flagler Beach Pier."
+"TIP" = "Grab lunch at a beachside spot right on A1A."
+
+[[stops]]
+name = "Daytona Beach"
+lat = 29.2271
+lon = -81.0058
+elevation_ft = 10
+tag = "DRIVE ON THE BEACH"
+road = "A1A"
+miles = 27
+drive_time = "45 min"
+photo_query = "Daytona Beach"
+via = [[29.4000, -81.1000], [29.2900, -81.0500]]
+drive_caption = "Through Ormond Beach and on to Daytona!"
+drive_fact = "Racers set speed records on these beaches back in the early 1900s."
+drive_narration = "Through Ormond Beach, where car racing on the sand began, and on to Daytona!"
+caption = "Daytona Beach: you can drive right on the sand!"
+fact = "The speed limit on the beach is just 10 miles per hour."
+narration = "We made it to Daytona Beach, the World's Most Famous Beach! You can drive right on the sand here, nice and slow, at ten miles per hour. Then head over to the Speedway!"
+[stops.info]
+"DO" = "Drive on the beach, then visit Daytona International Speedway."
+"TIP" = "Beach driving has a fee and set hours. Check before you go."

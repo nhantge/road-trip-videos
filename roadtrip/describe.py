@@ -72,7 +72,8 @@ def _description(route, segs, offset, brand, details=True, notes=True):
         where = "start" if st.index == 0 else (f"mile {int(round(st.mile))} · {st.miles} mi / "
                                                f"{fmt_minutes(st.drive_minutes)} from {route.stops[st.index - 1].name}"
                                                + (f" via {st.road}" if st.road else ""))
-        lines.append(f"{st.index + 1}. {st.name} ({fmt_int(st.elevation_ft)} ft) · {where}")
+        elev = "" if route.flat else f" ({fmt_int(st.elevation_ft)} ft)"
+        lines.append(f"{st.index + 1}. {st.name}{elev} · {where}")
         for sight in st.sights:
             lines.append(f"   On the way, worth a stop: {sight.name}." + (f" {sight.note}" if notes else ""))
         for label, value in (st.info.items() if details else ()):

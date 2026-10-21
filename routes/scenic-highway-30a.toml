@@ -1,0 +1,145 @@
+# Scenic Highway 30A on the Florida Panhandle: Rosemary Beach, Alys Beach, Seaside, Grayton Beach,
+# and Eden Gardens up CR 395. Short, slow and best by bike as much as by car.
+
+title = "Scenic Highway 30A"
+series = "Florida Road Trips"
+region = "Florida Panhandle"
+days = "1 to 2"
+best_season = "Spring and fall"
+flat = true
+numbers = [
+  { value = 15, label = "Named coastal dune lakes", note = "Found in only a few places on Earth" },
+  { value = 19, label = "Miles of paved bike path", note = "The Timpoochee Trail, right along 30A" },
+]
+hook = [
+  "A town where every building is white : Alys Beach",
+  "The real town from The Truman Show : Seaside",
+  "A rare lake right behind the beach : Grayton Beach State Park",
+]
+tips = [
+  "Park once and bike the Timpoochee Trail between towns.",
+  "Summer weekends are packed. Spring and fall are calmer.",
+  "Watch the beach flags. Rip currents are common.",
+  "State parks charge a small entry fee per car.",
+]
+
+[narration]
+hook = "The prettiest little beach road in Florida! A town where every building is white. The real town from The Truman Show. And rare lakes right behind the beach!"
+intro = "This is Scenic Highway 30A, on the Florida Panhandle: sugar-white sand and little beach towns. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We start in Rosemary Beach, then Alys Beach, Seaside and Grayton Beach, and we finish at Eden Gardens!"
+finale = "And that's the drive! A short road, packed with beach towns, from Rosemary Beach to Eden Gardens."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Subscribe to Road Trip Atlas for more road trips, and next time we're heading west to Utah, starting at Zion National Park!"
+
+[inset]
+name = "Florida"
+bounds = [-87.63, 24.40, -80.03, 31.00]
+city = { name = "Tallahassee", lat = 30.4383, lon = -84.2807 }
+
+[thumbnail]
+text = ["SUGAR-WHITE SAND", "SCENIC HIGHWAY 30A"]
+stop = "Grayton Beach State Park"
+photo = 0
+
+[up_next]
+title = "Zion to Bryce Canyon"
+subtitle = "Utah's red rock country"
+miles = 85
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Rosemary Beach"
+lat = 30.2797
+lon = -86.0168
+elevation_ft = 20
+tag = "BEACH TOWN"
+photo_query = "Rosemary Beach Florida"
+caption = "We start in Rosemary Beach, at the east end of 30A!"
+fact = "A paved bike path, the Timpoochee Trail, runs alongside 30A."
+narration = "We're starting in Rosemary Beach, on Scenic Highway 30A! Cobblestone streets, boardwalks down to the beach, and that sugar-white sand."
+[stops.info]
+"SEE & DO" = "Walk the town green and the boardwalks."
+"TIP" = "Park once, and bike the trail along 30A."
+
+[[stops]]
+name = "Alys Beach"
+lat = 30.2840
+lon = -86.0360
+elevation_ft = 25
+tag = "ALL-WHITE TOWN"
+road = "30A"
+miles = 1
+drive_time = "5 min"
+photo_query = "Alys Beach"
+drive_caption = "Just down the road to Alys Beach!"
+drive_fact = "30A runs about two dozen miles along the Gulf."
+drive_narration = "Just a mile down the road!"
+caption = "Alys Beach: a town where every building is white!"
+fact = "Almost every building in Alys Beach is bright white."
+narration = "Look at this! Alys Beach, where almost every building is bright white. It looks like a little Mediterranean town, right on the Gulf."
+[stops.info]
+"SEE" = "Walk the white streets of town."
+"TIP" = "Come at sunset for the best light."
+
+[[stops]]
+name = "Seaside"
+lat = 30.3210
+lon = -86.1393
+elevation_ft = 20
+tag = "THE TRUMAN SHOW TOWN"
+road = "30A"
+miles = 6
+drive_time = "15 min"
+photo_query = "Seaside Florida"
+via = [[30.2950, -86.0700], [30.3100, -86.1100]]
+drive_caption = "West on 30A, past the dune lakes!"
+drive_fact = "Seaside was the filming location for The Truman Show in 1998."
+drive_narration = "West on 30A, past the coastal dune lakes, to a town you might recognize!"
+caption = "Seaside: the real town from The Truman Show!"
+fact = "The Truman Show was filmed right here in 1998."
+narration = "Welcome to Seaside! Look familiar? This pastel town was the set for The Truman Show! Grab a bite from the Airstream food trucks on 30A."
+[stops.info]
+"SEE & DO" = "Central Square and the Airstream Row food trucks."
+"TIP" = "Parking fills fast in summer. Bike in."
+
+[[stops]]
+name = "Grayton Beach State Park"
+lat = 30.3290
+lon = -86.1600
+elevation_ft = 10
+tag = "COASTAL DUNE LAKE"
+road = "30A"
+miles = 2
+drive_time = "5 min"
+photo_query = "Grayton Beach"
+drive_caption = "On to Grayton Beach State Park!"
+drive_fact = "Coastal dune lakes are only found in a few places on Earth."
+drive_narration = "Just down the road to Grayton Beach State Park!"
+caption = "Grayton Beach: a rare coastal dune lake, right behind the beach!"
+fact = "This stretch of coast has 15 named coastal dune lakes."
+narration = "This is Grayton Beach State Park! Right behind the dunes is Western Lake, a coastal dune lake. Lakes like this are only found in a few places on Earth!"
+[stops.info]
+"DO" = "Paddle Western Lake, then walk over to the beach."
+"TIP" = "The state park charges a small entry fee per car."
+
+[[stops]]
+name = "Eden Gardens"
+lat = 30.3720
+lon = -86.1180
+elevation_ft = 15
+tag = "1897 MANSION"
+road = "30A and CR 395"
+miles = 6
+drive_time = "15 min"
+photo_query = "Eden Gardens State Park"
+via = [[30.3330, -86.1400], [30.3500, -86.1180]]
+drive_caption = "North on 395 to Eden Gardens!"
+drive_fact = "Eden Gardens sits on Tucker Bayou, off Choctawhatchee Bay."
+drive_narration = "North on County Road 395, away from the beach and under the live oaks!"
+caption = "Eden Gardens: an 1897 mansion under giant live oaks!"
+fact = "The Wesley mansion at Eden Gardens was built in 1897."
+narration = "We finish at Eden Gardens State Park, with a white-columned mansion from 1897 and giant live oaks dripping with Spanish moss!"
+[stops.info]
+"SEE" = "The Wesley mansion and its gardens."
+"TIP" = "House tours run on select days. Check ahead."

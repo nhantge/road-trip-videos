@@ -128,7 +128,7 @@ class MapView:
 
     def _terrain_grid(self):
         """Elevation (m) resampled onto the basemap grid, or None."""
-        if self.terrain is None:
+        if self.terrain is None or self.route.flat:  # flat routes: shaded sea floor only adds noise
             return None
         x0, y0 = self.ox, self.oy
         x1, y1 = self.ox + self.bw / self.scale, self.oy + self.bh / self.scale
@@ -271,13 +271,15 @@ class MapView:
             d.text((48, 86), route.region, font=S.font("regular", 17), fill=S.TEXT_DIM, anchor="lm")
         d.line((48, 106, 429, 106), fill=(49, 64, 78), width=2)
         d.text((48, 126), "MILE", font=S.font("semibold", 14), fill=S.TEXT_DIM, anchor="lm")
-        d.text((262, 126), "ELEVATION", font=S.font("semibold", 14), fill=S.TEXT_DIM, anchor="lm")
+        d.text((262, 126), "TO GO" if route.flat else "ELEVATION", font=S.font("semibold", 14), fill=S.TEXT_DIM,
+               anchor="lm")
         big = S.font("display", 52)
         val = str(int(mile + 0.5))
         d.text((46, 187), val, font=big, fill=S.TEXT, anchor="ls")
         d.text((56 + big.getlength(val), 184), f"of {int(round(route.total_miles))}",
                font=S.font("regular", 21), fill=S.TEXT_DIM, anchor="ls")
-        d.text((261, 180), f"{S.fmt_int(elevation_ft)} ft", font=S.font("display", 34), fill=S.TEXT, anchor="ls")
+        right = f"{S.fmt_int(max(0, route.total_miles - mile))} mi" if route.flat else f"{S.fmt_int(elevation_ft)} ft"
+        d.text((261, 180), right, font=S.font("display", 34), fill=S.TEXT, anchor="ls")
 
     def draw_inset(self, img, mile):
         inset = self.route.inset
@@ -338,6 +340,8 @@ class MapView:
         self._prof_lo, self._prof_hi = lo, hi
         xs = self.PX0 + route.prof_mi / route.total_miles * (self.PX1 - self.PX0)
         ys = self.PY1 - (route.prof_ft - lo) / max(hi - lo, 1) * (self.PY1 - self.PY0)
+        if route.flat:  # no elevation story at sea level: the strip becomes a progress bar
+            ys = np.full_like(route.prof_ft, self.PY1 - 12.0)
         self._prof_xy = (xs, ys)
         w, h = S.MAP_W, S.H - S.ELEV_Y
         ss = 3
@@ -356,9 +360,10 @@ class MapView:
         static = Image.new("RGBA", (w, h), S.BG_PANEL + (255,))
         d = ImageDraw.Draw(static)
         d.line((0, 0, w, 0), fill=S.DIVIDER, width=2)
-        d.text((48, 22), "ELEVATION", font=S.font("semibold", 14), fill=S.TEXT_DIM, anchor="lm")
-        note = "feet above sea level" if route.elevation_from_terrain else "approximate"
-        d.text((48 + S.font("semibold", 14).getlength("ELEVATION") + 12, 22), note,
+        head = "ROUTE" if route.flat else "ELEVATION"
+        d.text((48, 22), head, font=S.font("semibold", 14), fill=S.TEXT_DIM, anchor="lm")
+        note = "stop by stop" if route.flat else "feet above sea level" if route.elevation_from_terrain else "approximate"
+        d.text((48 + S.font("semibold", 14).getlength(head) + 12, 22), note,
                font=S.font("regular", 14), fill=S.TEXT_FAINT, anchor="lm")
         d.line((self.PX0, self.PY1 - S.ELEV_Y, self.PX1, self.PY1 - S.ELEV_Y), fill=(40, 52, 62), width=1)
         fnt = S.font("medium", 13)

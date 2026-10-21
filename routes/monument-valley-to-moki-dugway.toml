@@ -1,0 +1,141 @@
+# Monument Valley to the Moki Dugway: Monument Valley Navajo Tribal Park, Forrest Gump Point on
+# US 163, Mexican Hat, Goosenecks State Park, and up the Moki Dugway on UT 261.
+
+title = "Monument Valley to the Moki Dugway"
+series = "Utah Road Trips"
+region = "San Juan County"
+days = "1"
+best_season = "Spring and fall"
+hook = [
+  "The view from the end of Forrest Gump's run : Forrest Gump Point",
+  "A river looping 1,000 feet below : Goosenecks State Park",
+  "Three miles of gravel switchbacks up a cliff : Moki Dugway",
+]
+tips = [
+  "Monument Valley is a Navajo Tribal Park: $8 a person, and federal passes aren't accepted.",
+  "Navajo guides are required for most of the valley beyond the Valley Drive.",
+  "The Moki Dugway is unpaved, steep and narrow. Not for RVs or trailers.",
+  "Gas up in Mexican Hat or Bluff. Services are few.",
+]
+
+[narration]
+hook = "The most famous view in the American West! The spot where Forrest Gump stopped running. A river looping a thousand feet below. And three miles of gravel switchbacks, straight up a cliff!"
+intro = "This is Monument Valley to the Moki Dugway: about 60 miles on the Utah-Arizona border. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We start in Monument Valley, then Forrest Gump Point, Mexican Hat and the Goosenecks, and we finish at the top of the Moki Dugway!"
+finale = "And that's the drive! About 60 miles from Monument Valley to the top of the Moki Dugway."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Subscribe to Road Trip Atlas for more Utah road trips, and I'll see you on the next one!"
+
+[inset]
+name = "Utah"
+bounds = [-114.05, 37.0, -109.04, 42.0]
+city = { name = "Salt Lake City", lat = 40.7608, lon = -111.8910 }
+
+[thumbnail]
+text = ["THE MOST FAMOUS VIEW", "MONUMENT VALLEY"]
+stop = "Forrest Gump Point"
+photo = 0
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Monument Valley"
+lat = 36.9837
+lon = -110.1129
+tag = "NAVAJO TRIBAL PARK"
+photo_query = "Monument Valley Mittens"
+caption = "We start in Monument Valley, on the Utah-Arizona border!"
+fact = "Monument Valley is a Navajo Tribal Park. Entry is $8 per person."
+narration = "We're starting in Monument Valley Navajo Tribal Park! The Mittens and Merrick Butte have starred in Westerns for decades. Drive the 17-mile Valley Drive, or book a Navajo-guided tour to go deeper."
+[stops.info]
+"DO" = "The 17-mile Valley Drive, or a Navajo-guided tour."
+"TIP" = "Federal park passes aren't accepted here."
+
+[[stops]]
+name = "Forrest Gump Point"
+lat = 37.1017
+lon = -109.9906
+tag = "THE FAMOUS VIEW"
+road = "US 163"
+miles = 17
+drive_time = "25 min"
+photo_query = "Forrest Gump Point"
+via = [[37.0050, -110.0950], [37.0500, -110.0400]]
+drive_caption = "North on US 163, with the buttes in the mirror!"
+drive_fact = "Fans recreate the movie scene here, but it's a busy highway."
+drive_narration = "North on US 163. Don't forget to look in the mirror!"
+caption = "Forrest Gump Point: where Forrest stopped running!"
+fact = "The famous running scene was filmed on this stretch of US 163."
+narration = "Pull over at Forrest Gump Point! This is where Forrest finally stopped running, with Monument Valley lined up behind him down the road. Get your photo, but watch for traffic!"
+[stops.info]
+"SEE" = "The view south down US 163 to Monument Valley."
+"TIP" = "Pull fully off the road. Don't stand in the lanes."
+
+[[stops]]
+name = "Mexican Hat"
+lat = 37.1503
+lon = -109.8551
+elevation_ft = 4240
+tag = "SOMBRERO ROCK"
+road = "US 163"
+miles = 10
+drive_time = "15 min"
+photo_query = "Mexican Hat Rock"
+via = [[37.1300, -109.9200]]
+drive_caption = "Down to the San Juan River and Mexican Hat!"
+drive_fact = "The town is named after a rock that looks like a sombrero."
+drive_narration = "Down to the San Juan River, and the little town of Mexican Hat!"
+caption = "Mexican Hat: named for a rock that looks like a giant sombrero!"
+fact = "Mexican Hat sits right on the San Juan River."
+narration = "Welcome to Mexican Hat, named after a rock just outside town that looks exactly like a giant sombrero!"
+[stops.info]
+"SEE" = "Mexican Hat Rock, just north of town."
+"TIP" = "Gas and a few motels. Plan ahead."
+
+[[stops]]
+name = "Goosenecks State Park"
+lat = 37.1745
+lon = -109.9271
+elevation_ft = 4950
+tag = "1,000 FEET DOWN"
+road = "UT 261 and UT 316"
+miles = 9
+drive_time = "15 min"
+photo_query = "Goosenecks State Park"
+via = [[37.1750, -109.8650], [37.1850, -109.8950]]
+drive_caption = "Out to the edge of the Goosenecks!"
+drive_fact = "The San Juan River winds over 6 miles here to move just a mile and a half west."
+drive_narration = "Out across the mesa to the edge of the Goosenecks!"
+caption = "Goosenecks: the San Juan River loops 1,000 feet below!"
+fact = "The river winds over six miles here to travel just a mile and a half."
+narration = "This is Goosenecks State Park! The San Juan River twists through these tight loops a thousand feet below you, winding more than six miles just to move a mile and a half!"
+[stops.info]
+"SEE" = "The overlook, right by the parking lot."
+"TIP" = "There's no water here. Bring your own."
+
+[[stops]]
+name = "Moki Dugway"
+lat = 37.2760
+lon = -109.9370
+elevation_ft = 6350
+tag = "GRAVEL SWITCHBACKS"
+road = "UT 261"
+miles = 12
+drive_time = "30 min"
+photo_query = "Moki Dugway"
+via = [[37.1850, -109.8950], [37.2050, -109.9100], [37.2450, -109.9300]]
+drive_caption = "North on 261, toward a wall of cliffs!"
+drive_fact = "The Moki Dugway was built in 1958 for trucks hauling uranium ore."
+drive_narration = "North on Highway 261, straight toward a wall of cliffs. Where does the road go?"
+caption = "The Moki Dugway: 3 miles of gravel switchbacks up a cliff!"
+fact = "It was built in 1958 for trucks hauling uranium ore."
+narration = "And the grand finale, the Moki Dugway! About three miles of steep gravel switchbacks, climbing over a thousand feet up the cliff. At the top, look back over the Valley of the Gods. Wow!"
+[[stops.sights]]
+name = "Valley of the Gods"
+note = "A 17-mile dirt road through giant red buttes. Best with high clearance after rain."
+lat = 37.2500
+lon = -109.8300
+photo_query = "Valley of the Gods Utah"
+[stops.info]
+"SEE" = "The view back over the Valley of the Gods."
+"TIP" = "Unpaved, steep and narrow. Not for RVs or trailers."

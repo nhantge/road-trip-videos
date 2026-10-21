@@ -368,7 +368,8 @@ class Renderer:
             parts.append("START")
         elif st.index == self.n - 1:
             parts.append("FINISH")
-        parts.append(f"{S.fmt_int(st.elevation_ft)} ft")
+        if not self.route.flat:
+            parts.append(f"{S.fmt_int(st.elevation_ft)} ft")
         if st.index:
             parts.append(f"mile {int(round(st.mile))}")
         dl.text((X, y + 42), "  ·  ".join(parts), font=S.font("medium", 24), fill=S.TEAL, anchor="ls")
@@ -411,6 +412,7 @@ class Renderer:
         p = drive_progress(t / seg.dur)
         to_go = (st.mile - prev.mile) * (1 - p)
         cols = [("MILES TO GO", f"{int(math.ceil(to_go - 1e-6))}"), ("DRIVE TIME", S.fmt_minutes(st.drive_minutes)),
+                ("STOP", f"{st.index + 1} of {self.n}") if self.route.flat else
                 ("ELEVATION", f"{S.fmt_int(st.elevation_ft)} ft")]
         for k, (label, value) in enumerate(cols):
             cx = X + k * 232
@@ -419,7 +421,8 @@ class Renderer:
         dl.text((X, y + 184), "Road miles and drive time are approximate, without stops.",
                 font=S.font("regular", 16), fill=S.TEXT_FAINT, anchor="lm")
         img.alpha_composite(S.with_alpha(layer, a), (0, int((1 - a) * 14)))
-        self._leg_chart(img, prev, st, p, y + 220, S.ease_out((t - 0.4) / 0.45))
+        if not self.route.flat:
+            self._leg_chart(img, prev, st, p, y + 220, S.ease_out((t - 0.4) / 0.45))
         # The card under the photo follows the slideshow: the leg's fact, then each sight's tip.
         slides, k, lt, _ = self.slide_at(seg, t)
         if k == 0:
@@ -485,8 +488,9 @@ class Renderer:
             dr.text((X + 54, rh / 2), st.name, font=S.font("semibold", 27), fill=S.TEXT, anchor="lm")
             right = "start" if k == 0 else f"mile {int(round(st.mile))}"
             dr.text((X + 672, rh / 2 - 11), right, font=S.font("medium", 20), fill=S.TEXT_DIM, anchor="rm")
-            dr.text((X + 672, rh / 2 + 14), f"{S.fmt_int(st.elevation_ft)} ft", font=S.font("regular", 17),
-                    fill=S.TEXT_FAINT, anchor="rm")
+            if not self.route.flat:
+                dr.text((X + 672, rh / 2 + 14), f"{S.fmt_int(st.elevation_ft)} ft", font=S.font("regular", 17),
+                        fill=S.TEXT_FAINT, anchor="rm")
             if k < len(rows) - 1:
                 dr.line((X + 17, rh / 2 + 20, X + 17, rh), fill=(55, 68, 80), width=2)
             if k:
@@ -510,6 +514,9 @@ class Renderer:
             (f"{S.fmt_int(high)} ft", f"high point, near {high_name}"),
             (f"{S.fmt_int(low)} ft", f"low point, near {low_name}"),
         ]
+        if route.flat:
+            rows = rows[:2] + [(n["value"] if isinstance(n["value"], str) else S.fmt_int(n["value"]), n["label"].lower())
+                               for n in route.numbers[:2]]
         passes = [p for p in route.passes if (p.elevation_ft or 0) >= 10000]
         if passes:
             rows.append((str(len(passes)), plural(len(passes), "pass", "passes") + " over 10,000 ft"))
@@ -632,6 +639,11 @@ class Renderer:
                           ", ".join(p.name for p in passes)))
         else:
             cards.append((route.climb_ft, "", "FT OF CLIMBING", "Total uphill along the way"))
+        if route.flat:  # elevation cards say nothing at sea level; use the route's own numbers
+            mine = [(n["value"], "", n["label"].upper(), n.get("note", "")) if isinstance(n["value"], (int, float))
+                    else (None, str(n["value"]), n["label"].upper(), n.get("note", "")) for n in route.numbers[:2]]
+            keep = [c for c in cards if c[2] not in ("FT ELEVATION CHANGE", "FT OF CLIMBING")]
+            cards = keep[:1] + mine[:1] + keep[1:] + mine[1:]
         return cards
 
     def _stats_card(self, t):
@@ -671,7 +683,7 @@ class Renderer:
         top, bottom = 215, 1010
         rh = min(118, (bottom - top) // len(route.stops))
         d.text((120, top + 8), "STOP", font=S.font("semibold", 15), fill=S.TEXT_DIM, anchor="lm")
-        for label, x in (("MILE", 720), ("ELEV", 850), ("FROM LAST STOP", 1080)):
+        for label, x in (("MILE", 720), ("" if route.flat else "ELEV", 850), ("FROM LAST STOP", 1080)):
             d.text((x, top + 8), label, font=S.font("semibold", 15), fill=S.TEXT_DIM, anchor="rm")
         for k, st in enumerate(route.stops):
             ra = S.ease_out((t - 0.2 - 0.09 * k) / 0.4)
@@ -689,7 +701,9 @@ class Renderer:
                         fill=S.TEXT_DIM, anchor="lm")
             dr.text((600, cy), "0" if k == 0 else str(int(round(st.mile))), font=S.font("medium", 24),
                     fill=S.TEXT, anchor="rm")
-            dr.text((730, cy), f"{S.fmt_int(st.elevation_ft)} ft", font=S.font("regular", 22), fill=S.TEXT, anchor="rm")
+            if not route.flat:
+                dr.text((730, cy), f"{S.fmt_int(st.elevation_ft)} ft", font=S.font("regular", 22), fill=S.TEXT,
+                        anchor="rm")
             leg = "start" if k == 0 else f"{st.miles} mi · {S.fmt_minutes(st.drive_minutes)}"
             dr.text((960, cy), leg, font=S.font("regular", 22), fill=S.TEAL if k else S.TEXT_DIM, anchor="rm")
             img.alpha_composite(S.with_alpha(row, ra), (120 + int((1 - ra) * 20), top + 24 + k * rh))

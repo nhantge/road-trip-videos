@@ -1,0 +1,157 @@
+# The Tamiami Trail: US 41 from Little Havana across the Everglades and Big Cypress to Naples,
+# with the side trip to Everglades City on SR 29. Flat the whole way.
+
+title = "Tamiami Trail"
+series = "Florida Road Trips"
+region = "The Everglades"
+days = "1"
+best_season = "November to April, the dry season"
+flat = true
+numbers = [
+  { value = "1928", label = "Year the Tamiami Trail opened", note = "TAMpa plus MIAMI = Tamiami" },
+  { value = "1.5M", label = "Acres of Everglades National Park", note = "Plus Big Cypress next door" },
+]
+hook = [
+  "Alligators sunning right next to the path : Shark Valley",
+  "Boat rides into the Ten Thousand Islands : Everglades City",
+  "Sunset on the Gulf : Naples",
+]
+tips = [
+  "Fill up in Miami. Gas is sparse across the Everglades.",
+  "Winter is the dry season: fewer bugs and more wildlife.",
+  "Bring bug spray, especially around dusk.",
+  "Never feed or approach alligators.",
+]
+
+[narration]
+hook = "This road goes straight across the Everglades! Alligators sunning right next to the path. Boat rides into the Ten Thousand Islands. And sunset on the Gulf!"
+intro = "This is the Tamiami Trail: about 110 miles from Miami, across the Everglades, to Naples. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We start in Little Havana, then Shark Valley, Big Cypress and Everglades City, and we finish in Naples!"
+finale = "And that's the drive! About 110 miles from Little Havana, across the River of Grass, to the Gulf."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Subscribe to Road Trip Atlas for more Florida road trips, and next time we're visiting Florida's crystal-clear springs, and the manatees!"
+
+[inset]
+name = "Florida"
+bounds = [-87.63, 24.40, -80.03, 31.00]
+city = { name = "Miami", lat = 25.7617, lon = -80.1918 }
+
+[thumbnail]
+text = ["GATORS BY THE ROAD", "TAMIAMI TRAIL"]
+stop = "Shark Valley"
+photo = 0
+
+[up_next]
+title = "Florida's Springs"
+subtitle = "Silver Springs to Weeki Wachee"
+miles = 81
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Little Havana"
+lat = 25.7656
+lon = -80.2195
+elevation_ft = 10
+tag = "CALLE OCHO"
+photo_query = "Little Havana"
+caption = "We start on Calle Ocho in Little Havana, where the Tamiami Trail begins!"
+fact = "Calle Ocho, Southwest 8th Street, is the Miami end of the Tamiami Trail."
+narration = "We're starting in Little Havana, on Calle Ocho! Grab a Cuban coffee and watch the domino games at Domino Park, because this street is the start of the Tamiami Trail."
+[stops.info]
+"SEE & DO" = "Domino Park and the Calle Ocho Walk of Fame."
+"EAT" = "A cafecito and a Cuban sandwich."
+"TIP" = "Fill up here. Gas is sparse in the Everglades."
+
+[[stops]]
+name = "Shark Valley"
+lat = 25.7617
+lon = -80.7656
+elevation_ft = 7
+tag = "EVERGLADES NATIONAL PARK"
+road = "US 41"
+miles = 33
+drive_time = "45 min"
+photo_query = "Shark Valley Everglades"
+via = [[25.7620, -80.3500], [25.7610, -80.4800], [25.7615, -80.6000]]
+drive_caption = "West on the Tamiami Trail, straight into the Everglades!"
+drive_fact = "The Tamiami Trail opened in 1928. The name comes from TAMpa and MIAMI."
+drive_narration = "West on the Tamiami Trail, and the city just stops. Suddenly it's sawgrass as far as you can see!"
+caption = "Shark Valley: a 15-mile loop with alligators everywhere!"
+fact = "The observation tower halfway around the loop looks out over miles of sawgrass."
+narration = "Welcome to Shark Valley, in Everglades National Park! Ride the tram or rent a bike on the 15-mile loop. Alligators sun themselves right next to the path, and the tower halfway around looks out over the River of Grass!"
+[stops.info]
+"SEE & DO" = "Ride the tram, or bike the 15-mile loop to the observation tower."
+"WILDLIFE" = "Alligators, turtles and wading birds, right by the path."
+"TIP" = "Book tram seats ahead in winter. Waits can be long."
+
+[[stops]]
+name = "Big Cypress"
+lat = 25.8562
+lon = -81.0339
+elevation_ft = 10
+tag = "NATIONAL PRESERVE"
+road = "US 41"
+miles = 19
+drive_time = "25 min"
+photo_query = "Big Cypress National Preserve"
+via = [[25.7625, -80.8500], [25.8000, -80.9300]]
+drive_caption = "Deeper into the swamp, and into Big Cypress!"
+drive_fact = "Big Cypress National Preserve protects more than 700,000 acres of swamp."
+drive_narration = "Past the Miccosukee village, the sawgrass turns to cypress swamp. Welcome to Big Cypress!"
+caption = "Big Cypress: alligators lined up along the canal!"
+fact = "Big Cypress is home to the endangered Florida panther."
+narration = "This is Big Cypress National Preserve! At the Oasis Visitor Center, look down into the canal. Alligators everywhere! And this swamp is home to the rare Florida panther."
+[stops.info]
+"SEE" = "Alligators along the canal at the Oasis Visitor Center."
+"DO" = "Walk the boardwalk at Kirby Storter Roadside Park."
+"TIP" = "Stay behind the rails, and never feed the gators."
+
+[[stops]]
+name = "Everglades City"
+lat = 25.8573
+lon = -81.3856
+elevation_ft = 5
+tag = "TEN THOUSAND ISLANDS"
+road = "US 41 and SR 29"
+miles = 23
+drive_time = "30 min"
+photo_query = "Everglades City"
+via = [[25.8800, -81.1400], [25.9000, -81.2500], [25.9010, -81.3045], [25.9140, -81.3600], [25.8850, -81.3810]]
+drive_caption = "Past the smallest post office in the country, then south to Everglades City!"
+drive_fact = "The Ochopee post office is about 61 square feet, the smallest in the United States."
+drive_narration = "Past Ochopee, home of the smallest post office in America, then south to Everglades City!"
+caption = "Everglades City: boat rides into the Ten Thousand Islands!"
+fact = "Florida stone crab season opens in mid-October."
+narration = "Welcome to Everglades City! Take a boat out into the Ten Thousand Islands and watch for dolphins and manatees. Then crack into fresh stone crab claws. They're in season from mid-October!"
+[[stops.sights]]
+name = "Ochopee Post Office"
+note = "The smallest post office in the United States, about 61 square feet. Mail a postcard!"
+lat = 25.9010
+lon = -81.3045
+photo_query = "Ochopee Post Office"
+[stops.info]
+"DO" = "A boat tour of the Ten Thousand Islands."
+"EAT" = "Fresh stone crab claws, in season from mid-October."
+"TIP" = "Bring bug spray, especially at dusk."
+
+[[stops]]
+name = "Naples"
+lat = 26.1316
+lon = -81.8076
+elevation_ft = 8
+tag = "SUNSET ON THE GULF"
+road = "SR 29 and US 41"
+miles = 36
+drive_time = "50 min"
+photo_query = "Naples Pier"
+via = [[25.9200, -81.4000], [25.9800, -81.5500], [26.0500, -81.6800], [26.1000, -81.7600]]
+drive_caption = "Back on the Trail, northwest to the Gulf!"
+drive_fact = "The Tamiami Trail keeps going north from Naples all the way to Tampa."
+drive_narration = "Back on the Tamiami Trail, northwest to the Gulf coast!"
+caption = "Naples: sunset from the pier on the Gulf!"
+fact = "The first Naples Pier was built in 1888."
+narration = "We made it to Naples, on the Gulf! Walk out on the Naples Pier, first built back in 1888, and stay for the sunset over the water. What a way to end the day!"
+[stops.info]
+"SEE & DO" = "The Naples Pier and Fifth Avenue South."
+"TIP" = "Get to the pier early for sunset parking."

@@ -1,0 +1,150 @@
+# Florida's springs: Silver Springs near Ocala to Rainbow Springs, Crystal River, Homosassa and
+# Weeki Wachee on the Nature Coast. Best in winter, when manatees crowd into the warm springs.
+
+title = "Florida's Springs"
+series = "Florida Road Trips"
+region = "Nature Coast"
+days = "1 to 2"
+best_season = "November to March for manatees"
+flat = true
+numbers = [
+  { value = "30+", label = "First-magnitude springs in Florida", note = "Each pours out over 64 million gallons a day" },
+  { value = "72°F", label = "Spring water, year-round", note = "Why the manatees come in winter" },
+]
+hook = [
+  "Water so clear it looks like glass : Rainbow Springs",
+  "Hundreds of manatees in the winter springs : Crystal River",
+  "Live mermaids, since 1947 : Weeki Wachee",
+]
+tips = [
+  "Manatees gather in the springs from November to March.",
+  "Look, don't touch: never chase, touch or feed a manatee.",
+  "Use reef-safe sunscreen in the springs, or none at all.",
+  "Tubing and swimming rules change by season. Check each park.",
+]
+
+[narration]
+hook = "Crystal-clear springs, and the cutest animals in Florida! Water so clear it looks like glass. Hundreds of manatees in the winter springs. And live mermaids!"
+intro = "This is Florida's springs road trip: about 80 miles from Silver Springs to Weeki Wachee. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We start at Silver Springs, then Rainbow Springs, Crystal River and Homosassa Springs, and we finish at Weeki Wachee!"
+finale = "And that's the drive! About 80 miles of springs, from Silver Springs to Weeki Wachee."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Subscribe to Road Trip Atlas for more Florida road trips, and next time we're driving A1A from St. Augustine to Daytona Beach!"
+
+[inset]
+name = "Florida"
+bounds = [-87.63, 24.40, -80.03, 31.00]
+city = { name = "Orlando", lat = 28.5383, lon = -81.3792 }
+
+[thumbnail]
+text = ["MANATEE SEASON", "FLORIDA'S SPRINGS"]
+stop = "Crystal River"
+photo = 0
+
+[up_next]
+title = "St. Augustine to Daytona"
+subtitle = "Scenic A1A along the Atlantic"
+miles = 60
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Silver Springs"
+lat = 29.2156
+lon = -82.0533
+elevation_ft = 50
+tag = "GLASS-BOTTOM BOATS"
+photo_query = "Silver Springs"
+caption = "We start at Silver Springs, home of the original glass-bottom boats!"
+fact = "Glass-bottom boat tours have run at Silver Springs since the 1870s."
+narration = "We're starting at Silver Springs, near Ocala! Glass-bottom boats have floated over these springs since the 1870s. Look down, and you can see straight to the bottom!"
+[stops.info]
+"SEE & DO" = "A glass-bottom boat tour, and kayaking the Silver River."
+"TIP" = "Weekday mornings are the calmest."
+
+[[stops]]
+name = "Rainbow Springs"
+lat = 29.1022
+lon = -82.4376
+elevation_ft = 40
+tag = "CRYSTAL CLEAR"
+road = "SR 40 and CR 484"
+miles = 30
+drive_time = "45 min"
+photo_query = "Rainbow Springs"
+via = [[29.1900, -82.1400], [29.1500, -82.2200], [29.1100, -82.3000], [29.0950, -82.3800]]
+drive_caption = "West through Ocala horse country to Dunnellon!"
+drive_fact = "A first-magnitude spring pours out at least 64 million gallons of water a day."
+drive_narration = "West through Ocala's horse country, with its green pastures and white fences, all the way to Dunnellon!"
+caption = "Rainbow Springs: water so clear it looks like glass!"
+fact = "Rainbow Springs pours out hundreds of millions of gallons of water every day."
+narration = "Welcome to Rainbow Springs! The water is so clear it looks like glass. Walk the gardens out to the waterfalls, or grab a kayak and paddle the Rainbow River."
+[stops.info]
+"SEE & DO" = "The gardens and waterfalls, and kayaking the Rainbow River."
+"SWIM" = "Tubing on the river in the warm months."
+"TIP" = "Tubing is seasonal. Check before you go."
+
+[[stops]]
+name = "Crystal River"
+lat = 28.8875
+lon = -82.5953
+elevation_ft = 5
+tag = "MANATEES"
+road = "US 41 and US 19"
+miles = 22
+drive_time = "35 min"
+photo_query = "Crystal River manatee"
+via = [[29.0500, -82.4600], [28.9700, -82.5200], [28.9200, -82.5800]]
+drive_caption = "South to Crystal River, manatee country!"
+drive_fact = "Manatees can't handle water colder than about 68 degrees, so they head for the springs in winter."
+drive_narration = "South to the coast, and into manatee country!"
+caption = "Crystal River: hundreds of manatees in the winter springs!"
+fact = "Manatees gather in Crystal River's warm springs every winter."
+narration = "Welcome to Crystal River! Every winter, hundreds of manatees crowd into these warm springs. Watch from the boardwalk at Three Sisters Springs, or take a guided tour in Kings Bay. It's one of the few places you can legally swim with them!"
+[stops.info]
+"SEE" = "Manatees from the Three Sisters Springs boardwalk."
+"DO" = "A guided manatee tour in Kings Bay."
+"TIP" = "Look, don't touch. Never chase or touch a manatee."
+
+[[stops]]
+name = "Homosassa Springs"
+lat = 28.8003
+lon = -82.5861
+elevation_ft = 10
+tag = "UNDERWATER OBSERVATORY"
+road = "US 19"
+miles = 8
+drive_time = "15 min"
+photo_query = "Homosassa Springs"
+via = [[28.8500, -82.5900]]
+drive_caption = "A quick hop south to Homosassa!"
+drive_fact = "The Homosassa springs pour out about 65 million gallons of water a day."
+drive_narration = "A quick hop down US 19 to Homosassa Springs!"
+caption = "Homosassa Springs: watch manatees through an underwater window!"
+fact = "The underwater observatory sits right in the main spring."
+narration = "Welcome to Homosassa Springs! Head down into the underwater observatory, and watch manatees and fish swim right past the windows. You don't even get wet!"
+[stops.info]
+"SEE" = "The underwater observatory, and the manatee program."
+"TIP" = "Winter mornings are best for manatees."
+
+[[stops]]
+name = "Weeki Wachee"
+lat = 28.5172
+lon = -82.5734
+elevation_ft = 20
+tag = "LIVE MERMAIDS"
+road = "US 19"
+miles = 21
+drive_time = "30 min"
+photo_query = "Weeki Wachee"
+via = [[28.7200, -82.5800], [28.6200, -82.5800]]
+drive_caption = "South on US 19 to the mermaids!"
+drive_fact = "The mermaids breathe through air hoses, a trick invented here in 1946."
+drive_narration = "South on US 19, to one of the most famous roadside attractions in Florida!"
+caption = "Weeki Wachee: live mermaid shows since 1947!"
+fact = "Mermaids have performed in this spring since 1947."
+narration = "We made it to Weeki Wachee, home of the live mermaid show! Mermaids have performed in this spring since 1947, breathing through air hoses underwater. Only in Florida!"
+[stops.info]
+"SEE" = "The underwater mermaid show."
+"DO" = "Kayak or paddleboard the Weeki Wachee River."
+"TIP" = "Check show times before you go."

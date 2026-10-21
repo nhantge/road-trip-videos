@@ -1,0 +1,143 @@
+# Utah Scenic Byway 12, an All-American Road: Bryce Canyon to Escalante, Lower Calf Creek Falls,
+# over the Hogback to Boulder, and across Boulder Mountain to Torrey.
+
+title = "Scenic Byway 12"
+series = "Utah Road Trips"
+region = "Southern Utah"
+days = "1 to 2"
+best_season = "May to October"
+hook = [
+  "A 126-foot waterfall in the desert : Lower Calf Creek Falls",
+  "A road on a knife-edge ridge : Boulder",
+  "Over 9,000 feet on Boulder Mountain : Torrey",
+]
+tips = [
+  "Fill up in Escalante. Services are few until Boulder and Torrey.",
+  "The Hogback has steep drop-offs and no shoulders. Take it slow.",
+  "Boulder Mountain can see snow from fall into spring.",
+  "Bring plenty of water for the Calf Creek hike.",
+]
+
+[narration]
+hook = "This might be the most beautiful road in America! A 126-foot waterfall in the desert. A road on a knife-edge ridge. And over 9,000 feet up on Boulder Mountain!"
+intro = "This is Utah's Scenic Byway 12: about 120 miles from Bryce Canyon to Torrey. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We start at Bryce Canyon, then Escalante, Lower Calf Creek Falls and Boulder, and we finish in Torrey!"
+finale = "And that's the drive! About 120 miles of Scenic Byway 12, from Bryce Canyon to Torrey."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Subscribe to Road Trip Atlas for more Utah road trips, and next time we're heading to Capitol Reef and Goblin Valley!"
+
+[inset]
+name = "Utah"
+bounds = [-114.05, 37.0, -109.04, 42.0]
+city = { name = "Salt Lake City", lat = 40.7608, lon = -111.8910 }
+
+[thumbnail]
+text = ["THE KNIFE-EDGE ROAD", "SCENIC BYWAY 12"]
+stop = "Boulder"
+photo = 0
+
+[up_next]
+title = "Capitol Reef to Goblin Valley"
+subtitle = "Pie, petroglyphs and rock goblins"
+miles = 80
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Bryce Canyon"
+lat = 37.6228
+lon = -112.1661
+elevation_ft = 8000
+tag = "START"
+photo_query = "Bryce Canyon"
+caption = "We start at Bryce Canyon, at the top of Scenic Byway 12!"
+fact = "Scenic Byway 12 is one of America's All-American Roads."
+narration = "We're starting at Bryce Canyon, and heading east on Scenic Byway 12, one of America's All-American Roads!"
+[stops.info]
+"SEE" = "Sunrise Point before you hit the road."
+"TIP" = "Start early. There's a lot to see today."
+
+[[stops]]
+name = "Escalante"
+lat = 37.7703
+lon = -111.6013
+elevation_ft = 5820
+tag = "GRAND STAIRCASE"
+road = "UT 12"
+miles = 47
+drive_time = "1 hr"
+photo_query = "Escalante Utah"
+via = [{ name = "Tropic", lat = 37.6247, lon = -112.0816 }, [37.5650, -111.9950], [37.6000, -111.9300], [37.6800, -111.8600], [37.7400, -111.7300]]
+drive_caption = "Down through Tropic and across the Grand Staircase!"
+drive_fact = "Grand Staircase-Escalante National Monument covers nearly 1.9 million acres."
+drive_narration = "Down through Tropic and Henrieville, then up and across the Grand Staircase, layer after layer of colored rock!"
+caption = "Escalante: gateway to the Grand Staircase!"
+fact = "Grand Staircase-Escalante is one of the most remote corners of the lower 48."
+narration = "Welcome to Escalante, gateway to Grand Staircase-Escalante National Monument, one of the wildest, most remote places in the lower 48!"
+[stops.info]
+"SEE & DO" = "Escalante Petrified Forest State Park."
+"TIP" = "Fill up here. Services are few until Boulder."
+
+[[stops]]
+name = "Lower Calf Creek Falls"
+lat = 37.7944
+lon = -111.4148
+elevation_ft = 5300
+tag = "126-FOOT WATERFALL"
+road = "UT 12"
+miles = 15
+drive_time = "20 min"
+photo_query = "Lower Calf Creek Falls"
+via = [[37.7550, -111.5200], [37.7750, -111.4500]]
+drive_caption = "Down into the slickrock canyons of the Escalante River!"
+drive_fact = "The trail to the falls is about 6 miles round trip, mostly on sand."
+drive_narration = "East into a sea of pale slickrock, and down to the Escalante River!"
+caption = "Lower Calf Creek Falls: a 126-foot waterfall in the desert!"
+fact = "The hike is about 6 miles round trip."
+narration = "Time for a hike! The trail to Lower Calf Creek Falls is about six miles round trip, and at the end, a 126-foot waterfall pours into a cool, green pool."
+[stops.info]
+"HIKE" = "About 6 miles round trip, mostly sandy."
+"TIP" = "Start early in summer, and bring plenty of water."
+
+[[stops]]
+name = "Boulder"
+lat = 37.9050
+lon = -111.4227
+elevation_ft = 6700
+tag = "LAST MULE MAIL"
+road = "UT 12"
+miles = 12
+drive_time = "20 min"
+photo_query = "Hogback Highway 12"
+via = [[37.8150, -111.4100], { name = "The Hogback", lat = 37.8400, lon = -111.4200 }, [37.8750, -111.4200]]
+drive_caption = "Across the Hogback, a knife-edge ridge with drop-offs on both sides!"
+drive_fact = "On the Hogback, the road runs along a narrow ridge with steep drop-offs on both sides."
+drive_narration = "Now the Hogback! The road runs right along a narrow ridge, with steep drop-offs on both sides. Hold on!"
+caption = "Boulder: the last town in the US to get its mail by mule!"
+fact = "Boulder got its mail by mule train until 1940."
+narration = "Welcome to Boulder! This tiny town was the last in the continental US to get its mail by mule train, until 1940. Stop at Anasazi State Park to see an ancient village."
+[stops.info]
+"SEE" = "Anasazi State Park Museum."
+"EAT" = "Hell's Backbone Grill, a local favorite."
+"TIP" = "The Hogback has no shoulders. Take it slow."
+
+[[stops]]
+name = "Torrey"
+lat = 38.2997
+lon = -111.4199
+elevation_ft = 6840
+tag = "GATEWAY TO CAPITOL REEF"
+road = "UT 12"
+miles = 37
+drive_time = "50 min"
+photo_query = "Boulder Mountain Utah"
+via = [[37.9600, -111.4000], { name = "Boulder Mountain", lat = 38.0500, lon = -111.3700, kind = "summit", elevation_ft = 9600 }, [38.1500, -111.3500], { name = "Grover", lat = 38.2286, lon = -111.3486 }, [38.2800, -111.4000]]
+drive_caption = "Up and over Boulder Mountain!"
+drive_fact = "Highway 12 tops out above 9,000 feet on Boulder Mountain."
+drive_narration = "Up and over Boulder Mountain, through aspen forests more than 9,000 feet up, with views across the whole Escalante country!"
+caption = "Over Boulder Mountain and down to Torrey!"
+fact = "Torrey is the gateway to Capitol Reef National Park, just 11 miles east."
+narration = "And down into Torrey, a little town at the gateway to Capitol Reef National Park. What a drive!"
+[stops.info]
+"EAT" = "Torrey's cafes and food trucks."
+"TIP" = "Capitol Reef is just 11 miles east."

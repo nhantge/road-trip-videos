@@ -1,0 +1,149 @@
+# The Overseas Highway: US 1 from Key Largo to Key West, island to island over 42 bridges.
+# Near sea level the whole way, so the route is flat (no elevation stats).
+
+title = "The Overseas Highway"
+series = "Florida Road Trips"
+region = "Florida Keys"
+days = "1 to 2"
+best_season = "December to April"
+flat = true
+numbers = [
+  { value = 42, label = "Bridges on the Overseas Highway", note = "Island to island, all the way to Key West" },
+  { value = "6.8", label = "Miles on the Seven Mile Bridge", note = "Opened in 1982, beside the old railroad bridge" },
+]
+hook = [
+  "The first undersea park in America : Key Largo",
+  "Nearly seven miles of bridge over open water : Bahia Honda State Park",
+  "Sunset at the very end of US 1 : Key West",
+]
+tips = [
+  "Addresses use mile markers, counting down to Mile Marker 0 in Key West.",
+  "Winter is peak season. Book Key West hotels early.",
+  "Hurricane season runs June through November. Watch the forecast.",
+  "Reef trips at Pennekamp fill up on weekends. Book ahead.",
+]
+
+[narration]
+hook = "Florida's most famous drive goes right out over the ocean! The first undersea park in America. Nearly seven miles of bridge over open water. And sunset at the very end of US 1!"
+intro = "This is the Overseas Highway: about 100 miles from Key Largo to Key West, island to island. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We start in Key Largo, then Islamorada, Marathon and Bahia Honda, and we finish in Key West!"
+finale = "And that's the drive! About 100 miles of islands and bridges, from Key Largo all the way to Key West."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Subscribe to Road Trip Atlas for more Florida road trips, and next time we're crossing the Everglades on the Tamiami Trail!"
+
+[inset]
+name = "Florida"
+bounds = [-87.63, 24.40, -80.03, 31.00]
+city = { name = "Miami", lat = 25.7617, lon = -80.1918 }
+
+[thumbnail]
+text = ["7 MILES OVER THE OCEAN", "THE OVERSEAS HIGHWAY"]
+stop = "Bahia Honda State Park"
+photo = 0
+
+[up_next]
+title = "Tamiami Trail"
+subtitle = "Miami across the Everglades to Naples"
+miles = 111
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Key Largo"
+lat = 25.1006
+lon = -80.4370
+elevation_ft = 7
+tag = "DIVE CAPITAL"
+photo_query = "Key Largo"
+caption = "We start in Key Largo, home of America's first undersea park!"
+fact = "John Pennekamp Coral Reef State Park was the first undersea park in the United States."
+narration = "We're starting in Key Largo, the first big island in the Florida Keys! Just offshore is John Pennekamp Coral Reef State Park, the first undersea park in America. Hop on a glass-bottom boat, or go snorkeling on the reef!"
+[stops.info]
+"SEE & DO" = "Snorkel or ride a glass-bottom boat at John Pennekamp Coral Reef State Park."
+"TIP" = "Book reef trips early. Calm mornings are best."
+
+[[stops]]
+name = "Islamorada"
+lat = 24.9243
+lon = -80.6278
+elevation_ft = 6
+tag = "SPORTFISHING CAPITAL"
+road = "US 1"
+miles = 20
+drive_time = "25 min"
+photo_query = "Islamorada"
+via = [[25.0600, -80.4700], [25.0000, -80.5300], [24.9600, -80.5800]]
+drive_caption = "South on US 1, island to island!"
+drive_fact = "Mile markers count down all the way to Mile Marker 0 in Key West."
+drive_narration = "South on US 1, hopping from island to island, with water on both sides!"
+caption = "Islamorada: the Sportfishing Capital of the World!"
+fact = "At Robbie's Marina you can hand-feed giant tarpon right off the dock."
+narration = "Welcome to Islamorada, the Sportfishing Capital of the World! Stop at Robbie's Marina and hand-feed the giant tarpon right off the dock. Watch your fingers!"
+[stops.info]
+"SEE & DO" = "Feed the tarpon at Robbie's Marina."
+"EAT" = "Fresh-caught fish, right on the water."
+"TIP" = "Fishing charters leave early. Book the day before."
+
+[[stops]]
+name = "Marathon"
+lat = 24.7136
+lon = -81.0904
+elevation_ft = 6
+tag = "TURTLE HOSPITAL"
+road = "US 1"
+miles = 32
+drive_time = "40 min"
+photo_query = "Marathon Florida Keys"
+via = [[24.8600, -80.7300], [24.8300, -80.8000], [24.7900, -80.8800], [24.7500, -80.9700]]
+drive_caption = "Over Long Key and on to Marathon!"
+drive_fact = "The old Long Key Viaduct was part of Henry Flagler's railroad to Key West."
+drive_narration = "Over Long Key, past the old railroad viaduct, and on to Marathon!"
+caption = "Marathon: say hi to the patients at the Turtle Hospital!"
+fact = "The Turtle Hospital rescues injured sea turtles and releases them back to the ocean."
+narration = "Welcome to Marathon, right in the middle of the Keys! Take a tour of the Turtle Hospital, where injured sea turtles get patched up and sent back to sea."
+[stops.info]
+"SEE & DO" = "Tour the Turtle Hospital, then relax at Sombrero Beach."
+"TIP" = "Turtle Hospital tours are guided. Reserve ahead."
+
+[[stops]]
+name = "Bahia Honda State Park"
+lat = 24.6550
+lon = -81.2780
+elevation_ft = 5
+tag = "BEACHES"
+road = "US 1"
+miles = 13
+drive_time = "20 min"
+photo_query = "Bahia Honda"
+via = [[24.7050, -81.1300], { name = "Seven Mile Bridge", lat = 24.6950, lon = -81.1700 }, [24.6700, -81.2200]]
+drive_caption = "Across the Seven Mile Bridge, with open water on both sides!"
+drive_fact = "The old Seven Mile Bridge runs right beside the new one. Part of it is open to walk and bike."
+drive_narration = "And here it is, the Seven Mile Bridge! Nothing but open water on both sides, for almost seven miles!"
+caption = "Bahia Honda: soft sand, clear water, and the old railroad bridge!"
+fact = "Henry Flagler's railroad reached Key West in 1912."
+narration = "Welcome to Bahia Honda State Park! Some of the best beaches in the Keys, with the old railroad bridge standing right offshore. Climb up for the view!"
+[stops.info]
+"SEE & DO" = "Swim at Sandspur Beach, and climb up to the old bridge overlook."
+"TIP" = "The park fills up by mid-morning in winter. Come early."
+
+[[stops]]
+name = "Key West"
+lat = 24.5551
+lon = -81.8000
+elevation_ft = 10
+tag = "MILE MARKER 0"
+road = "US 1"
+miles = 37
+drive_time = "50 min"
+photo_query = "Key West"
+via = [[24.6650, -81.3600], [24.6500, -81.4500], [24.6600, -81.5300], [24.6200, -81.6200], [24.5750, -81.7300]]
+drive_caption = "Past Big Pine Key and on to the end of the road!"
+drive_fact = "Big Pine Key is home to the tiny Key deer, found only in the Florida Keys."
+drive_narration = "Past Big Pine Key, where you might spot a tiny Key deer, and all the way to the end of US 1!"
+caption = "Key West: Mile Marker 0, and sunset at Mallory Square!"
+fact = "The Southernmost Point buoy says it's just 90 miles to Cuba."
+narration = "We made it to Key West, Mile Marker 0! Snap a photo at the Southernmost Point buoy, just 90 miles from Cuba, then catch the sunset celebration at Mallory Square!"
+[stops.info]
+"SEE & DO" = "The Hemingway Home and its six-toed cats, and Duval Street."
+"EAT" = "Key lime pie, of course."
+"TIP" = "Park once, then walk or bike. Parking is tight."

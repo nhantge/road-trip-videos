@@ -1,0 +1,142 @@
+# Zion to Bryce Canyon: Springdale, the Zion-Mount Carmel Highway and tunnel, Checkerboard Mesa,
+# US 89 north and Scenic Byway 12 through Red Canyon to Bryce.
+
+title = "Zion to Bryce Canyon"
+series = "Utah Road Trips"
+region = "Southern Utah"
+days = "1 to 2"
+best_season = "Spring and fall"
+hook = [
+  "A tunnel blasted through solid rock in 1930 : Canyon Overlook",
+  "Two red rock arches over the highway : Red Canyon",
+  "Thousands of glowing orange hoodoos : Bryce Canyon",
+]
+tips = [
+  "Zion Canyon is mostly shuttle-only. Get there early for parking.",
+  "RVs and trailers 7'10\" wide or 11'4\" tall need a $15 tunnel permit.",
+  "Bryce sits around 8,000 feet. Bring layers, even in summer.",
+  "One national park pass covers both Zion and Bryce.",
+]
+
+[narration]
+hook = "Two of America's best national parks in one drive! A tunnel blasted through solid rock. Two red rock arches over the highway. And thousands of glowing orange hoodoos!"
+intro = "This is Zion to Bryce Canyon: about 85 miles through Utah's red rock country. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We start in Springdale, then Canyon Overlook, Checkerboard Mesa and Red Canyon, and we finish at Bryce Canyon!"
+finale = "And that's the drive! About 85 miles from the floor of Zion Canyon to the rim of Bryce."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Subscribe to Road Trip Atlas for more Utah road trips, and next time we're driving Scenic Byway 12!"
+
+[inset]
+name = "Utah"
+bounds = [-114.05, 37.0, -109.04, 42.0]
+city = { name = "Salt Lake City", lat = 40.7608, lon = -111.8910 }
+
+[thumbnail]
+text = ["2 NATIONAL PARKS, 1 DRIVE", "ZION TO BRYCE"]
+stop = "Bryce Canyon"
+photo = 0
+
+[up_next]
+title = "Scenic Byway 12"
+subtitle = "Bryce Canyon to Torrey"
+miles = 122
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Springdale"
+lat = 37.1889
+lon = -112.9986
+elevation_ft = 3900
+tag = "GATEWAY TO ZION"
+photo_query = "Zion Canyon Springdale"
+caption = "We start in Springdale, right at the gate of Zion National Park!"
+fact = "Zion Canyon's scenic drive is shuttle-only for most of the year."
+narration = "We're starting in Springdale, right outside Zion National Park! Hop on the shuttle up Zion Canyon, where red cliffs tower up to 2,000 feet over the Virgin River."
+[stops.info]
+"SEE & DO" = "The Zion Canyon shuttle, and the Riverside Walk."
+"TIP" = "Get to the park early. Parking fills fast."
+
+[[stops]]
+name = "Canyon Overlook"
+lat = 37.2130
+lon = -112.9410
+elevation_ft = 5150
+tag = "1.1-MILE TUNNEL"
+road = "UT 9"
+miles = 7
+drive_time = "20 min"
+photo_query = "Canyon Overlook Zion"
+via = [[37.2000, -112.9870], [37.2130, -112.9780], [37.2150, -112.9600]]
+drive_caption = "Up the switchbacks and through the Zion-Mount Carmel Tunnel!"
+drive_fact = "The tunnel is 1.1 miles long, and it opened in 1930."
+drive_narration = "Up the switchbacks, and into the Zion-Mount Carmel Tunnel, over a mile long, blasted right through the rock!"
+caption = "Canyon Overlook: a short hike to a huge view down Zion Canyon!"
+fact = "Oversized RVs need a $15 permit to drive through the tunnel."
+narration = "Right past the tunnel is the Canyon Overlook Trail! It's only about a mile round trip, and the view straight down Zion Canyon is incredible."
+[stops.info]
+"HIKE" = "Canyon Overlook Trail, about a mile round trip."
+"TIP" = "Big RVs and trailers need a tunnel permit."
+
+[[stops]]
+name = "Checkerboard Mesa"
+lat = 37.2265
+lon = -112.8823
+tag = "SLICKROCK"
+road = "UT 9"
+miles = 5
+drive_time = "10 min"
+photo_query = "Checkerboard Mesa"
+via = [[37.2200, -112.9200]]
+drive_caption = "East through slickrock country!"
+drive_fact = "This side of Zion is all slickrock: sandstone that was once sand dunes."
+drive_narration = "East through the slickrock, swirls of sandstone that used to be giant sand dunes!"
+caption = "Checkerboard Mesa: a mountain of sandstone with a checkerboard pattern!"
+fact = "The crisscross lines come from ancient dune layers and cracks from freezing and thawing."
+narration = "Check out Checkerboard Mesa! Ancient sand dunes turned to stone, then cracked into a checkerboard by frost. Watch for bighorn sheep on the slickrock!"
+[stops.info]
+"SEE" = "The Checkerboard Mesa viewpoint."
+"WILDLIFE" = "Bighorn sheep on the slickrock."
+
+[[stops]]
+name = "Red Canyon"
+lat = 37.7426
+lon = -112.3056
+elevation_ft = 7400
+tag = "RED ROCK ARCHES"
+road = "US 89 and UT 12"
+miles = 57
+drive_time = "1 hr 10 min"
+photo_query = "Red Canyon Utah"
+via = [{ name = "Mount Carmel Junction", lat = 37.2236, lon = -112.6800 }, [37.3000, -112.6400], [37.4000, -112.5700], [37.5500, -112.4800], [37.7000, -112.4300], [37.7460, -112.4000]]
+drive_caption = "North on US 89, then onto Scenic Byway 12!"
+drive_fact = "Scenic Byway 12 is one of America's All-American Roads."
+drive_narration = "North on US 89 through Long Valley, then east onto Scenic Byway 12!"
+caption = "Red Canyon: drive right through two red rock tunnels!"
+fact = "Red Canyon is in Dixie National Forest, just west of Bryce."
+narration = "Welcome to Red Canyon! The highway goes right through two tunnels cut into the bright red rock. Stop at the visitor center for a short hike among the hoodoos."
+[stops.info]
+"SEE" = "The two rock tunnels on Highway 12."
+"HIKE" = "The short Pink Ledges loop by the visitor center."
+
+[[stops]]
+name = "Bryce Canyon"
+lat = 37.6228
+lon = -112.1661
+elevation_ft = 8000
+tag = "HOODOOS"
+road = "UT 12 and UT 63"
+miles = 13
+drive_time = "20 min"
+photo_query = "Bryce Canyon Sunset Point"
+via = [[37.7200, -112.2700], [37.6700, -112.1700]]
+drive_caption = "Up onto the plateau, and into Bryce Canyon!"
+drive_fact = "Bryce isn't really a canyon. It's a row of giant natural amphitheaters."
+drive_narration = "Up onto the plateau, and into Bryce Canyon National Park!"
+caption = "Bryce Canyon: thousands of hoodoos glowing orange!"
+fact = "Bryce isn't really a canyon. It's a row of natural amphitheaters carved into the plateau."
+narration = "We made it to Bryce Canyon! Stand at Sunset Point and look down at thousands of orange hoodoos. Then hike down in among them on the Navajo Loop!"
+[stops.info]
+"SEE" = "Sunset and Sunrise Points over the Bryce Amphitheater."
+"HIKE" = "Navajo Loop and Queen's Garden, about 3 miles."
+"TIP" = "It's cold up here. Bring layers, even in summer."

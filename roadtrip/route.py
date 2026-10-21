@@ -105,6 +105,8 @@ class Route:
     thumbnail: dict = field(default_factory=dict)
     voice: dict = field(default_factory=dict)  # overrides brand.json "voice" for this route
     rim_road: bool = False  # road runs along cliff tops: sample the terrain at the line itself
+    flat: bool = False      # near sea level (coasts, Keys): no terrain sampling, no elevation stats
+    numbers: list = field(default_factory=list)  # [{value, label, note}] stat cards for flat routes
     places: list = field(default_factory=list)
 
     @property
@@ -175,7 +177,7 @@ class Route:
         anchors = [(s.mile, s.elevation_ft) for s in self.stops if s.elevation_ft]
         anchors += [(p.mile, p.elevation_ft) for p in self.places if p.elevation_ft]
         anchors.sort()
-        if not terrain:
+        if not terrain or self.flat:  # flat routes: the terrain tiles report sea floor under bridges
             sampled = None
         elif self.rim_road:
             sampled = terrain.sample(px, py)
@@ -282,7 +284,7 @@ STOP_KEYS = {"name", "lat", "lon", "kind", "tag", "elevation_ft", "caption", "fa
              "drive_caption", "drive_fact", "drive_narration", "sights"}
 SIGHT_KEYS = {"name", "note", "say", "lat", "lon", "photo_query", "photos"}
 ROUTE_KEYS = {"title", "series", "region", "days", "best_season", "hook", "tips", "narration",
-              "inset", "up_next", "thumbnail", "voice", "rim_road", "stops"}
+              "inset", "up_next", "thumbnail", "voice", "rim_road", "flat", "numbers", "stops"}
 
 
 def load_route(path):
@@ -330,7 +332,8 @@ def load_route(path):
         best_season=data.get("best_season", ""), hook=data.get("hook", []), tips=data.get("tips", []),
         narration=data.get("narration", {}), inset=data.get("inset", {}), up_next=data.get("up_next", {}),
         thumbnail=data.get("thumbnail", {}), voice=data.get("voice", {}),
-        rim_road=bool(data.get("rim_road", False)),
+        rim_road=bool(data.get("rim_road", False)), flat=bool(data.get("flat", False)),
+        numbers=data.get("numbers", []),
     )
 
 

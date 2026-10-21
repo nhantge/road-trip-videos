@@ -1,0 +1,128 @@
+# Moab to Arches and Canyonlands: Moab, the Windows section of Arches, Dead Horse Point State Park,
+# and Island in the Sky in Canyonlands (Mesa Arch, Grand View Point).
+
+title = "Arches and Canyonlands"
+series = "Utah Road Trips"
+region = "Moab"
+days = "2"
+best_season = "Spring and fall"
+hook = [
+  "More than 2,000 natural stone arches : Arches National Park",
+  "2,000 feet above a bend in the Colorado River : Dead Horse Point",
+  "A whole world of canyons at your feet : Grand View Point",
+]
+tips = [
+  "Arches doesn't need a timed-entry reservation in 2026, but lots fill early.",
+  "Dead Horse Point is a state park, so national park passes don't cover it.",
+  "There's no food or water in Island in the Sky. Pack it in.",
+  "Summer days top 100 degrees. Hike early.",
+]
+
+[narration]
+hook = "Two national parks in one day! More than 2,000 natural stone arches. A cliff 2,000 feet above the Colorado River. And a whole world of canyons at your feet!"
+intro = "This is Moab to Arches and Canyonlands: about 65 miles through Utah's red rock playground. Stick around till the end for the full trip planner!"
+overview = "Here's the plan! We start in Moab, then Arches, Dead Horse Point, and we finish at Grand View Point in Canyonlands!"
+finale = "And that's the drive! About 65 miles, two national parks, and a whole lot of red rock."
+planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
+end = "Thanks for riding along! Subscribe to Road Trip Atlas for more Utah road trips, and next time we're heading to Monument Valley and the Moki Dugway!"
+
+[inset]
+name = "Utah"
+bounds = [-114.05, 37.0, -109.04, 42.0]
+city = { name = "Salt Lake City", lat = 40.7608, lon = -111.8910 }
+
+[thumbnail]
+text = ["2 PARKS IN 1 DAY", "ARCHES + CANYONLANDS"]
+stop = "Arches National Park"
+photo = 0
+
+[up_next]
+title = "Monument Valley"
+subtitle = "To the Moki Dugway"
+miles = 60
+
+# ---------------------------------------------------------------------------
+
+[[stops]]
+name = "Moab"
+lat = 38.5733
+lon = -109.5498
+elevation_ft = 4025
+tag = "ADVENTURE TOWN"
+photo_query = "Moab Utah"
+caption = "We start in Moab, base camp for two national parks!"
+fact = "Moab sits between Arches and Canyonlands National Parks."
+narration = "We're starting in Moab, base camp for two national parks! Rent a jeep, ride a mountain bike, or float the Colorado River."
+[stops.info]
+"SEE & DO" = "Jeep tours, mountain biking and rafting on the Colorado."
+"TIP" = "Book jeep and rafting trips ahead in spring and fall."
+
+[[stops]]
+name = "Arches National Park"
+lat = 38.6872
+lon = -109.5367
+elevation_ft = 5150
+tag = "2,000+ ARCHES"
+road = "US 191 and Arches Scenic Drive"
+miles = 14
+drive_time = "30 min"
+photo_query = "Arches National Park Windows"
+via = [[38.6000, -109.5700], { name = "Arches Visitor Center", lat = 38.6166, lon = -109.6196 }, [38.6350, -109.6000], [38.6600, -109.5700]]
+drive_caption = "North out of Moab, and up into Arches!"
+drive_fact = "Arches has no timed-entry reservations in 2026."
+drive_narration = "North out of Moab, past the visitor center, and up the switchbacks into Arches!"
+caption = "Arches National Park: more than 2,000 natural stone arches!"
+fact = "Arches has more than 2,000 documented natural arches."
+narration = "Welcome to Arches National Park! More than 2,000 natural stone arches. Walk out to the Windows, and if you have time, hike to Delicate Arch for sunset!"
+[stops.info]
+"SEE" = "The Windows, Balanced Rock and Park Avenue."
+"HIKE" = "Delicate Arch, about 3 miles round trip."
+"TIP" = "Get there early. Parking lots fill by mid-morning."
+
+[[stops]]
+name = "Dead Horse Point"
+lat = 38.4706
+lon = -109.7406
+elevation_ft = 5900
+tag = "2,000 FEET DOWN"
+road = "US 191 and UT 313"
+miles = 33
+drive_time = "50 min"
+photo_query = "Dead Horse Point"
+via = [[38.6350, -109.6000], [38.6200, -109.6600], [38.6000, -109.7200], [38.5500, -109.8000], [38.4950, -109.7700]]
+drive_caption = "Back out of Arches, and up onto the mesa!"
+drive_fact = "Dead Horse Point is a state park, so it has its own entry fee."
+drive_narration = "Back out of Arches, then up Highway 313 onto the mesa top!"
+caption = "Dead Horse Point: 2,000 feet above a bend in the Colorado River!"
+fact = "The ending of Thelma and Louise was filmed near here."
+narration = "This is Dead Horse Point! Two thousand feet straight down to a giant bend in the Colorado River. The famous ending of Thelma and Louise was filmed right near here!"
+[stops.info]
+"SEE" = "The Dead Horse Point overlook, best at sunset."
+"TIP" = "State park fee. National park passes don't count here."
+
+[[stops]]
+name = "Grand View Point"
+lat = 38.3113
+lon = -109.8573
+elevation_ft = 6080
+tag = "ISLAND IN THE SKY"
+road = "Grand View Point Road"
+miles = 19
+drive_time = "30 min"
+photo_query = "Grand View Point Canyonlands"
+via = [[38.4950, -109.7700], { name = "Island in the Sky Visitor Center", lat = 38.4598, lon = -109.8210 }, [38.4200, -109.8500], [38.3700, -109.8650]]
+drive_caption = "Into Canyonlands, on the Island in the Sky!"
+drive_fact = "The Colorado and Green Rivers split Canyonlands into separate districts."
+drive_narration = "Into Canyonlands National Park, out along the Island in the Sky!"
+caption = "Grand View Point: the whole of Canyonlands at your feet!"
+fact = "The Colorado and Green Rivers carved these canyons, and meet just south of here."
+narration = "We made it to Grand View Point, in Canyonlands National Park! Layer after layer of canyons drop away below you, carved by the Colorado and Green Rivers. On the way, don't miss Mesa Arch!"
+[[stops.sights]]
+name = "Mesa Arch"
+note = "A short walk to an arch right on the canyon rim. Famous at sunrise."
+lat = 38.3890
+lon = -109.8681
+photo_query = "Mesa Arch"
+[stops.info]
+"SEE" = "Grand View Point, and Mesa Arch on the way."
+"TIP" = "No food or water in the park. Pack it in."

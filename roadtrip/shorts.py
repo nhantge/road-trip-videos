@@ -288,6 +288,9 @@ class ShortRenderer(Renderer):
         facts = [f"{S.fmt_int(route.total_miles)} miles  ·  {self.n} stops",
                  f"Top elevation {S.fmt_int(high)} ft" +
                  (f"  ·  {len(passes)} {plural(len(passes), 'pass', 'passes')} over 10,000 ft" if passes else "")]
+        if route.flat:
+            facts[1:] = [f"{n['value'] if isinstance(n['value'], str) else S.fmt_int(n['value'])} {n['label'].lower()}"
+                         for n in route.numbers[:1]]
         for line in facts:
             d.text((X0, y), line, font=S.font("medium", 36), fill=S.TEXT_DIM, anchor="lm")
             y += 54
@@ -349,7 +352,7 @@ def caption_text(route, brand, total, credits=()):
         "",
         "DESCRIPTION / CAPTION",
         f"{hook}. {route.title}: {S.fmt_int(route.total_miles)} miles, {len(route.stops)} stops"
-        + ("." if S.fmt_int(high) in hook else f", topping out at {S.fmt_int(high)} ft."),
+        + ("." if route.flat or S.fmt_int(high) in hook else f", topping out at {S.fmt_int(high)} ft."),
         "",
         "Full episode with every stop, drive times and a trip planner is on the channel. "
         f"Subscribe {subscribe_text(route, brand.get('channel', ''))}!",
