@@ -8,6 +8,7 @@ Three beats, all voiced with the episode's own clips so a short costs no new nar
 3. end: "full trip on the channel" card with subscribe (voiced by the end line)
 """
 
+import re
 import dataclasses
 
 import numpy as np
@@ -347,7 +348,7 @@ def caption_text(route, brand, total, credits=()):
     title = f"{route.title}: {S.fmt_int(route.total_miles)} miles in {round(total)} seconds #shorts"
     state = state_name(route).replace(" ", "").lower() or "usa"
     tags = ["#shorts", "#roadtrip", "#" + state,
-            "#" + "".join(w.capitalize() for w in route.title.split() if w.isalpha())]
+            "#" + "".join(w[:1].upper() + w[1:] for w in (re.sub(r"[^A-Za-z0-9]", "", w) for w in route.title.split()) if w)]
     lines = [
         "TITLE (under 100 characters)",
         title,
