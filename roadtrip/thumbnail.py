@@ -85,7 +85,10 @@ def _map_card(img, route):
     card.alpha_composite(S.rounded_box(cw, ch, 18, S.BG_TITLE + (225,), S.CARD_BORDER + (255,), 2))
     d = ImageDraw.Draw(card)
     first, last = route.stops[0].name, route.stops[-1].name
-    d.text((cw / 2, 30), f"{first.upper()} → {last.upper()}", font=S.font("bold", 20), fill=S.TEXT, anchor="mm")
+    label, size = f"{first.upper()} → {last.upper()}", 20
+    while size > 13 and S.font("bold", size).getlength(label) > cw - 28:  # shrink long names to fit the card
+        size -= 1
+    d.text((cw / 2, 30), label, font=S.font("bold", size), fill=S.TEXT, anchor="mm")
     wx, wy = route.wx, route.wy
     pad, top = 34, 58
     k = min((cw - 2 * pad) / (wx.max() - wx.min()), (ch - top - pad) / (wy.max() - wy.min()))
