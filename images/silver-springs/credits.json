@@ -1,0 +1,28 @@
+[
+  {
+    "file": "wikimedia-36312056.jpg",
+    "place": "Silver Springs",
+    "source": "wikimedia",
+    "id": "36312056",
+    "title": "SilverSprings.JPG",
+    "page_url": "https://commons.wikimedia.org/wiki/File:SilverSprings.JPG",
+    "author": "NeilEvans",
+    "license": "Public domain",
+    "license_url": "",
+    "attribution_required": false,
+    "attribution": "\"SilverSprings.JPG\" by NeilEvans, Public domain, via https://commons.wikimedia.org/wiki/File:SilverSprings.JPG"
+  },
+  {
+    "file": "wikimedia-24279477.jpg",
+    "place": "Silver Springs",
+    "source": "wikimedia",
+    "id": "24279477",
+    "title": "Silver Springs Park East bridge.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Silver_Springs_Park_East_bridge.jpg",
+    "author": "SchautMaster98",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "attribution_required": true,
+    "attribution": "\"Silver Springs Park East bridge.jpg\" by SchautMaster98, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0), via https://commons.wikimedia.org/wiki/File:Silver_Springs_Park_East_bridge.jpg"
+  }
+]

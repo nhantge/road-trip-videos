@@ -1,0 +1,41 @@
+[
+  {
+    "file": "wikimedia-51243078.jpg",
+    "place": "St. Augustine Castillo",
+    "source": "wikimedia",
+    "id": "51243078",
+    "title": "San Pablo Bastion, Castillo de San Marcos.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:San_Pablo_Bastion,_Castillo_de_San_Marcos.jpg",
+    "author": "Juliancolton",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution_required": true,
+    "attribution": "\"San Pablo Bastion, Castillo de San Marcos.jpg\" by Juliancolton, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), via https://commons.wikimedia.org/wiki/File:San_Pablo_Bastion,_Castillo_de_San_Marcos.jpg"
+  },
+  {
+    "file": "wikimedia-2000176.jpg",
+    "place": "St. Augustine Castillo",
+    "source": "wikimedia",
+    "id": "2000176",
+    "title": "Castillo de San Marcos Fort Panorama 1.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Castillo_de_San_Marcos_Fort_Panorama_1.jpg",
+    "author": "“Jon Zander (Digon3)”",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "attribution_required": true,
+    "attribution": "\"Castillo de San Marcos Fort Panorama 1.jpg\" by “Jon Zander (Digon3)”, CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/), via https://commons.wikimedia.org/wiki/File:Castillo_de_San_Marcos_Fort_Panorama_1.jpg"
+  },
+  {
+    "file": "wikimedia-2766326.jpg",
+    "place": "St. Augustine Castillo",
+    "source": "wikimedia",
+    "id": "2766326",
+    "title": "Castillo de San Marcos Fort Wall.JPG",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Castillo_de_San_Marcos_Fort_Wall.JPG",
+    "author": "Jon Zander (Digon3)",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "attribution_required": true,
+    "attribution": "\"Castillo de San Marcos Fort Wall.JPG\" by Jon Zander (Digon3), CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/), via https://commons.wikimedia.org/wiki/File:Castillo_de_San_Marcos_Fort_Wall.JPG"
+  }
+]

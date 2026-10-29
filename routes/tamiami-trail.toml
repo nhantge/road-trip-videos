@@ -38,7 +38,7 @@ city = { name = "Miami", lat = 25.7617, lon = -80.1918 }
 
 [thumbnail]
 text = ["GATORS BY THE ROAD", "TAMIAMI TRAIL"]
-stop = "Shark Valley"
+stop = "Big Cypress"
 photo = 0
 
 [up_next]
@@ -55,6 +55,7 @@ lon = -80.2195
 elevation_ft = 10
 tag = "CALLE OCHO"
 photo_query = "Little Havana"
+photos = ["wikimedia-106333053.jpg", "wikimedia-150912672.jpg", "wikimedia-106331485.jpg"]
 caption = "We start on Calle Ocho in Little Havana, where the Tamiami Trail begins!"
 fact = "Calle Ocho, Southwest 8th Street, is the Miami end of the Tamiami Trail."
 narration = "We're starting in Little Havana, on Calle Ocho! Grab a Cuban coffee and watch the domino games at Domino Park, because this street is the start of the Tamiami Trail."
@@ -73,6 +74,7 @@ road = "US 41"
 miles = 33
 drive_time = "45 min"
 photo_query = "Shark Valley Everglades"
+photos = ["wikimedia-84208419.jpg", "wikimedia-66232881.jpg", "wikimedia-84203116.jpg", "wikimedia-3351338.jpg"]
 via = [[25.7620, -80.3500], [25.7610, -80.4800], [25.7615, -80.6000]]
 drive_caption = "West on the Tamiami Trail, straight into the Everglades!"
 drive_fact = "The Tamiami Trail opened in 1928. The name comes from TAMpa and MIAMI."
@@ -95,6 +97,7 @@ road = "US 41"
 miles = 19
 drive_time = "25 min"
 photo_query = "Big Cypress National Preserve"
+photos = ["wikimedia-147331425.jpg", "wikimedia-51130864.jpg", "wikimedia-147331426.jpg", "wikimedia-24117996.jpg"]
 via = [[25.7625, -80.8500], [25.8000, -80.9300]]
 drive_caption = "Deeper into the swamp, and into Big Cypress!"
 drive_fact = "Big Cypress National Preserve protects more than 700,000 acres of swamp."
@@ -117,6 +120,7 @@ road = "US 41 and SR 29"
 miles = 23
 drive_time = "30 min"
 photo_query = "Everglades City"
+photos = ["wikimedia-10201461.jpg", "wikimedia-10201472.jpg", "wikimedia-10201413.jpg"]
 via = [[25.8800, -81.1400], [25.9000, -81.2500], [25.9010, -81.3045], [25.9140, -81.3600], [25.8850, -81.3810]]
 drive_caption = "Past the smallest post office in the country, then south to Everglades City!"
 drive_fact = "The Ochopee post office is about 61 square feet, the smallest in the United States."
@@ -130,6 +134,7 @@ note = "The smallest post office in the United States, about 61 square feet. Mai
 lat = 25.9010
 lon = -81.3045
 photo_query = "Ochopee Post Office"
+photos = ["wikimedia-146401437.jpg", "wikimedia-32160463.jpg", "wikimedia-59424848.jpg"]
 [stops.info]
 "DO" = "A boat tour of the Ten Thousand Islands."
 "EAT" = "Fresh stone crab claws, in season from mid-October."
@@ -145,6 +150,7 @@ road = "SR 29 and US 41"
 miles = 36
 drive_time = "50 min"
 photo_query = "Naples Pier"
+photos = ["wikimedia-154111880.jpg", "wikimedia-105176910.jpg", "wikimedia-154111883.jpg"]
 via = [[25.9200, -81.4000], [25.9800, -81.5500], [26.0500, -81.6800], [26.1000, -81.7600]]
 drive_caption = "Back on the Trail, northwest to the Gulf!"
 drive_fact = "The Tamiami Trail keeps going north from Naples all the way to Tampa."

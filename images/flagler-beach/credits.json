@@ -1,0 +1,28 @@
+[
+  {
+    "file": "wikimedia-6434236.jpg",
+    "place": "Flagler Beach",
+    "source": "wikimedia",
+    "id": "6434236",
+    "title": "Flagler Beach.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Flagler_Beach.jpg",
+    "author": "Daniel Schwen",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution_required": true,
+    "attribution": "\"Flagler Beach.jpg\" by Daniel Schwen, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), via https://commons.wikimedia.org/wiki/File:Flagler_Beach.jpg"
+  },
+  {
+    "file": "wikimedia-70914057.jpg",
+    "place": "Flagler Beach",
+    "source": "wikimedia",
+    "id": "70914057",
+    "title": "Flagler Beach 2.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Flagler_Beach_2.jpg",
+    "author": "Morten Haan",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution_required": true,
+    "attribution": "\"Flagler Beach 2.jpg\" by Morten Haan, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), via https://commons.wikimedia.org/wiki/File:Flagler_Beach_2.jpg"
+  }
+]
