@@ -7,7 +7,7 @@ Full-screen cards (hook, title + stats, planner, end card) and the map scenes
 import math
 
 import numpy as np
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
 from . import style as S
 from .mapview import ZFOLLOW, MapView
@@ -49,6 +49,16 @@ class Renderer:
             for k, sight in enumerate(s.sights):
                 self.photos[("sight", s.index, k)] = pick_photos(sight, limit=1)
         self._covers = {}
+        if route.flat:  # the filmstrip shows each stop's last pinned photo, so it adds a new picture
+            thumbs = []
+            for st in route.stops:
+                ph = self.photos.get(st.index) or []
+                if ph:
+                    with Image.open(ph[-1][0]) as im:
+                        thumbs.append(ImageOps.exif_transpose(im).convert("RGB").reduce(2))
+                else:
+                    thumbs.append(None)
+            self.map.set_filmstrip(thumbs)
         self.hook = hook_items(route)
         self._stats = self._stat_cards()
         self.spotlights = self._pick_spotlights()
@@ -221,7 +231,7 @@ class Renderer:
         if caption:
             a = min(S.fade(t, 0.35, 0.3), 1 - S.fade(t, seg.dur - 0.35, 0.3))
             self.map.draw_caption(img, caption, a)
-        self.map.draw_profile(img, mile)
+        self.map.draw_profile(img, mile, seg.start + t)
         # Right-hand panel, crossfading from the previous map segment's panel.
         panel = self.panel(seg, t)
         i = self.segs.index(seg)

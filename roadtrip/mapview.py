@@ -8,7 +8,7 @@ and elevation), the region inset, captions and the elevation strip.
 import math
 
 import numpy as np
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageOps
 
 from . import style as S
 from .terrain import hillshade, lonlat_to_world
@@ -384,6 +384,13 @@ class MapView:
                 d.text((x, self.PY1 - S.ELEV_Y + 15), st.name, font=fnt, fill=S.TEXT_DIM, anchor=anchor)
                 last = left + tw
         self.prof_static = static
+        film = Image.new("RGBA", (w, h), S.BG_PANEL + (255,))
+        fd = ImageDraw.Draw(film)
+        fd.line((0, 0, w, 0), fill=S.DIVIDER, width=2)
+        fd.text((48, 22), "THE STOPS", font=S.font("semibold", 14), fill=S.TEXT_DIM, anchor="lm")
+        fd.text((48 + S.font("semibold", 14).getlength("THE STOPS") + 12, 22), "one by one",
+                font=S.font("regular", 14), fill=S.TEXT_FAINT, anchor="lm")
+        self.prof_static_film = film
         # Peak labels (passes) are drawn over the profile.
         self.prof_peaks = []
         for p in route.passes:
@@ -392,7 +399,84 @@ class MapView:
             y = self.PY1 - (elev - lo) / max(hi - lo, 1) * (self.PY1 - self.PY0)
             self.prof_peaks.append((x, y, f"{p.name.replace(' Pass', '')} {S.fmt_int(elev)} ft"))
 
-    def draw_profile(self, img, mile):
+    # -- photo filmstrip (flat routes) ----------------------------------------
+
+    FILM_Y0, FILM_H, FILM_GAP, FILM_LINE_Y = 40, 100, 14, 154
+
+    def set_filmstrip(self, thumbs):
+        """thumbs: one RGB photo (or None) per stop. Flat routes show these instead of the
+        progress bar: reached stops in full colour with a check, the next stop highlighted
+        and pulsing, the rest dimmed."""
+        n = len(self.route.stops)
+        cw = (self.PX1 - self.PX0 - self.FILM_GAP * (n - 1)) / n
+        self._film_x = [self.PX0 + i * (cw + self.FILM_GAP) for i in range(n)]
+        self._film_w = int(cw)
+        w, h = self._film_w, self.FILM_H
+        mask = S.rounded_box(w, h, 10, (255, 255, 255, 255)).getchannel("A")
+        name_f = S.font("semibold", 17)
+        self._film = []
+        for st, im in zip(self.route.stops, thumbs):
+            card = Image.new("RGBA", (w, h), (29, 40, 51, 255))
+            if im is not None:
+                card.paste(ImageOps.fit(im, (w, h), Image.LANCZOS, centering=(0.5, 0.45)), (0, 0))
+            shade = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+            sd = ImageDraw.Draw(shade)
+            for y in range(h // 2, h):  # darken the bottom so the name reads
+                sd.line((0, y, w, y), fill=(8, 12, 16, int(200 * (y - h / 2) / (h / 2))))
+            card.alpha_composite(shade)
+            d = ImageDraw.Draw(card)
+            name = st.name
+            while name_f.getlength(name) > w - 20 and len(name) > 4:
+                name = name[:-2].rstrip() + "…" if not name.endswith("…") else name[:-2] + "…"
+            d.text((10, h - 10), name, font=name_f, fill=S.TEXT, anchor="ls")
+            lit = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+            lit.paste(card, (0, 0), mask)
+            dim = ImageEnhance.Brightness(ImageEnhance.Color(card).enhance(0.25)).enhance(0.45)
+            dark = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+            dark.paste(dim, (0, 0), mask)
+            self._film.append((lit, dark))
+
+    def draw_filmstrip(self, img, mile, t):
+        route = self.route
+        strip = self.prof_static_film.copy()
+        d = ImageDraw.Draw(strip)
+        n, w, h, y0 = len(route.stops), self._film_w, self.FILM_H, self.FILM_Y0
+        miles = [st.mile for st in route.stops]
+        reached = [m <= mile + 0.05 for m in miles]
+        at_stop = next((i for i, m in enumerate(miles) if abs(m - mile) < 0.05), None)
+        nxt = next((i for i, r in enumerate(reached) if not r), None)
+        active = at_stop if at_stop is not None else nxt
+        # Progress line through the card centres; the dot moves along the current leg.
+        cx = [x + w / 2 for x in self._film_x]
+        ly = self.FILM_LINE_Y
+        d.line((cx[0], ly, cx[-1], ly), fill=(52, 66, 79), width=4)
+        k = int(np.searchsorted(miles, mile, side="right")) - 1
+        k = max(0, min(k, n - 2))
+        f = (mile - miles[k]) / max(miles[k + 1] - miles[k], 1e-6)
+        xdot = cx[k] + (cx[k + 1] - cx[k]) * min(max(f, 0.0), 1.0)
+        d.line((cx[0], ly, xdot, ly), fill=S.ORANGE, width=4)
+        for i, x in enumerate(self._film_x):
+            lit, dark = self._film[i]
+            x = int(x)
+            if i == active:
+                pulse = 0.5 + 0.5 * math.sin(t * 5.0) if not reached[i] else 1.0
+                lift = 4
+                glow = S.rounded_box(w + 8, h + 8, 14, S.ORANGE + (int(120 + 135 * pulse),))
+                strip.alpha_composite(glow, (x - 4, y0 - 4 - lift))
+                strip.alpha_composite(lit, (x, y0 - lift))
+            else:
+                strip.alpha_composite(lit if reached[i] else dark, (x, y0))
+            if reached[i]:
+                S.paste_center(strip, S.circle(22, S.ORANGE + (255,)), x + w - 16, y0 + 16)
+                d.line((x + w - 22, y0 + 16, x + w - 17, y0 + 21, x + w - 10, y0 + 11), fill=S.BG_TITLE, width=3)
+            fill = S.ORANGE if reached[i] or i == active else (90, 104, 117)
+            S.paste_center(strip, S.circle(12, fill + (255,)), cx[i], ly)
+        S.paste_center(strip, S.circle(16, S.ORANGE + (255,), (255, 255, 255, 255), 2), xdot, ly)
+        img.alpha_composite(strip, (0, S.ELEV_Y))
+
+    def draw_profile(self, img, mile, t=0.0):
+        if self.route.flat and getattr(self, "_film", None):
+            return self.draw_filmstrip(img, mile, t)
         strip = self.prof_static.copy()
         strip.alpha_composite(self.prof_grey)
         xs, ys = self._prof_xy
