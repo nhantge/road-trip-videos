@@ -6,7 +6,7 @@ Same steps as `examples/denver-to-ouray/UPLOAD.md`; the details for this episode
 |---|---|
 | Video | `st-augustine-to-daytona.mp4` |
 | Thumbnail | `thumbnail.jpg` |
-| Description | `description.txt` (3,396 characters; the timestamps become chapters) |
+| Description | `description.txt` (3,382 characters; the timestamps become chapters) |
 | Subtitles | `captions.srt` |
 | Short | `short.mp4`, with its title and caption in `short.txt` |
 
