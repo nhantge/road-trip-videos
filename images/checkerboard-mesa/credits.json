@@ -1,0 +1,41 @@
+[
+  {
+    "file": "wikimedia-24312353.jpg",
+    "place": "Checkerboard Mesa",
+    "source": "wikimedia",
+    "id": "24312353",
+    "title": "Zion, Checkerboard Mesa (3680196206).jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Zion,_Checkerboard_Mesa_(3680196206).jpg",
+    "author": "Greg Willis from Denver, CO, usa",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "attribution_required": true,
+    "attribution": "\"Zion, Checkerboard Mesa (3680196206).jpg\" by Greg Willis from Denver, CO, usa, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0), via https://commons.wikimedia.org/wiki/File:Zion,_Checkerboard_Mesa_(3680196206).jpg"
+  },
+  {
+    "file": "wikimedia-94044776.jpg",
+    "place": "Checkerboard Mesa",
+    "source": "wikimedia",
+    "id": "94044776",
+    "title": "Checkerboard Mesa detail.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Checkerboard_Mesa_detail.jpg",
+    "author": "Murray Foubister",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "attribution_required": true,
+    "attribution": "\"Checkerboard Mesa detail.jpg\" by Murray Foubister, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0), via https://commons.wikimedia.org/wiki/File:Checkerboard_Mesa_detail.jpg"
+  },
+  {
+    "file": "wikimedia-45371850.jpg",
+    "place": "Checkerboard Mesa",
+    "source": "wikimedia",
+    "id": "45371850",
+    "title": "Checkerboard Mesa (5014798065).jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Checkerboard_Mesa_(5014798065).jpg",
+    "author": "Zion National Park",
+    "license": "Public domain",
+    "license_url": "",
+    "attribution_required": false,
+    "attribution": "\"Checkerboard Mesa (5014798065).jpg\" by Zion National Park, Public domain, via https://commons.wikimedia.org/wiki/File:Checkerboard_Mesa_(5014798065).jpg"
+  }
+]
