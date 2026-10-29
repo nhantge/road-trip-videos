@@ -158,7 +158,7 @@ class ShortRenderer(Renderer):
             dl.text((X0 - 3, top + i * lh), ln, font=f, fill=S.TEXT, stroke_width=3, stroke_fill=S.BG_TITLE + (110,))
         if stop_index is not None:
             st = self.route.stops[stop_index]
-            where = [st.name, f"{S.fmt_int(st.elevation_ft)} ft"]
+            where = [st.name] if self.route.flat else [st.name, f"{S.fmt_int(st.elevation_ft)} ft"]
             if st.index:
                 where.append(f"mile {int(round(st.mile))}")
             dl.text((X0, top + len(lines) * lh + 52), "  ·  ".join(where), font=S.font("semibold", 38),
@@ -212,9 +212,10 @@ class ShortRenderer(Renderer):
             dr.text((X0 + r / 2, rh / 2 + 1), str(st.index + 1), font=S.font("bold", int(r * 0.55)),
                     fill=S.BG_TITLE, anchor="mm")
             dr.text((X0 + r + 22, rh / 2), st.name, font=name_f, fill=S.TEXT, anchor="lm")
-            facts = f"{S.fmt_int(st.elevation_ft)} ft"
+            parts = [] if self.route.flat else [f"{S.fmt_int(st.elevation_ft)} ft"]
             if st.index:
-                facts += f"  ·  +{st.miles:g} mi"
+                parts.append(f"+{st.miles:g} mi")
+            facts = "  ·  ".join(parts)
             dr.text((SW - 190, rh / 2), facts, font=sub_f, fill=S.TEAL, anchor="rm")
             img.alpha_composite(S.with_alpha(row, a), (int((1 - a) * 24), y - rh // 2))
         return img.convert("RGB")
@@ -295,7 +296,8 @@ class ShortRenderer(Renderer):
             d.text((X0, y), line, font=S.font("medium", 36), fill=S.TEXT_DIM, anchor="lm")
             y += 54
         y += 40
-        perks = ["Every stop, drive times and elevations", "Where to eat, see and stay",
+        perks = ["Every stop and drive time" if route.flat else "Every stop, drive times and elevations",
+                 "Where to eat, see and stay",
                  "A trip planner you can screenshot"]
         for line in perks:
             S.paste_center(layer, S.circle(16, S.TEAL + (255,)), X0 + 8, y)
