@@ -26,6 +26,11 @@ finale = "And that's the drive! About 60 miles from Monument Valley to the top o
 planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
 end = "Thanks for riding along! Subscribe to Road Trip Atlas for more Utah road trips, and I'll see you on the next one!"
 
+[voice]                             # new episodes use Hope (Florida and Zion to Bryce kept Marie)
+name = "Hope"
+voice_id = "tnSpp4vdxKPjI9w0GnoV"
+credit = "ElevenLabs voice \"Hope\""
+
 [inset]
 name = "Utah"
 bounds = [-114.05, 37.0, -109.04, 42.0]

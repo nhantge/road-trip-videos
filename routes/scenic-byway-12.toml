@@ -26,6 +26,11 @@ finale = "And that's the drive! About 120 miles of Scenic Byway 12, from Bryce C
 planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
 end = "Thanks for riding along! Subscribe to Road Trip Atlas for more Utah road trips, and next time we're heading to Capitol Reef and Goblin Valley!"
 
+[voice]                             # new episodes use Hope (Florida and Zion to Bryce kept Marie)
+name = "Hope"
+voice_id = "tnSpp4vdxKPjI9w0GnoV"
+credit = "ElevenLabs voice \"Hope\""
+
 [inset]
 name = "Utah"
 bounds = [-114.05, 37.0, -109.04, 42.0]

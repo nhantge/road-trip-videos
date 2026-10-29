@@ -122,7 +122,9 @@ segment stretches to fit it, so narration is never cut off; without clips the vi
 renders at default timings with the narration space left empty.
 
 The channel voice is ElevenLabs **Marie – Young & Optimistic** (`ijbjxuucMt4vnA0kA9IO`),
-set in `assets/brand/brand.json`. A route can override any voice setting with its own
+set in `assets/brand/brand.json`. New episodes from the Utah batch on use **Hope – upbeat and clear** (`tnSpp4vdxKPjI9w0GnoV`) through a
+`[voice]` table in the route; give every new route that table. Hope routes need their own `planner` clip
+(the shared one is Marie). A route can override any voice setting with its own
 `[voice]` table (Denver to Ouray keeps Sadie that way). Write the script
 to match her: short, upbeat sentences and exclamation where it's earned. To generate a route's narration with it:
 
