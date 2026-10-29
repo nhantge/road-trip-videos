@@ -1,0 +1,64 @@
+The Overseas Highway | Florida Road Trips
+
+102 miles · 5 stops · about 2 hr 15 min of driving · 1 to 2 days recommended
+
+CHAPTERS
+0:00 Intro
+0:35 Key Largo
+0:51 Islamorada
+1:08 Marathon
+1:24 Bahia Honda State Park
+1:44 Key West
+2:12 Trip planner
+
+THE ROUTE
+1. Key Largo · start
+   See & Do: Snorkel or ride a glass-bottom boat at John Pennekamp Coral Reef State Park.
+   Tip: Book reef trips early. Calm mornings are best.
+2. Islamorada · mile 20 · 20 mi / 25 min from Key Largo via US 1
+   See & Do: Feed the tarpon at Robbie's Marina.
+   Eat: Fresh-caught fish, right on the water.
+   Tip: Fishing charters leave early. Book the day before.
+3. Marathon · mile 52 · 32 mi / 40 min from Islamorada via US 1
+   See & Do: Tour the Turtle Hospital, then relax at Sombrero Beach.
+   Tip: Turtle Hospital tours are guided. Reserve ahead.
+4. Bahia Honda State Park · mile 65 · 13 mi / 20 min from Marathon via US 1
+   See & Do: Swim at Sandspur Beach, and climb up to the old bridge overlook.
+   Tip: The park fills up by mid-morning in winter. Come early.
+5. Key West · mile 102 · 37 mi / 50 min from Bahia Honda State Park via US 1
+   See & Do: The Hemingway Home and its six-toed cats, and Duval Street.
+   Eat: Key lime pie, of course.
+   Tip: Park once, then walk or bike. Parking is tight.
+
+Best season: December to April
+
+GOOD TO KNOW
+- Addresses use mile markers, counting down to Mile Marker 0 in Key West.
+- Winter is peak season. Book Key West hotels early.
+- Hurricane season runs June through November. Watch the forecast.
+- Reef trips at Pennekamp fill up on weekends. Book ahead.
+
+Mileage and drive times are approximate and don't include stops. Check road conditions before you go.
+
+PHOTO CREDITS
+- "A Key Largo marina at dusk" by Baron Maddock, CC BY 4.0, https://commons.wikimedia.org/?curid=103487500
+- "Key-largo-harbor-3" by Elmschrat, CC BY-SA 3.0, https://commons.wikimedia.org/?curid=7355009
+- "The Killer Octopus! - Key Largo Florida" by Rob Olivera, CC BY 2.0, https://commons.wikimedia.org/?curid=106551361
+- "Islamorada - Florida - Sunset" by Carl Lender, CC BY 2.0, https://commons.wikimedia.org/?curid=150921484
+- "Snake Creek, Islamorada, Florida June 2021" by Sharon Hahn Darlin, CC BY 2.0, https://commons.wikimedia.org/?curid=106454441
+- "US Coast Guard Station at Snake Creek, Islamorada, Florida" by Sharon Hahn Darlin, CC BY 2.0, https://commons.wikimedia.org/?curid=106454440
+- "Florida Keys Aquarium Encounters, Marathon, Florida" by Sharon Hahn Darlin, CC BY 2.0, https://commons.wikimedia.org/?curid=106454332
+- "Route 1, Marathon, Florida Keys - In Limbo Hippie Shop" by Sharon Hahn Darlin, CC BY 2.0, https://commons.wikimedia.org/?curid=106545219
+- "Marathon Florida Chamber of Commerce - Heart of the Florida Keys" by Florida Keys--Public Libraries, CC BY 2.0, https://commons.wikimedia.org/?curid=106457934
+- "Seven Mile Bridge, Florida Keys aerial (2003)" by United States Department of Transportation, Public domain, https://commons.wikimedia.org/?curid=15957493
+- "Bahia Honda Rail Bridge FL1" by Acroterion, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=28319149
+- "Aerial view of Bahia Honda Key 2025-05-17" by Schwerdf, CC BY 4.0, https://commons.wikimedia.org/?curid=183654447
+- "Seven Mile Bridge, part of the Overseas Highway" by Matrek, CC BY-SA 2.5 pl, https://commons.wikimedia.org/?curid=2451826
+- "Sunset Key and Sailboats, Florida, 2025" by Julian Lupyan, CC0, https://commons.wikimedia.org/?curid=179278744
+- "Buildings on the Corner of Front and Duval Street, Key West, Florida" by Julian Lupyan, CC0, https://commons.wikimedia.org/?curid=179281652
+- "The Harbor House, Front Street, Key West, Florida" by Julian Lupyan, CC0, https://commons.wikimedia.org/?curid=179278774
+
+CREDITS
+- Intro sting and outro music: original music by Road Trip Atlas
+- Voiceover: ElevenLabs voice "Marie"
+- Elevation: AWS Terrain Tiles (USGS 3DEP, SRTM, GMTED2010, ETOPO1 and others, https://registry.opendata.aws/terrain-tiles/)

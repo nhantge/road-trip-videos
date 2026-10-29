@@ -1,0 +1,69 @@
+Tamiami Trail | Florida Road Trips
+
+111 miles · 5 stops · about 2 hr 30 min of driving · 1 day recommended
+
+CHAPTERS
+0:00 Intro
+0:33 Little Havana
+0:45 Shark Valley
+1:11 Big Cypress
+1:34 Everglades City
+1:54 Naples
+2:21 Trip planner
+
+THE ROUTE
+1. Little Havana · start
+   See & Do: Domino Park and the Calle Ocho Walk of Fame.
+   Eat: A cafecito and a Cuban sandwich.
+   Tip: Fill up here. Gas is sparse in the Everglades.
+2. Shark Valley · mile 33 · 33 mi / 45 min from Little Havana via US 41
+   See & Do: Ride the tram, or bike the 15-mile loop to the observation tower.
+   Wildlife: Alligators, turtles and wading birds, right by the path.
+   Tip: Book tram seats ahead in winter. Waits can be long.
+3. Big Cypress · mile 52 · 19 mi / 25 min from Shark Valley via US 41
+   See: Alligators along the canal at the Oasis Visitor Center.
+   Do: Walk the boardwalk at Kirby Storter Roadside Park.
+   Tip: Stay behind the rails, and never feed the gators.
+4. Everglades City · mile 75 · 23 mi / 30 min from Big Cypress via US 41 and SR 29
+   On the way, worth a stop: Ochopee Post Office. The smallest post office in the United States, about 61 square feet. Mail a postcard!
+   Do: A boat tour of the Ten Thousand Islands.
+   Eat: Fresh stone crab claws, in season from mid-October.
+   Tip: Bring bug spray, especially at dusk.
+5. Naples · mile 111 · 36 mi / 50 min from Everglades City via SR 29 and US 41
+   See & Do: The Naples Pier and Fifth Avenue South.
+   Tip: Get to the pier early for sunset parking.
+
+Best season: November to April, the dry season
+
+GOOD TO KNOW
+- Fill up in Miami. Gas is sparse across the Everglades.
+- Winter is the dry season: fewer bugs and more wildlife.
+- Bring bug spray, especially around dusk.
+- Never feed or approach alligators.
+
+Mileage and drive times are approximate and don't include stops. Check road conditions before you go.
+
+PHOTO CREDITS
+- "Little Havana, Miami, Florida 2021 - Welcome" by Sharon Hahn Darlin, CC BY 2.0, https://commons.wikimedia.org/?curid=106333053
+- "Havana Collection Little Havana, Miami July 2024" by Phillip Pessar, CC BY 2.0, https://commons.wikimedia.org/?curid=150912672
+- "April 7, 2015 - Little Havana, Miami, Florida" by osseous, CC BY 2.0, https://commons.wikimedia.org/?curid=106331485
+- "Shark Valley Observation Tower Panorama" by Daniel Kraft, CC BY-SA 3.0, https://commons.wikimedia.org/?curid=84208419
+- "Shark Valley Loop Road - Shark Valley - Everglades National Park - DSC09507" by Daderot, CC0, https://commons.wikimedia.org/?curid=66232881
+- "Shark Valley Borrow Pit Vegetation" by Daniel Kraft, CC BY-SA 3.0, https://commons.wikimedia.org/?curid=84203116
+- "Shark Valley Tower" by Everglades National Park Photo, Public domain, https://commons.wikimedia.org/?curid=3351338
+- "Big Cypress National Preserve - 52499322737" by apasciuto, CC BY 2.0, https://commons.wikimedia.org/?curid=147331425
+- "Big Cypress Bend Boardwalk 3" by Gzzz, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=51130864
+- "Big Cypress National Preserve (2022)" by apasciuto, CC BY 2.0, https://commons.wikimedia.org/?curid=147331426
+- "Big Cypress National Preserve BICY1060" by National Park Service Digital Image Archives, Public domain, https://commons.wikimedia.org/?curid=24117996
+- "Everglades City FL old crths01" by Ebyabe, CC BY-SA 3.0, https://commons.wikimedia.org/?curid=10201461
+- "Everglades City FL Rod and Gun Club01" by Ebyabe, CC BY-SA 3.0, https://commons.wikimedia.org/?curid=10201472
+- "Everglades City FL Depot01" by Ebyabe, CC BY-SA 3.0, https://commons.wikimedia.org/?curid=10201413
+- "Smallest Post Office (51892225596)" by John Foehner, CC BY 2.0, https://commons.wikimedia.org/?curid=146401437
+- "Naples Pier R04" by Marc Ryckaert, CC BY 4.0, https://commons.wikimedia.org/?curid=154111880
+- "Naples Pier After Sundown (35314969951)" by Charles Patrick Ewing, CC BY 2.0, https://commons.wikimedia.org/?curid=105176910
+- "Naples Pier R05" by Marc Ryckaert, CC BY 4.0, https://commons.wikimedia.org/?curid=154111883
+
+CREDITS
+- Intro sting and outro music: original music by Road Trip Atlas
+- Voiceover: ElevenLabs voice "Marie"
+- Elevation: AWS Terrain Tiles (USGS 3DEP, SRTM, GMTED2010, ETOPO1 and others, https://registry.opendata.aws/terrain-tiles/)
