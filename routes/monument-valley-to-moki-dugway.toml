@@ -34,7 +34,8 @@ credit = "ElevenLabs voice \"Hope\""
 [inset]
 name = "Utah"
 bounds = [-114.05, 37.0, -109.04, 42.0]
-city = { name = "Salt Lake City", lat = 40.7608, lon = -111.8910 }
+outline = [[-114.05, 42.0], [-111.05, 42.0], [-111.05, 41.0], [-109.04, 41.0], [-109.04, 37.0], [-114.05, 37.0]]
+city = { name = "Salt Lake", lat = 40.7608, lon = -111.8910 }
 
 [thumbnail]
 text = ["THE MOST FAMOUS VIEW", "MONUMENT VALLEY"]

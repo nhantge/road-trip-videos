@@ -296,8 +296,11 @@ class MapView:
         k = min(iw / (bx1 - bx0), ih / (by1 - by0))
         rw, rh = (bx1 - bx0) * k, (by1 - by0) * k
         rx, ry = x0 + 17 + (iw - rw) / 2, y0 + 40 + (ih - rh) / 2
-        d.rectangle((rx, ry, rx + rw, ry + rh), outline=(150, 159, 167), width=2)
         to = lambda x, y: (rx + (x - bx0) * k, ry + (y - by0) * k)
+        if inset.get("outline"):  # state shape as [[lon, lat], ...]; default is the bounds box
+            d.polygon([to(*lonlat_to_world(lon, lat)) for lon, lat in inset["outline"]], outline=(150, 159, 167), width=2)
+        else:
+            d.rectangle((rx, ry, rx + rw, ry + rh), outline=(150, 159, 167), width=2)
         pts = [to(x, y) for x, y in zip(self.route.wx[::4], self.route.wy[::4])]
         d.line(pts, fill=S.ROUTE_GREY, width=2)
         cut = int(self.route.index_at(mile) / 4) + 1
@@ -307,7 +310,10 @@ class MapView:
         if city:
             cxy = to(*lonlat_to_world(city["lon"], city["lat"]))
             S.paste_center(img, S.circle(6, S.LABEL + (255,)), *cxy)
-            d.text((cxy[0] + 6, cxy[1]), city["name"], font=S.font("medium", 13), fill=S.LABEL_DIM, anchor="lm")
+            fnt = S.font("medium", 13)
+            right_side = cxy[0] + 8 + fnt.getlength(city["name"]) < x0 + w - 8  # else label left of the dot
+            d.text((cxy[0] + (8 if right_side else -8), cxy[1]), city["name"], font=fnt,
+                   fill=S.LABEL_DIM, anchor="lm" if right_side else "rm")
         S.paste_center(img, S.circle(13, S.ORANGE + (255,)), *to(*self.route.point_at(mile)))
 
     @staticmethod
