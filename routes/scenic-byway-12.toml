@@ -56,6 +56,7 @@ lon = -112.1661
 elevation_ft = 8000
 tag = "START"
 photo_query = "Bryce Canyon"
+photos = ["wikimedia-1080134.jpg", "wikimedia-80066080.jpg"]
 caption = "We start at Bryce Canyon, at the top of Scenic Byway 12!"
 fact = "Scenic Byway 12 is one of America's All-American Roads."
 narration = "We're starting at Bryce Canyon, and heading east on Scenic Byway 12, one of America's All-American Roads!"
@@ -73,6 +74,7 @@ road = "UT 12"
 miles = 47
 drive_time = "1 hr"
 photo_query = "Escalante Utah"
+photos = ["wikimedia-85889876.jpg", "wikimedia-45407284.jpg"]
 via = [{ name = "Tropic", lat = 37.6247, lon = -112.0816 }, [37.5650, -111.9950], [37.6000, -111.9300], [37.6800, -111.8600], [37.7400, -111.7300]]
 drive_caption = "Down through Tropic and across the Grand Staircase!"
 drive_fact = "Grand Staircase-Escalante National Monument covers nearly 1.9 million acres."
@@ -115,6 +117,7 @@ road = "UT 12"
 miles = 12
 drive_time = "20 min"
 photo_query = "Hogback Highway 12"
+photos = ["wikimedia-80316958.jpg", "wikimedia-80316957.jpg"]
 via = [[37.8150, -111.4100], { name = "The Hogback", lat = 37.8400, lon = -111.4200 }, [37.8750, -111.4200]]
 drive_caption = "Across the Hogback, a knife-edge ridge with drop-offs on both sides!"
 drive_fact = "On the Hogback, the road runs along a narrow ridge with steep drop-offs on both sides."
@@ -137,6 +140,7 @@ road = "UT 12"
 miles = 37
 drive_time = "50 min"
 photo_query = "Boulder Mountain Utah"
+photos = ["images/torrey-utah/wikimedia-51853612.jpg", "wikimedia-24312422.jpg", "wikimedia-60082.jpg"]
 via = [[37.9600, -111.4000], { name = "Boulder Mountain", lat = 38.0500, lon = -111.3700, kind = "summit", elevation_ft = 9600 }, [38.1500, -111.3500], { name = "Grover", lat = 38.2286, lon = -111.3486 }, [38.2800, -111.4000]]
 drive_caption = "Up and over Boulder Mountain!"
 drive_fact = "Highway 12 tops out above 9,000 feet on Boulder Mountain."
