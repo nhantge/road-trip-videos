@@ -1,0 +1,17 @@
+{
+  "voice": "Hope (ElevenLabs tnSpp4vdxKPjI9w0GnoV)",
+  "model": "eleven_v3",
+  "hook": "7cd022b14f",
+  "intro": "6c36545a3e",
+  "overview": "3ddd59407f",
+  "stop-0": "d8a651ac08",
+  "drive-1": "a63f8b2779",
+  "stop-1": "193437b3e9",
+  "drive-2": "bd9b9a3945",
+  "stop-2": "11b3047b0e",
+  "drive-3": "9908cb38f0",
+  "stop-3": "9aee213883",
+  "finale": "f259f181f8",
+  "end": "8a9dd11131",
+  "planner": "3505725f1d"
+}
