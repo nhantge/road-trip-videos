@@ -1,0 +1,55 @@
+Arches and Canyonlands | Utah Road Trips
+
+66 miles · 4 stops · about 1 hr 50 min of driving · 2 days recommended
+
+CHAPTERS
+0:00 Intro
+0:37 Moab / Arches National Park
+1:05 Dead Horse Point
+1:22 Grand View Point
+1:52 Trip planner
+
+THE ROUTE
+1. Moab (4,025 ft) · start
+   See & Do: Jeep tours, mountain biking and rafting on the Colorado.
+   Tip: Book jeep and rafting trips ahead in spring and fall.
+2. Arches National Park (5,150 ft) · mile 14 · 14 mi / 30 min from Moab via US 191 and Arches Scenic Drive
+   See: The Windows, Balanced Rock and Park Avenue.
+   Hike: Delicate Arch, about 3 miles round trip.
+   Tip: Get there early. Parking lots fill by mid-morning.
+3. Dead Horse Point (5,900 ft) · mile 47 · 33 mi / 50 min from Arches National Park via US 191 and UT 313
+   See: The Dead Horse Point overlook, best at sunset.
+   Tip: State park fee. National park passes don't count here.
+4. Grand View Point (6,080 ft) · mile 66 · 19 mi / 30 min from Dead Horse Point via Grand View Point Road
+   On the way, worth a stop: Mesa Arch. A short walk to an arch right on the canyon rim. Famous at sunrise.
+   See: Grand View Point, and Mesa Arch on the way.
+   Tip: No food or water in the park. Pack it in.
+
+Best season: Spring and fall
+
+GOOD TO KNOW
+- Arches doesn't need a timed-entry reservation in 2026, but lots fill early.
+- Dead Horse Point is a state park, so national park passes don't cover it.
+- There's no food or water in Island in the Sky. Pack it in.
+- Summer days top 100 degrees. Hike early.
+
+Mileage and drive times are approximate and don't include stops. Check road conditions before you go.
+
+PHOTO CREDITS
+- srkcalifano / Pixabay, https://pixabay.com/photos/utah-red-rock-sandstone-desert-6600510/
+- bariceric / Pixabay, https://pixabay.com/photos/hike-desert-nature-landscape-7470767/
+- LoggaWiggler / Pixabay, https://pixabay.com/photos/sandstone-landmark-natural-arch-4625/
+- MikeGoad / Pixabay, https://pixabay.com/photos/north-window-arch-sandstone-utah-4000492/
+- lillolillolillo / Pixabay, https://pixabay.com/photos/arches-national-park-rainbow-utah-6529177/
+- ducken99 / Pixabay, https://pixabay.com/photos/dead-horse-point-state-park-moab-3053634/
+- MikeGoad / Pixabay, https://pixabay.com/photos/dead-horse-point-park-view-canyon-3999711/
+- MikeGoad / Pixabay, https://pixabay.com/photos/utahs-dead-horse-point-view-canyon-3984634/
+- MikeGoad / Pixabay, https://pixabay.com/photos/canyonlands-grand-view-mesa-3978355/
+- srkcalifano / Pixabay, https://pixabay.com/photos/canyonlands-canyons-desert-6600507/
+- MikeGoad / Pixabay, https://pixabay.com/photos/lone-utah-juniper-desert-rock-3979330/
+- Designtek / Pixabay, https://pixabay.com/photos/arch-desert-sunrise-utah-landscape-4732103/
+
+CREDITS
+- Intro sting and outro music: original music by Road Trip Atlas
+- Voiceover: ElevenLabs voice "Hope"
+- Elevation: AWS Terrain Tiles (USGS 3DEP, SRTM, GMTED2010, ETOPO1 and others, https://registry.opendata.aws/terrain-tiles/)

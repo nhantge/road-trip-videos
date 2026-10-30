@@ -1,0 +1,56 @@
+Scenic Byway 12 | Utah Road Trips
+
+111 miles · 5 stops · about 2 hr 30 min of driving · 1 to 2 days recommended
+
+CHAPTERS
+0:00 Intro
+0:38 Bryce Canyon / Escalante
+1:07 Lower Calf Creek Falls
+1:26 Boulder
+1:49 Torrey
+2:16 Trip planner
+
+THE ROUTE
+1. Bryce Canyon (8,000 ft) · start
+   See: Sunrise Point before you hit the road.
+   Tip: Start early. There's a lot to see today.
+2. Escalante (5,820 ft) · mile 47 · 47 mi / 1 hr from Bryce Canyon via UT 12
+   See & Do: Escalante Petrified Forest State Park.
+   Tip: Fill up here. Services are few until Boulder.
+3. Lower Calf Creek Falls (5,300 ft) · mile 62 · 15 mi / 20 min from Escalante via UT 12
+   Hike: About 6 miles round trip, mostly sandy.
+   Tip: Start early in summer, and bring plenty of water.
+4. Boulder (6,700 ft) · mile 74 · 12 mi / 20 min from Lower Calf Creek Falls via UT 12
+   See: Anasazi State Park Museum.
+   Eat: Hell's Backbone Grill, a local favorite.
+   Tip: The Hogback has no shoulders. Take it slow.
+5. Torrey (6,840 ft) · mile 111 · 37 mi / 50 min from Boulder via UT 12
+   Eat: Torrey's cafes and food trucks.
+   Tip: Capitol Reef is just 11 miles east.
+
+Best season: May to October
+
+GOOD TO KNOW
+- Fill up in Escalante. Services are few until Boulder and Torrey.
+- The Hogback has steep drop-offs and no shoulders. Take it slow.
+- Boulder Mountain can see snow from fall into spring.
+- Bring plenty of water for the Calf Creek hike.
+
+Mileage and drive times are approximate and don't include stops. Check road conditions before you go.
+
+PHOTO CREDITS
+- "Bryce Canyon Hoodoos" by “Jon Zander(digon3)”, CC BY-SA 3.0, https://commons.wikimedia.org/?curid=1080134
+- "Sunrise Point Bryce Canyon November 2018 002" by King of Hearts, CC BY-SA 4.0, https://commons.wikimedia.org/?curid=80066080
+- "A646, Escalante, Utah, United States, 2016" by Brian W. Schaller, FAL, https://commons.wikimedia.org/?curid=85889876
+- "Canyons of the Escalante, Escalante River, Utah (101366521)" by Ken Lund from Reno, Nevada, USA, CC BY-SA 2.0, https://commons.wikimedia.org/?curid=45407284
+- "Lower Calf Creek Falls. Escalante, Utah" by iessi, CC BY 2.0, https://www.flickr.com/photos/47399725@N00/24038721776/
+- "Scenic Byway 12 - Scenic Byway 12 Across the Hogsback - NARA - 7721855" by A. E. Crane, U.S. Department of Transportation, Public domain, https://commons.wikimedia.org/?curid=80316958
+- "Scenic Byway 12 - Scenic Byway 12 Across the Hogsback - NARA - 7721853" by A. E. Crane, U.S. Department of Transportation, Public domain, https://commons.wikimedia.org/?curid=80316957
+- "Dawn at Torrey, Utah (6294462026)" by Murray Foubister, CC BY-SA 2.0, https://commons.wikimedia.org/?curid=51853612
+- "Aspens, Boulder Mountain (3678755867)" by Greg Willis from Denver, CO, usa, CC BY-SA 2.0, https://commons.wikimedia.org/?curid=24312422
+- "Boulder Mountain West" by Unknown, CC BY-SA 2.0, https://commons.wikimedia.org/?curid=60082
+
+CREDITS
+- Intro sting and outro music: original music by Road Trip Atlas
+- Voiceover: ElevenLabs voice "Hope"
+- Elevation: AWS Terrain Tiles (USGS 3DEP, SRTM, GMTED2010, ETOPO1 and others, https://registry.opendata.aws/terrain-tiles/)
