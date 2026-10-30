@@ -97,6 +97,7 @@ road = "UT 24"
 miles = 37
 drive_time = "45 min"
 photo_query = "Hanksville Utah"
+photos = ["wikimedia-51853587.jpg", "wikimedia-36807254.jpg", "wikimedia-200056883.jpg"]
 via = [[38.2880, -111.2000], [38.3000, -111.0500], { name = "Caineville", lat = 38.3367, lon = -111.0161 }, [38.3800, -110.8800]]
 drive_caption = "Out of the park, and into the gray badlands!"
 drive_fact = "Near Hanksville, the Mars Desert Research Station simulates life on Mars."

@@ -20,9 +20,9 @@ tips = [
 
 [narration]
 hook = "This might be the most beautiful road in America! A 126-foot waterfall in the desert. A road on a knife-edge ridge. And over 9,000 feet up on Boulder Mountain!"
-intro = "This is Utah's Scenic Byway 12: about 120 miles from Bryce Canyon to Torrey. Stick around till the end for the full trip planner!"
+intro = "This is Utah's Scenic Byway 12: about 110 miles from Bryce Canyon to Torrey. Stick around till the end for the full trip planner!"
 overview = "Here's the plan! We start at Bryce Canyon, then Escalante, Lower Calf Creek Falls and Boulder, and we finish in Torrey!"
-finale = "And that's the drive! About 120 miles of Scenic Byway 12, from Bryce Canyon to Torrey."
+finale = "And that's the drive! About 110 miles of Scenic Byway 12, from Bryce Canyon to Torrey."
 planner = "Here's your trip planner, everything in one place. Pause and grab a screenshot!"
 end = "Thanks for riding along! Subscribe to Road Trip Atlas for more Utah road trips, and next time we're heading to Capitol Reef and Goblin Valley!"
 
@@ -96,6 +96,7 @@ road = "UT 12"
 miles = 15
 drive_time = "20 min"
 photo_query = "Lower Calf Creek Falls"
+photos = ["flickr-24038721776.jpg"]
 via = [[37.7550, -111.5200], [37.7750, -111.4500]]
 drive_caption = "Down into the slickrock canyons of the Escalante River!"
 drive_fact = "The trail to the falls is about 6 miles round trip, mostly on sand."

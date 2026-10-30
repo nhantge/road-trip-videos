@@ -2,7 +2,7 @@
   "voice": "Hope (ElevenLabs tnSpp4vdxKPjI9w0GnoV)",
   "model": "eleven_v3",
   "hook": "36b5b1c1df",
-  "intro": "af912d15d2",
+  "intro": "871090addd",
   "overview": "1d5da5d5a4",
   "stop-0": "0105f4805e",
   "drive-1": "3a835b375c",
@@ -13,7 +13,7 @@
   "stop-3": "914e8f49d3",
   "drive-4": "8401598ae9",
   "stop-4": "dcb2d4bf61",
-  "finale": "c662b15736",
+  "finale": "d3f014937a",
   "planner": "3505725f1d",
   "end": "df463badec"
 }
